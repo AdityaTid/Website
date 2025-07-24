@@ -18,6 +18,35 @@
             object-fit: contain;
         }
 
+        /* Custom Animations */
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .animate-fadeInUp {
+            animation: fadeInUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+        }
+
+        @keyframes modalPop {
+            0% {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        .animate-modalPop {
+            animation: modalPop 0.4s cubic-bezier(0.22, 1, 0.36, 1) both;
+        }
+
         .hero-section {
             background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
             background-size: cover;
@@ -46,14 +75,10 @@
                             alt="Tista Ventures">
                     </div>
                     <div class="hidden md:ml-8 md:flex md:space-x-8">
-                        <a href="#"
-                            class="border-blue-500 text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Home</a>
-                        <a href="#"
-                            class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Products</a>
-                        <a href="#"
-                            class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">About</a>
-                        <a href="#"
-                            class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Contact</a>
+                        <a href="#hero" class="border-blue-500 text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium nav-link">Home</a>
+                        <a href="#products" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium nav-link">Products</a>
+                        <a href="#about" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium nav-link">About</a>
+                        <a href="#contact" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium nav-link">Contact</a>
                     </div>
                 </div>
                 <div class="hidden md:ml-6 md:flex md:items-center">
@@ -74,7 +99,7 @@
     </nav>
 
     <!-- Hero Section -->
-    <div class="hero-section text-white py-20 px-4 sm:px-6 lg:px-8">
+    <div id="hero" class="hero-section text-white py-20 px-4 sm:px-6 lg:px-8">
         <div class="max-w-3xl mx-auto text-center">
             <h1 class="text-4xl font-extrabold sm:text-5xl sm:tracking-tight lg:text-6xl">Premium Hardware Solutions
             </h1>
@@ -96,7 +121,15 @@
     </div>
 
     <!-- Product Categories -->
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div id="products" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <!-- About Section -->
+    <div id="about" class="bg-white py-16">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-extrabold text-gray-900 mb-4">About Us</h2>
+            <p class="text-lg text-gray-600">Tista Ventures is dedicated to providing premium hardware solutions for industrial and commercial needs. Our commitment to quality and customer satisfaction sets us apart in the industry.</p>
+        </div>
+    </div>
+
         <div class="text-center mb-12">
             <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">Our Product Categories</h2>
             <p class="mt-4 max-w-2xl text-xl text-gray-500 mx-auto">Browse our wide range of high-quality hardware
@@ -120,8 +153,8 @@
         <!-- Product Grid -->
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
             <!-- Product 1 -->
-            <div class="product-card bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300"
-                data-category="screws">
+            <div class="product-card bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 animate-fadeInUp"
+                data-category="screws" style="animation-delay:0.1s">
                 <div class="p-4">
                     <img src="https://images.unsplash.com/photo-1618941719400-4b7d18fd1fda?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80"
                         alt="Stainless Steel Screws" class="product-image w-full">
@@ -149,8 +182,8 @@
             </div>
 
             <!-- Product 2 -->
-            <div class="product-card bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300"
-                data-category="epoxy">
+            <div class="product-card bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 animate-fadeInUp"
+                data-category="epoxy" style="animation-delay:0.2s">
                 <div class="p-4">
                     <img src="https://images.unsplash.com/photo-1581093196278-1afFA6A7f5a9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80"
                         alt="Industrial Strength Epoxy" class="product-image w-full">
@@ -178,8 +211,8 @@
             </div>
 
             <!-- Product 3 -->
-            <div class="product-card bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300"
-                data-category="tools">
+            <div class="product-card bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 animate-fadeInUp"
+                data-category="tools" style="animation-delay:0.3s">
                 <div class="p-4">
                     <img src="https://images.unsplash.com/photo-1585771724684-38269d6639fd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80"
                         alt="Professional Screwdriver Set" class="product-image w-full">
@@ -207,6 +240,146 @@
                 </div>
             </div>
 
+            <!-- Product 4 -->
+            <div class="product-card bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 animate-fadeInUp"
+                data-category="fasteners" style="animation-delay:0.4s">
+                <div class="p-4">
+                    <img src="https://images.unsplash.com/photo-1581094271901-8022df4466f9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80"
+                        alt="Heavy Duty Bolts" class="product-image w-full">
+                </div>
+                <div class="px-5 pb-5">
+                    <a href="#"
+                        onclick="showProductDetails('Heavy Duty Bolts', 'fasteners', 'Grade 8 heavy duty bolts with zinc plating for corrosion resistance. Available in various sizes from M6 to M20.', '4.6', 'https://images.unsplash.com/photo-1581094271901-8022df4466f9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80')">
+                        <h5 class="text-xl font-semibold tracking-tight text-gray-900">Heavy Duty Bolts</h5>
+                    </a>
+                    <div class="flex items-center mt-2.5 mb-5">
+                        <div class="flex items-center space-x-1">
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star-half-alt text-yellow-400"></i>
+                            <span
+                                class="bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded ml-3">4.6</span>
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span class="text-2xl font-bold text-gray-900">$18.99</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Product 4 -->
+            <div class="product-card bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 animate-fadeInUp"
+                data-category="fasteners" style="animation-delay:0.5s">
+                <div class="p-4">
+                    <img src="https://images.unsplash.com/photo-1581094271901-8022df4466f9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80"
+                        alt="Heavy Duty Bolts" class="product-image w-full">
+                </div>
+                <div class="px-5 pb-5">
+                    <a href="#"
+                        onclick="showProductDetails('Heavy Duty Bolts', 'fasteners', 'Grade 8 heavy duty bolts with zinc plating for corrosion resistance. Available in various sizes from M6 to M20.', '4.6', 'https://images.unsplash.com/photo-1581094271901-8022df4466f9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80')">
+                        <h5 class="text-xl font-semibold tracking-tight text-gray-900">Heavy Duty Bolts</h5>
+                    </a>
+                    <div class="flex items-center mt-2.5 mb-5">
+                        <div class="flex items-center space-x-1">
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star-half-alt text-yellow-400"></i>
+                            <span
+                                class="bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded ml-3">4.6</span>
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span class="text-2xl font-bold text-gray-900">$18.99</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Product 4 -->
+            <div class="product-card bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 animate-fadeInUp"
+                data-category="fasteners" style="animation-delay:0.6s">
+                <div class="p-4">
+                    <img src="https://images.unsplash.com/photo-1581094271901-8022df4466f9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80"
+                        alt="Heavy Duty Bolts" class="product-image w-full">
+                </div>
+                <div class="px-5 pb-5">
+                    <a href="#"
+                        onclick="showProductDetails('Heavy Duty Bolts', 'fasteners', 'Grade 8 heavy duty bolts with zinc plating for corrosion resistance. Available in various sizes from M6 to M20.', '4.6', 'https://images.unsplash.com/photo-1581094271901-8022df4466f9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80')">
+                        <h5 class="text-xl font-semibold tracking-tight text-gray-900">Heavy Duty Bolts</h5>
+                    </a>
+                    <div class="flex items-center mt-2.5 mb-5">
+                        <div class="flex items-center space-x-1">
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star-half-alt text-yellow-400"></i>
+                            <span
+                                class="bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded ml-3">4.6</span>
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span class="text-2xl font-bold text-gray-900">$18.99</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Product 4 -->
+            <div class="product-card bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 animate-fadeInUp"
+                data-category="fasteners" style="animation-delay:0.7s">
+                <div class="p-4">
+                    <img src="https://images.unsplash.com/photo-1581094271901-8022df4466f9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80"
+                        alt="Heavy Duty Bolts" class="product-image w-full">
+                </div>
+                <div class="px-5 pb-5">
+                    <a href="#"
+                        onclick="showProductDetails('Heavy Duty Bolts', 'fasteners', 'Grade 8 heavy duty bolts with zinc plating for corrosion resistance. Available in various sizes from M6 to M20.', '4.6', 'https://images.unsplash.com/photo-1581094271901-8022df4466f9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80')">
+                        <h5 class="text-xl font-semibold tracking-tight text-gray-900">Heavy Duty Bolts</h5>
+                    </a>
+                    <div class="flex items-center mt-2.5 mb-5">
+                        <div class="flex items-center space-x-1">
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star-half-alt text-yellow-400"></i>
+                            <span
+                                class="bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded ml-3">4.6</span>
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span class="text-2xl font-bold text-gray-900">$18.99</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Product 4 -->
+            <div class="product-card bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 animate-fadeInUp"
+                data-category="fasteners" style="animation-delay:0.8s">
+                <div class="p-4">
+                    <img src="https://images.unsplash.com/photo-1581094271901-8022df4466f9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80"
+                        alt="Heavy Duty Bolts" class="product-image w-full">
+                </div>
+                <div class="px-5 pb-5">
+                    <a href="#"
+                        onclick="showProductDetails('Heavy Duty Bolts', 'fasteners', 'Grade 8 heavy duty bolts with zinc plating for corrosion resistance. Available in various sizes from M6 to M20.', '4.6', 'https://images.unsplash.com/photo-1581094271901-8022df4466f9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80')">
+                        <h5 class="text-xl font-semibold tracking-tight text-gray-900">Heavy Duty Bolts</h5>
+                    </a>
+                    <div class="flex items-center mt-2.5 mb-5">
+                        <div class="flex items-center space-x-1">
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star-half-alt text-yellow-400"></i>
+                            <span
+                                class="bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded ml-3">4.6</span>
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span class="text-2xl font-bold text-gray-900">$18.99</span>
+                    </div>
+                </div>
+            </div>
             <!-- Product 4 -->
             <div class="product-card bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300"
                 data-category="fasteners">
@@ -246,7 +419,7 @@
             </div>
             <span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
             <div
-                class="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-4xl sm:w-full">
+                class="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-4xl sm:w-full animate-modalPop">
                 <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
                     <div class="sm:flex sm:items-start">
                         <div class="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left w-full">
@@ -431,7 +604,7 @@
     </div>
 
     <!-- CTA Section -->
-    <div class="bg-blue-700">
+    <div id="contact" class="bg-blue-700">
         <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
             <div class="lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center">
                 <div>
@@ -522,6 +695,32 @@
     </footer>
 
     <script>
+        // Smooth scroll for nav links
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                if (href && href.startsWith('#')) {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        window.scrollTo({
+                            top: target.offsetTop - 20,
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+        });
+        // Animate product cards on load
+        window.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.product-card').forEach((card, idx) => {
+                card.style.opacity = 0;
+                setTimeout(() => {
+                    card.style.opacity = 1;
+                }, 100 + idx * 100);
+            });
+        });
+
         // Category filter functionality
         document.querySelectorAll('.category-btn').forEach(button => {
             button.addEventListener('click', () => {
