@@ -48,9 +48,48 @@
         }
 
         .hero-section {
-            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            position: relative;
+            min-height: 480px;
+            height: 60vh;
+            max-height: 700px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             background-size: cover;
             background-position: center;
+            background-repeat: no-repeat;
+            transition: background-image 1s cubic-bezier(0.4,0,0.2,1);
+        }
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6));
+            z-index: 1;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-carousel-controls {
+            position: absolute;
+            left: 0; right: 0; bottom: 30px;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            z-index: 3;
+        }
+        .hero-dot {
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.5);
+            border: 2px solid #fff;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .hero-dot.active {
+            background: #3b82f6;
         }
 
         .category-btn.active {
@@ -99,25 +138,17 @@
     </nav>
 
     <!-- Hero Section -->
-    <div id="hero" class="hero-section text-white py-20 px-4 sm:px-6 lg:px-8">
-        <div class="max-w-3xl mx-auto text-center">
-            <h1 class="text-4xl font-extrabold sm:text-5xl sm:tracking-tight lg:text-6xl">Premium Hardware Solutions
-            </h1>
-            <p class="mt-5 text-xl">High-quality screws, epoxy, and hardware products for industrial and commercial
-                applications</p>
-            <div class="mt-8 flex justify-center">
-                <div class="inline-flex rounded-md shadow">
-                    <a href="#"
-                        class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-blue-600 bg-white hover:bg-blue-50">Explore
-                        Products</a>
-                </div>
-                <div class="ml-3 inline-flex">
-                    <a href="#"
-                        class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 bg-opacity-60 hover:bg-opacity-70">Contact
-                        Us</a>
-                </div>
+    <div id="hero" class="hero-section text-white">
+        <div class="hero-overlay"></div>
+        <div class="hero-content max-w-3xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+            <h1 class="text-5xl md:text-6xl font-extrabold sm:tracking-tight drop-shadow-lg">Premium Hardware Solutions</h1>
+            <p class="mt-6 text-2xl md:text-3xl font-medium drop-shadow-lg">High-quality screws, epoxy, and hardware products for industrial and commercial applications</p>
+            <div class="mt-10 flex justify-center gap-4">
+                <a href="#products" class="inline-flex items-center justify-center px-7 py-4 border border-transparent text-lg font-semibold rounded-md text-blue-600 bg-white hover:bg-blue-50 shadow-lg transition">Explore Products</a>
+                <a href="#contact" class="inline-flex items-center justify-center px-7 py-4 border border-transparent text-lg font-semibold rounded-md text-white bg-blue-600 bg-opacity-80 hover:bg-opacity-100 shadow-lg transition">Contact Us</a>
             </div>
         </div>
+        <div class="hero-carousel-controls"></div>
     </div>
 
     <!-- Product Categories -->
@@ -695,6 +726,40 @@
     </footer>
 
     <script>
+        // Hero Section Carousel
+        const heroImages = [
+            'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+            'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80',
+            'https://images.unsplash.com/photo-1465101046530-73398c7f28ca?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80',
+            'https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80'
+        ];
+        let heroIndex = 0;
+        const heroSection = document.getElementById('hero');
+        const heroDots = document.createElement('div');
+        heroDots.className = 'hero-carousel-controls';
+        function setHeroBg(idx) {
+            heroSection.style.backgroundImage = `linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url('${heroImages[idx]}')`;
+            document.querySelectorAll('.hero-dot').forEach((dot, i) => {
+                dot.classList.toggle('active', i === idx);
+            });
+        }
+        function nextHeroBg() {
+            heroIndex = (heroIndex + 1) % heroImages.length;
+            setHeroBg(heroIndex);
+        }
+        // Dots
+        heroImages.forEach((img, i) => {
+            const dot = document.createElement('span');
+            dot.className = 'hero-dot' + (i === 0 ? ' active' : '');
+            dot.addEventListener('click', () => {
+                heroIndex = i;
+                setHeroBg(heroIndex);
+            });
+            heroDots.appendChild(dot);
+        });
+        document.querySelector('#hero .hero-carousel-controls').replaceWith(heroDots);
+        setHeroBg(heroIndex);
+        setInterval(nextHeroBg, 5000);
         // Smooth scroll for nav links
         document.querySelectorAll('.nav-link').forEach(link => {
             link.addEventListener('click', function(e) {
