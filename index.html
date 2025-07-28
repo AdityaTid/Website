@@ -68,7 +68,7 @@
         .hero-overlay {
             position: absolute;
             inset: 0;
-            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+            background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5));
             z-index: 1;
         }
 
@@ -89,12 +89,6 @@
         }
 
         .hero-dot {
-            width: 14px;
-            height: 14px;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.5);
-            border: 2px solid #fff;
-            cursor: pointer;
             transition: background 0.3s;
         }
 
@@ -125,20 +119,20 @@
                     <div class="hidden md:ml-8 md:flex md:space-x-8">
 
                         <a href="index.html"
-                            class="border-blue-500 text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium nav-link">Home</a>
+                            class="border-blue-500 text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 text-lg font-medium nav-link">Home</a>
                         <a href="product.html"
-                            class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium nav-link">Products</a>
+                            class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-lg font-medium nav-link">Products</a>
                         <a href="#about"
-                            class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium nav-link">About</a>
+                            class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-lg font-medium nav-link">About</a>
                         <a href="#contact"
-                            class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium nav-link">Contact</a>
+                            class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-lg font-medium nav-link">Contact</a>
                     </div>
                 </div>
-                <div class="hidden md:ml-6 md:flex md:items-center">
+                <!-- <div class="hidden md:ml-6 md:flex md:items-center">
                     <button
                         class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium">Get
                         Quote</button>
-                </div>
+                </div> -->
                 <div class="-mr-2 flex items-center md:hidden">
                     <button type="button"
                         class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500"
@@ -194,20 +188,28 @@
                 class="category-btn active px-6 py-2 rounded-full border border-gray-300 hover:bg-blue-100 transition-all"
                 data-category="all">All Products</button>
             <button class="category-btn px-6 py-2 rounded-full border border-gray-300 hover:bg-blue-100 transition-all"
-                data-category="screws">Screws</button>
+                data-category="Frame And General Purpose Fittings">Frame And General Purpose Fittings</button>
             <button class="category-btn px-6 py-2 rounded-full border border-gray-300 hover:bg-blue-100 transition-all"
-                data-category="epoxy">Epoxy</button>
+                data-category="Wooden Construction Screws">Wooden Construction Screws</button>
             <button class="category-btn px-6 py-2 rounded-full border border-gray-300 hover:bg-blue-100 transition-all"
-                data-category="tools">Tools</button>
+                data-category="Premium Series Anchor And Fasteners">Premium Series Anchor And Fasteners</button>
             <button class="category-btn px-6 py-2 rounded-full border border-gray-300 hover:bg-blue-100 transition-all"
-                data-category="fasteners">Fasteners</button>
+                data-category="Chemical Anchors">Chemical Anchors</button>
+            <button class="category-btn px-6 py-2 rounded-full border border-gray-300 hover:bg-blue-100 transition-all"
+                data-category="Economical Hammer Drive Fixing">Economical Hammer Drive Fixing</button>
+            <button class="category-btn px-6 py-2 rounded-full border border-gray-300 hover:bg-blue-100 transition-all"
+                data-category="Screws And Fasteners For Windows And Doors">Screws And Fasteners For Windows And Doors</button>
+            <button class="category-btn px-6 py-2 rounded-full border border-gray-300 hover:bg-blue-100 transition-all"
+                data-category="Mechanical Wedge Anchor">Mechanical Wedge Anchor</button>
+            <button class="category-btn px-6 py-2 rounded-full border border-gray-300 hover:bg-blue-100 transition-all"
+                data-category="Fasting System For Roof And Wall Cladding">Fasting System For Roof And Wall Cladding</button>
         </div>
 
         <!-- Product Grid -->
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
             <!-- Product 1 -->
             <div class="product-card bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 animate-fadeInUp"
-                style="max-width: 905px" data-category="plug" style="animation-delay:0.1s">
+                style="max-width: 905px" data-category="Frame And General Purpose Fittings" style="animation-delay:0.1s">
                 <div class="p-4">
                     <img src="https://5.imimg.com/data5/SELLER/Default/2025/3/495514825/KX/IG/XC/224699900/universal-plug-with-straight-hook-1000x1000.jpg"
                         alt="Round Hook UniversaL Plung" class="product-image w-full">
@@ -235,15 +237,14 @@
 
             <!-- Product 2 -->
             <div class="product-card bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 animate-fadeInUp"
-                data-category="epoxy" style="animation-delay:0.2s">
+                style="max-width: 905px" data-category="Wooden Construction Screws" style="animation-delay:0.1s">
                 <div class="p-4">
-                    <img src="https://images.unsplash.com/photo-1581093196278-1afFA6A7f5a9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80"
-                        alt="Industrial Strength Epoxy" class="product-image w-full">
+                    <img src="https://5.imimg.com/data5/SELLER/Default/2025/3/499296788/QF/FH/FO/224699900/wkcp-washer-head-screw-1000x1000.jpg"
+                        alt="Brass Round WKCP Washer Head Screw" class="product-image w-full">
                 </div>
                 <div class="px-5 pb-5">
-                    <a href="#"
-                        onclick="showProductDetails('Industrial Strength Epoxy', 'epoxy', 'Our premium two-part epoxy adhesive provides exceptional bonding strength for metals, plastics, and ceramics. Sets in 5 minutes with full cure in 24 hours.', '4.9', 'https://images.unsplash.com/photo-1581093196278-1afFA6A7f5a9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80')">
-                        <h5 class="text-xl font-semibold tracking-tight text-gray-900">Industrial Strength Epoxy</h5>
+                    <a href="product.html">
+                        <h5 class="text-xl font-semibold tracking-tight text-gray-900">Round Hook Universal Plug</h5>
                     </a>
                     <div class="flex items-center mt-2.5 mb-5">
                         <div class="flex items-center space-x-1">
@@ -251,210 +252,18 @@
                             <i class="fas fa-star text-yellow-400"></i>
                             <i class="fas fa-star text-yellow-400"></i>
                             <i class="fas fa-star text-yellow-400"></i>
-                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star-half-alt text-yellow-400"></i>
                             <span
-                                class="bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded ml-3">4.9</span>
+                                class="bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded ml-3">4.8</span>
                         </div>
                     </div>
-                    <div class="flex justify-between items-center">
-                        <span class="text-2xl font-bold text-gray-900">$24.99</span>
+                    <div class="mt-4">
+                        <span class="text-2xl font-bold text-gray-900">$12.99</span>
                     </div>
                 </div>
             </div>
 
-            <!-- Product 3 -->
-            <div class="product-card bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 animate-fadeInUp"
-                data-category="tools" style="animation-delay:0.3s">
-                <div class="p-4">
-                    <img src="https://images.unsplash.com/photo-1585771724684-38269d6639fd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80"
-                        alt="Professional Screwdriver Set" class="product-image w-full">
-                </div>
-                <div class="px-5 pb-5">
-                    <a href="#"
-                        onclick="showProductDetails('Professional Screwdriver Set', 'tools', '12-piece professional screwdriver set with ergonomic handles and magnetic tips. Includes Phillips, flathead, Torx, and hex drivers.', '4.7', 'https://images.unsplash.com/photo-1585771724684-38269d6639fd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80')">
-                        <h5 class="text-xl font-semibold tracking-tight text-gray-900">Professional Screwdriver Set</h5>
-                    </a>
-                    <div class="flex items-center mt-2.5 mb-5">
-                        <div class="flex items-center space-x-1">
-                            <i class="fas fa-star text-yellow-400"></i>
-                            <i class="fas fa-star text-yellow-400"></i>
-                            <i class="fas fa-star text-yellow-400"></i>
-                            <i class="fas fa-star text-yellow-400"></i>
-                            <i class="fas fa-star text-yellow-400"></i>
-                            <span
-                                class="bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded ml-3">4.7</span>
-                        </div>
-                    </div>
-                    <div class="flex justify-between items-center">
-                        <span class="text-2xl font-bold text-gray-900">$29.99</span>
-
-                    </div>
-                </div>
-            </div>
-
-            <!-- Product 4 -->
-            <div class="product-card bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 animate-fadeInUp"
-                data-category="fasteners" style="animation-delay:0.4s">
-                <div class="p-4">
-                    <img src="https://images.unsplash.com/photo-1581094271901-8022df4466f9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80"
-                        alt="Heavy Duty Bolts" class="product-image w-full">
-                </div>
-                <div class="px-5 pb-5">
-                    <a href="product.html?name=Heavy%20Duty%20Bolts" class="cursor-pointer">
-                        <h5 class="text-xl font-semibold tracking-tight text-gray-900">Heavy Duty Bolts</h5>
-                    </a>
-                    <div class="flex items-center mt-2.5 mb-5">
-                        <div class="flex items-center space-x-1">
-                            <i class="fas fa-star text-yellow-400"></i>
-                            <i class="fas fa-star text-yellow-400"></i>
-                            <i class="fas fa-star text-yellow-400"></i>
-                            <i class="fas fa-star text-yellow-400"></i>
-                            <i class="fas fa-star-half-alt text-yellow-400"></i>
-                            <span
-                                class="bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded ml-3">4.6</span>
-                        </div>
-                    </div>
-                    <div class="flex justify-between items-center">
-                        <span class="text-2xl font-bold text-gray-900">$18.99</span>
-                    </div>
-                </div>
-            </div>
-            <!-- Product 4 -->
-            <div class="product-card bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 animate-fadeInUp"
-                data-category="fasteners" style="animation-delay:0.5s">
-                <div class="p-4">
-                    <img src="https://images.unsplash.com/photo-1581094271901-8022df4466f9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80"
-                        alt="Heavy Duty Bolts" class="product-image w-full">
-                </div>
-                <div class="px-5 pb-5">
-                    <a href="product.html?name=Heavy%20Duty%20Bolts" class="cursor-pointer">
-                        <h5 class="text-xl font-semibold tracking-tight text-gray-900">Heavy Duty Bolts</h5>
-                    </a>
-                    <div class="flex items-center mt-2.5 mb-5">
-                        <div class="flex items-center space-x-1">
-                            <i class="fas fa-star text-yellow-400"></i>
-                            <i class="fas fa-star text-yellow-400"></i>
-                            <i class="fas fa-star text-yellow-400"></i>
-                            <i class="fas fa-star text-yellow-400"></i>
-                            <i class="fas fa-star-half-alt text-yellow-400"></i>
-                            <span
-                                class="bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded ml-3">4.6</span>
-                        </div>
-                    </div>
-                    <div class="flex justify-between items-center">
-                        <span class="text-2xl font-bold text-gray-900">$18.99</span>
-                    </div>
-                </div>
-            </div>
-            <!-- Product 4 -->
-            <div class="product-card bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 animate-fadeInUp"
-                data-category="fasteners" style="animation-delay:0.6s">
-                <div class="p-4">
-                    <img src="https://images.unsplash.com/photo-1581094271901-8022df4466f9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80"
-                        alt="Heavy Duty Bolts" class="product-image w-full">
-                </div>
-                <div class="px-5 pb-5">
-                    <a href="product.html?name=Heavy%20Duty%20Bolts" class="cursor-pointer">
-                        <h5 class="text-xl font-semibold tracking-tight text-gray-900">Heavy Duty Bolts</h5>
-                    </a>
-                    <div class="flex items-center mt-2.5 mb-5">
-                        <div class="flex items-center space-x-1">
-                            <i class="fas fa-star text-yellow-400"></i>
-                            <i class="fas fa-star text-yellow-400"></i>
-                            <i class="fas fa-star text-yellow-400"></i>
-                            <i class="fas fa-star text-yellow-400"></i>
-                            <i class="fas fa-star-half-alt text-yellow-400"></i>
-                            <span
-                                class="bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded ml-3">4.6</span>
-                        </div>
-                    </div>
-                    <div class="flex justify-between items-center">
-                        <span class="text-2xl font-bold text-gray-900">$18.99</span>
-                    </div>
-                </div>
-            </div>
-            <!-- Product 4 -->
-            <div class="product-card bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 animate-fadeInUp"
-                data-category="fasteners" style="animation-delay:0.7s">
-                <div class="p-4">
-                    <img src="https://images.unsplash.com/photo-1581094271901-8022df4466f9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80"
-                        alt="Heavy Duty Bolts" class="product-image w-full">
-                </div>
-                <div class="px-5 pb-5">
-                    <a href="product.html?name=Heavy%20Duty%20Bolts" class="cursor-pointer">
-                        <h5 class="text-xl font-semibold tracking-tight text-gray-900">Heavy Duty Bolts</h5>
-                    </a>
-                    <div class="flex items-center mt-2.5 mb-5">
-                        <div class="flex items-center space-x-1">
-                            <i class="fas fa-star text-yellow-400"></i>
-                            <i class="fas fa-star text-yellow-400"></i>
-                            <i class="fas fa-star text-yellow-400"></i>
-                            <i class="fas fa-star text-yellow-400"></i>
-                            <i class="fas fa-star-half-alt text-yellow-400"></i>
-                            <span
-                                class="bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded ml-3">4.6</span>
-                        </div>
-                    </div>
-                    <div class="flex justify-between items-center">
-                        <span class="text-2xl font-bold text-gray-900">$18.99</span>
-                    </div>
-                </div>
-            </div>
-            <!-- Product 4 -->
-            <div class="product-card bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 animate-fadeInUp"
-                data-category="fasteners" style="animation-delay:0.8s">
-                <div class="p-4">
-                    <img src="https://images.unsplash.com/photo-1581094271901-8022df4466f9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80"
-                        alt="Heavy Duty Bolts" class="product-image w-full">
-                </div>
-                <div class="px-5 pb-5">
-                    <a href="product.html?name=Heavy%20Duty%20Bolts" class="cursor-pointer">
-                        <h5 class="text-xl font-semibold tracking-tight text-gray-900">Heavy Duty Bolts</h5>
-                    </a>
-                    <div class="flex items-center mt-2.5 mb-5">
-                        <div class="flex items-center space-x-1">
-                            <i class="fas fa-star text-yellow-400"></i>
-                            <i class="fas fa-star text-yellow-400"></i>
-                            <i class="fas fa-star text-yellow-400"></i>
-                            <i class="fas fa-star text-yellow-400"></i>
-                            <i class="fas fa-star-half-alt text-yellow-400"></i>
-                            <span
-                                class="bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded ml-3">4.6</span>
-                        </div>
-                    </div>
-                    <div class="flex justify-between items-center">
-                        <span class="text-2xl font-bold text-gray-900">$18.99</span>
-                    </div>
-                </div>
-            </div>
-            <!-- Product 4 -->
-            <div class="product-card bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300"
-                data-category="fasteners">
-                <div class="p-4">
-                    <img src="https://images.unsplash.com/photo-1581094271901-8022df4466f9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80"
-                        alt="Heavy Duty Bolts" class="product-image w-full">
-                </div>
-                <div class="px-5 pb-5">
-                    <a href="#"
-                        onclick="showProductDetails('Heavy Duty Bolts', 'fasteners', 'Grade 8 heavy duty bolts with zinc plating for corrosion resistance. Available in various sizes from M6 to M20.', '4.6', 'https://images.unsplash.com/photo-1581094271901-8022df4466f9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80')">
-                        <h5 class="text-xl font-semibold tracking-tight text-gray-900">Heavy Duty Bolts</h5>
-                    </a>
-                    <div class="flex items-center mt-2.5 mb-5">
-                        <div class="flex items-center space-x-1">
-                            <i class="fas fa-star text-yellow-400"></i>
-                            <i class="fas fa-star text-yellow-400"></i>
-                            <i class="fas fa-star text-yellow-400"></i>
-                            <i class="fas fa-star text-yellow-400"></i>
-                            <i class="fas fa-star-half-alt text-yellow-400"></i>
-                            <span
-                                class="bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded ml-3">4.6</span>
-                        </div>
-                    </div>
-                    <div class="flex justify-between items-center">
-                        <span class="text-2xl font-bold text-gray-900">$18.99</span>
-                    </div>
-                </div>
-            </div>
+            
         </div>
     </div>
 
@@ -676,67 +485,84 @@
     </div>
 
     <!-- Footer -->
-    <footer class="bg-gray-800">
-        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
-                <div>
-                    <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase">Products</h3>
-                    <ul class="mt-4 space-y-4">
-                        <li><a href="#" class="text-base text-gray-300 hover:text-white">Screws</a></li>
-                        <li><a href="#" class="text-base text-gray-300 hover:text-white">Epoxy</a></li>
-                        <li><a href="#" class="text-base text-gray-300 hover:text-white">Fasteners</a></li>
-                        <li><a href="#" class="text-base text-gray-300 hover:text-white">Tools</a></li>
+    <footer class="bg-gray-900">
+        <div class="max-w-7xl mx-auto pt-12 px-4 sm:px-6 lg:px-8">
+            <!-- Top Footer Section -->
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 pb-12 border-b border-gray-800">
+                <!-- Company Info Section -->
+                <div class="md:col-span-4">
+                    <div class="flex items-center mb-6">
+                        <img class="h-16 w-auto" src="img/logo/logo1.jpg" alt="Tista Ventures">
+                    </div>
+                    <p class="text-gray-400 mb-6">Tista Ventures is a leading provider of premium hardware solutions, serving industries with quality products and exceptional service since 1995.</p>
+                    <div class="flex space-x-4">
+                        <a href="https://facebook.com/tistaventures" class="text-gray-400 hover:text-blue-500 transition-colors duration-300">
+                            <i class="fab fa-facebook-f text-xl"></i>
+                        </a>
+                        <a href="https://twitter.com/tistaventures" class="text-gray-400 hover:text-blue-400 transition-colors duration-300">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="https://linkedin.com/company/tistaventures" class="text-gray-400 hover:text-blue-600 transition-colors duration-300">
+                            <i class="fab fa-linkedin-in text-xl"></i>
+                        </a>
+                        <a href="https://instagram.com/tistaventures" class="text-gray-400 hover:text-pink-500 transition-colors duration-300">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="md:col-span-2">
+                    <h3 class="text-lg font-semibold text-white mb-6">Quick Links</h3>
+                    <ul class="space-y-4">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Home</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition-colors duration-300">About</a></li>
+                        <li><a href="#products" class="text-gray-400 hover:text-white transition-colors duration-300">Products</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors duration-300">Contact</a></li>
                     </ul>
                 </div>
-                <div>
-                    <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase">Company</h3>
-                    <ul class="mt-4 space-y-4">
-                        <li><a href="#" class="text-base text-gray-300 hover:text-white">About</a></li>
-                        <li><a href="#" class="text-base text-gray-300 hover:text-white">Blog</a></li>
-                        <li><a href="#" class="text-base text-gray-300 hover:text-white">Careers</a></li>
-                        <li><a href="#" class="text-base text-gray-300 hover:text-white">Partners</a></li>
+
+                <!-- Products -->
+                <div class="md:col-span-3">
+                    <h3 class="text-lg font-semibold text-white mb-6">Our Products</h3>
+                    <ul class="space-y-4">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Frame And General Purpose Fittings</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Wooden Construction Screws</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Chemical Anchors</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Premium Series Anchor And Fasteners</a></li>
                     </ul>
                 </div>
-                <div>
-                    <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase">Support</h3>
-                    <ul class="mt-4 space-y-4">
-                        <li><a href="#" class="text-base text-gray-300 hover:text-white">Help Center</a></li>
-                        <li><a href="#" class="text-base text-gray-300 hover:text-white">Shipping</a></li>
-                        <li><a href="#" class="text-base text-gray-300 hover:text-white">Returns</a></li>
-                        <li><a href="#" class="text-base text-gray-300 hover:text-white">Contact</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase">Connect</h3>
-                    <ul class="mt-4 space-y-4">
-                        <li><a href="#" class="text-base text-gray-300 hover:text-white">Facebook</a></li>
-                        <li><a href="#" class="text-base text-gray-300 hover:text-white">Twitter</a></li>
-                        <li><a href="#" class="text-base text-gray-300 hover:text-white">LinkedIn</a></li>
-                        <li><a href="#" class="text-base text-gray-300 hover:text-white">Instagram</a></li>
+
+                <!-- Contact Info -->
+                <div class="md:col-span-3">
+                    <h3 class="text-lg font-semibold text-white mb-6">Contact Us</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start space-x-3">
+                            <i class="fas fa-map-marker-alt text-gray-400 mt-1"></i>
+                            <span class="text-gray-400">123 Industrial Area, Mumbai, Maharashtra, India</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <i class="fas fa-phone text-gray-400"></i>
+                            <span class="text-gray-400">+91 12345 67890</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <i class="fas fa-envelope text-gray-400"></i>
+                            <span class="text-gray-400">info@tistaventures.com</span>
+                        </li>
                     </ul>
                 </div>
             </div>
-            <div class="mt-8 border-t border-gray-700 pt-8 md:flex md:items-center md:justify-between">
-                <div class="flex space-x-6 md:order-2">
-                    <a href="#" class="text-gray-400 hover:text-gray-300">
-                        <span class="sr-only">Facebook</span>
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a href="#" class="text-gray-400 hover:text-gray-300">
-                        <span class="sr-only">Instagram</span>
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="#" class="text-gray-400 hover:text-gray-300">
-                        <span class="sr-only">Twitter</span>
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                    <a href="#" class="text-gray-400 hover:text-gray-300">
-                        <span class="sr-only">LinkedIn</span>
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
+
+            <!-- Bottom Footer Section -->
+            <div class="py-6">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400 text-sm">&copy; 2023 Tista Ventures. All rights reserved.</p>
+                    <div class="flex space-x-6 mt-4 md:mt-0">
+                        <a href="#" class="text-sm text-gray-400 hover:text-white transition-colors duration-300">Privacy Policy</a>
+                        <a href="#" class="text-sm text-gray-400 hover:text-white transition-colors duration-300">Terms of Service</a>
+                        <a href="#" class="text-sm text-gray-400 hover:text-white transition-colors duration-300">Cookie Policy</a>
+                    </div>
                 </div>
-                <p class="mt-8 text-base text-gray-400 md:mt-0 md:order-1">&copy; 2023 Tista Ventures. All rights
-                    reserved.</p>
             </div>
         </div>
     </footer>
@@ -744,10 +570,7 @@
     <script>
         // Hero Section Carousel
         const heroImages = [
-            'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
-            'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80',
-            'https://images.unsplash.com/photo-1465101046530-73398c7f28ca?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80',
-            'https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80'
+            'img/hero/hero1.jpg'
         ];
         let heroIndex = 0;
         const heroSection = document.getElementById('hero');
