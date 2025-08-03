@@ -114,7 +114,9 @@
             <div class="flex justify-between h-28">
                 <div class="flex items-center">
                     <div class="flex-shrink-0 flex items-center">
-                        <img class="h-20 w-auto object-contain" src="img/logo/logo1.jpg" alt="Tista Ventures">
+                        <a href="index.html">
+                            <img class="h-20 w-auto object-contain" src="img/logo/logo1.jpg" alt="Tista Ventures">
+                        </a>
                     </div>
                     <div class="hidden md:ml-8 md:flex md:space-x-8">
 
@@ -141,24 +143,94 @@
     </nav>
 
     <!-- Hero Section -->
-    <div id="hero" class="hero-section text-white">
-        <div class="hero-overlay"></div>
-        <div class="hero-content max-w-3xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-            <h1 class="text-4xl md:text-6xl font-extrabold sm:tracking-tight drop-shadow-lg ">Premium Hardware Solutions
-            </h1>
+    <div id="hero" class="hero-section relative h-[600px] overflow-hidden text-white">
+        <!-- Background images will be inserted here by JavaScript -->
+        <div class="hero-overlay absolute inset-0 bg-gradient-to-b from-black/50 to-black/50"></div>
+        <div class="hero-content relative z-10 max-w-3xl mx-auto text-center px-4 sm:px-6 lg:px-8 pt-[150px]">
+            <h1 class="text-4xl md:text-6xl font-extrabold sm:tracking-tight drop-shadow-lg">Premium Hardware Solutions</h1>
             <p class="mt-6 text-2xl md:text-3xl font-medium drop-shadow-lg">High-quality screws, epoxy, and hardware
                 products for industrial and commercial applications</p>
             <div class="mt-10 flex justify-center gap-4">
-                <a href="#products"
+                <a href="product.html"
                     class="inline-flex items-center justify-center px-7 py-4 border border-transparent text-lg font-semibold rounded-md text-blue-600 bg-white hover:bg-blue-50 shadow-lg transition">Explore
                     Products</a>
-                <a href="#contact"
+                <a href="contact.html"
                     class="inline-flex items-center justify-center px-7 py-4 border border-transparent text-lg font-semibold rounded-md text-white bg-blue-600 bg-opacity-80 hover:bg-opacity-100 shadow-lg transition">Contact
                     Us</a>
             </div>
         </div>
-        <div class="hero-carousel-controls"></div>
+        <div class="hero-carousel-controls absolute bottom-5 left-1/2 transform -translate-x-1/2 flex gap-2 z-20"></div>
     </div>
+    
+    <style>
+        .hero-section {
+            background-size: cover;
+            background-position: center;
+            transition: background-image 0.5s ease-in-out;
+        }
+        .hero-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.1);
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            display: inline-block;
+        }
+        .hero-dot.active {
+            background-color: white;
+        }
+        .hero-carousel-controls {
+            display: flex;
+            gap: 8px;
+            justify-content: center;
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 20;
+        }
+    </style>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const heroImages = [
+                'img/hero/hero1.jpg',
+                'https://5.imimg.com/data5/SELLER/Default/2025/3/495909056/ZJ/YH/FO/224699900/sfsfkko-500x500.jpeg',
+                'https://5.imimg.com/data5/SELLER/Default/2025/3/495908901/WM/KG/TZ/224699900/cmdadklkdop-500x500.jpeg',
+                'https://5.imimg.com/data5/SELLER/Default/2025/3/495908878/IM/LQ/EC/224699900/mkkop-500x500.jpeg',
+                'https://5.imimg.com/data5/SELLER/Default/2025/3/495908937/KL/UQ/YP/224699900/fsfsoflfp-500x500.jpeg'
+            ];
+            
+            const heroSection = document.getElementById('hero');
+            let currentIndex = 0;
+            const dotsContainer = document.querySelector('#hero .hero-carousel-controls');
+            dotsContainer.innerHTML = ''; // Clear any existing dots
+
+            function setHeroBg(idx) {
+                heroSection.style.backgroundImage = `linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.45)), url('${heroImages[idx]}')`;
+                dotsContainer.querySelectorAll('.hero-dot').forEach((dot, i) => {
+                    dot.classList.toggle('active', i === idx);
+                });
+            }
+            function nextHeroBg() {
+                heroIndex = (heroIndex + 1) % heroImages.length;
+                setHeroBg(heroIndex);
+            }
+            // Create dots for each image
+            heroImages.forEach((img, i) => {
+                const dot = document.createElement('span');
+                dot.className = 'hero-dot' + (i === 0 ? ' active' : '');
+                dot.addEventListener('click', () => {
+                    heroIndex = i;
+                    setHeroBg(heroIndex);
+                });
+                dotsContainer.appendChild(dot);
+            });
+            setHeroBg(heroIndex);
+            setInterval(nextHeroBg, 5000);
+        });
+    </script>
 
     <!-- Product Categories -->
     <div id="products" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -264,7 +336,8 @@
 
             <!-- Premium Series Anchor And Fasteners -->
             <div class="product-card bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 animate-fadeInUp"
-                style="max-width: 905px" data-category="Premium Series Anchor And Fasteners" style="animation-delay:0.1s">
+                style="max-width: 905px" data-category="Premium Series Anchor And Fasteners"
+                style="animation-delay:0.1s">
                 <div class="p-4">
                     <img src="https://5.imimg.com/data5/SELLER/Default/2025/3/499723181/RE/WQ/GK/224699900/stainless-steel-kps-fast-8-s-a4-csk-head-screw-1000x1000.jpeg"
                         alt="Ss 316 Anchor Fastener" class="product-image w-full">
@@ -347,14 +420,16 @@
 
             <!-- Screws And Fasteners For Windows And Doors -->
             <div class="product-card bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 animate-fadeInUp"
-                style="max-width: 905px" data-category="Screws And Fasteners For Windows And Doors" style="animation-delay:0.1s">
+                style="max-width: 905px" data-category="Screws And Fasteners For Windows And Doors"
+                style="animation-delay:0.1s">
                 <div class="p-4">
                     <img src="https://5.imimg.com/data5/SELLER/Default/2025/3/495907887/BX/ZJ/CF/224699900/self-drilling-screw-without-ribs-500x500.jpg"
                         alt="Self Drilling Without Ribs Screw" class="product-image w-full">
                 </div>
                 <div class="px-5 pb-5">
                     <a href="product.html">
-                        <h5 class="text-xl font-semibold tracking-tight text-gray-900">Self Drilling Without Ribs Screw</h5>
+                        <h5 class="text-xl font-semibold tracking-tight text-gray-900">Self Drilling Without Ribs Screw
+                        </h5>
                     </a>
                     <div class="flex items-center mt-2.5 mb-5">
                         <div class="flex items-center space-x-1">
@@ -382,7 +457,8 @@
                 </div>
                 <div class="px-5 pb-5">
                     <a href="product.html">
-                        <h5 class="text-xl font-semibold tracking-tight text-gray-900">Galvanized Stainless Steel A4 Wedge Anchors</h5>
+                        <h5 class="text-xl font-semibold tracking-tight text-gray-900">Galvanized Stainless Steel A4
+                            Wedge Anchors</h5>
                     </a>
                     <div class="flex items-center mt-2.5 mb-5">
                         <div class="flex items-center space-x-1">
@@ -403,14 +479,16 @@
 
             <!-- Fasting System For Roof And Wall Cladding -->
             <div class="product-card bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 animate-fadeInUp"
-                style="max-width: 905px" data-category="Fasting System For Roof And Wall Cladding" style="animation-delay:0.1s">
+                style="max-width: 905px" data-category="Fasting System For Roof And Wall Cladding"
+                style="animation-delay:0.1s">
                 <div class="p-4">
                     <img src="https://5.imimg.com/data5/SELLER/Default/2025/3/495906310/ZM/PM/UM/224699900/wooden-substrate-self-drilling-screw-1000x1000.jpg"
                         alt="Wooden Substrate Self Drilling Screw" class="product-image w-full">
                 </div>
                 <div class="px-5 pb-5">
                     <a href="product.html">
-                        <h5 class="text-xl font-semibold tracking-tight text-gray-900">Wooden Substrate Self Drilling Screw</h5>
+                        <h5 class="text-xl font-semibold tracking-tight text-gray-900">Wooden Substrate Self Drilling
+                            Screw</h5>
                     </a>
                     <div class="flex items-center mt-2.5 mb-5">
                         <div class="flex items-center space-x-1">
@@ -659,10 +737,7 @@
         <div class="w-full h-[600px]">
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.35374075706!2d73.02189517580653!3d19.09213135146472!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c11b94887361%3A0x2bdbc4cd46dba316!2s163%2C%20Pawane%20Village%20Midc%20Rd%2C%20T.T.C.%20Industrial%20Area%2C%20MIDC%20Industrial%20Area%2C%20Pawne%2C%20Navi%20Mumbai%2C%20Maharashtra%20400705!5e0!3m2!1sen!2sin!4v1753724639933!5m2!1sen!2sin"
-                class="w-full h-full" 
-                style="border:0;" 
-                allowfullscreen="" 
-                loading="lazy"
+                class="w-full h-full" style="border:0;" allowfullscreen="" loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade">
             </iframe>
         </div>
@@ -704,13 +779,14 @@
                 <div class="md:col-span-2">
                     <h3 class="text-lg font-semibold text-white mb-6">Quick Links</h3>
                     <ul class="space-y-4">
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Home</a>
+                        <li><a href="index.html"
+                                class="text-gray-400 hover:text-white transition-colors duration-300">Home</a>
                         </li>
-                        <li><a href="#about"
+                        <li><a href="about.html"
                                 class="text-gray-400 hover:text-white transition-colors duration-300">About</a></li>
-                        <li><a href="#products"
+                        <li><a href="product.html"
                                 class="text-gray-400 hover:text-white transition-colors duration-300">Products</a></li>
-                        <li><a href="#contact"
+                        <li><a href="contact.html"
                                 class="text-gray-400 hover:text-white transition-colors duration-300">Contact</a></li>
                     </ul>
                 </div>
@@ -719,14 +795,31 @@
                 <div class="md:col-span-3">
                     <h3 class="text-lg font-semibold text-white mb-6">Our Products</h3>
                     <ul class="space-y-4">
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Frame And
+                        <li><a href="product.html"
+                                class="text-gray-400 hover:text-white transition-colors duration-300">Frame And
                                 General Purpose Fittings</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Wooden
+                        <li><a href="product.html"
+                                class="text-gray-400 hover:text-white transition-colors duration-300">Wooden
                                 Construction Screws</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Chemical
+                        <li><a href="product.html"
+                                class="text-gray-400 hover:text-white transition-colors duration-300">Chemical
                                 Anchors</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Premium
+                        <li><a href="product.html"
+                                class="text-gray-400 hover:text-white transition-colors duration-300">Premium
                                 Series Anchor And Fasteners</a></li>
+                        <li><a href="product.html"
+                                class="text-gray-400 hover:text-white transition-colors duration-300">Economical Hammer
+                                Drive Fixing</a></li>
+                        <li><a href="product.html"
+                                class="text-gray-400 hover:text-white transition-colors duration-300">Screws And
+                                Fasteners For Windows And Doors</a></li>
+                        <li><a href="product.html"
+                                class="text-gray-400 hover:text-white transition-colors duration-300">Mechanical Wedge
+                                Anchor</a></li>
+                        <li><a href="product.html"
+                                class="text-gray-400 hover:text-white transition-colors duration-300">Fasting System For
+                                Roof And Wall Cladding
+                            </a></li>
                     </ul>
                 </div>
 
@@ -750,21 +843,6 @@
                 </div>
             </div>
 
-            <!-- Bottom Footer Section -->
-            <div class="py-6">
-                <div class="flex flex-col md:flex-row justify-between items-center">
-                    <p class="text-gray-400 text-sm">&copy; 2023 Tista Ventures. All rights reserved.</p>
-                    <div class="flex space-x-6 mt-4 md:mt-0">
-                        <a href="#"
-                            class="text-sm text-gray-400 hover:text-white transition-colors duration-300">Privacy
-                            Policy</a>
-                        <a href="#" class="text-sm text-gray-400 hover:text-white transition-colors duration-300">Terms
-                            of Service</a>
-                        <a href="#" class="text-sm text-gray-400 hover:text-white transition-colors duration-300">Cookie
-                            Policy</a>
-                    </div>
-                </div>
-            </div>
         </div>
     </footer>
 
@@ -779,11 +857,12 @@
         ];
         let heroIndex = 0;
         const heroSection = document.getElementById('hero');
-        const heroDots = document.createElement('div');
-        heroDots.className = 'hero-carousel-controls';
+        const dotsContainer = document.querySelector('#hero .hero-carousel-controls');
+        dotsContainer.innerHTML = ''; // Clear any existing dots
+
         function setHeroBg(idx) {
-            heroSection.style.backgroundImage = `linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url('₹{heroImages[idx]}')`;
-            document.querySelectorAll('.hero-dot').forEach((dot, i) => {
+            heroSection.style.backgroundImage = `linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.45)), url('${heroImages[idx]}')`;
+            dotsContainer.querySelectorAll('.hero-dot').forEach((dot, i) => {
                 dot.classList.toggle('active', i === idx);
             });
         }
@@ -791,7 +870,7 @@
             heroIndex = (heroIndex + 1) % heroImages.length;
             setHeroBg(heroIndex);
         }
-        // Dots
+        // Create dots for each image
         heroImages.forEach((img, i) => {
             const dot = document.createElement('span');
             dot.className = 'hero-dot' + (i === 0 ? ' active' : '');
@@ -799,9 +878,8 @@
                 heroIndex = i;
                 setHeroBg(heroIndex);
             });
-            heroDots.appendChild(dot);
+            dotsContainer.appendChild(dot);
         });
-        document.querySelector('#hero .hero-carousel-controls').replaceWith(heroDots);
         setHeroBg(heroIndex);
         setInterval(nextHeroBg, 5000);
         // Smooth scroll for nav links
