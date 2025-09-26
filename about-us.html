@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Rustic Roots Emporium</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f9f7f0;
+        }
+        
+        .rustic-texture {
+            background-image: url('http://static.photos/textures/1200x630/5');
+            background-blend-mode: multiply;
+            background-color: rgba(245, 238, 220, 0.9);
+        }
+        
+        .nav-link::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background: #8b5a2b;
+            transition: width .3s;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .team-member:hover {
+            transform: translateY(-5px);
+            transition: transform 0.3s ease;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+    <!-- Top Navbar -->
+    <div class="bg-amber-900 text-amber-50 py-2 px-4 sticky top-0 z-50">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
+            <div class="flex space-x-4 mb-2 md:mb-0">
+                <a href="mailto:hello@rusticroots.com" class="flex items-center text-sm hover:text-amber-200 transition">
+                    <i data-feather="mail" class="w-4 h-4 mr-1"></i> hello@rusticroots.com
+                </a>
+                <a href="tel:+1234567890" class="flex items-center text-sm hover:text-amber-200 transition">
+                    <i data-feather="phone" class="w-4 h-4 mr-1"></i> +1 (234) 567-890
+                </a>
+            </div>
+            <div class="flex space-x-4">
+                <a href="#" class="hover:text-amber-200 transition"><i data-feather="facebook"></i></a>
+                <a href="#" class="hover:text-amber-200 transition"><i data-feather="instagram"></i></a>
+                <a href="#" class="hover:text-amber-200 transition"><i data-feather="twitter"></i></a>
+                <a href="#" class="hover:text-amber-200 transition"><i data-feather="linkedin"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navbar -->
+    <nav class="bg-white shadow-md sticky top-12 z-40">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="index.html" class="flex items-center">
+                <span class="font-playfair text-2xl font-bold text-amber-900">Rustic Roots</span>
+            </a>
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="nav-link font-medium text-amber-900">Home</a>
+                <a href="about.html" class="nav-link font-medium text-amber-900 border-b-2 border-amber-900">About Us</a>
+                <a href="products.html" class="nav-link font-medium text-amber-900">Products</a>
+                <a href="contact.html" class="nav-link font-medium text-amber-900">Contact</a>
+            </div>
+            <button class="md:hidden">
+                <i data-feather="menu"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <div class="rustic-texture py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4 text-amber-900 font-playfair">Our Story</h1>
+            <p class="text-lg text-amber-800 max-w-3xl mx-auto">Discover the passion and craftsmanship behind Rustic Roots Emporium</p>
+        </div>
+    </div>
+
+    <!-- Our Story Section -->
+    <div class="container mx-auto px-4 py-16">
+        <div class="flex flex-col md:flex-row items-center gap-12">
+            <div class="md:w-1/2">
+                <img src="http://static.photos/craft/640x360/12" alt="Our Workshop" class="rounded-lg shadow-lg">
+            </div>
+            <div class="md:w-1/2">
+                <h2 class="text-3xl font-bold mb-6 text-amber-900 font-playfair">From Humble Beginnings</h2>
+                <p class="text-gray-600 mb-4">Founded in 2010 by artisans Sarah and Michael Thompson, Rustic Roots began as a small workshop in the countryside. What started as a passion project creating custom furniture for friends and family has blossomed into a thriving community of craftspeople dedicated to preserving traditional techniques.</p>
+                <p class="text-gray-600 mb-4">Our philosophy is simple: create beautiful, functional pieces that honor the natural materials we work with. Each item in our collection tells a story of craftsmanship, sustainability, and connection to nature.</p>
+                <p class="text-gray-600">Today, our team of 15 skilled artisans continues this tradition, blending time-honored methods with contemporary design to create pieces that will last for generations.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Our Values Section -->
+    <div class="rustic-texture py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-amber-900 font-playfair">Our Values</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-lg shadow-md text-center">
+                    <div class="bg-amber-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-feather="leaf" class="w-8 h-8 text-amber-700"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-amber-900">Sustainability</h3>
+                    <p class="text-gray-600">We source materials responsibly, using reclaimed wood and natural fibers whenever possible. Our production processes minimize waste and environmental impact.</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-md text-center">
+                    <div class="bg-amber-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-feather="heart" class="w-8 h-8 text-amber-700"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-amber-900">Craftsmanship</h3>
+                    <p class="text-gray-600">Every piece is meticulously handcrafted by skilled artisans who take pride in their work. We believe in quality over quantity, creating heirloom pieces built to last.</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-md text-center">
+                    <div class="bg-amber-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-feather="users" class="w-8 h-8 text-amber-700"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-amber-900">Community</h3>
+                    <p class="text-gray-600">We support local artisans and suppliers, and regularly host workshops to share traditional crafting techniques with the next generation of makers.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Meet the Team Section -->
+    <div class="container mx-auto px-4 py-16">
+        <h2 class="text-3xl font-bold text-center mb-12 text-amber-900 font-playfair">Meet Our Artisans</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="team-member bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300">
+                <img src="http://static.photos/people/640x360/1" alt="Sarah Thompson" class="w-full h-64 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-1 text-amber-900">Sarah Thompson</h3>
+                    <p class="text-amber-700 mb-3">Co-Founder & Master Potter</p>
+                    <p class="text-gray-600">With over 20 years of experience, Sarah specializes in creating unique pottery pieces using traditional wheel-throwing techniques.</p>
+                </div>
+            </div>
+            <div class="team-member bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300">
+                <img src="http://static.photos/people/640x360/2" alt="Michael Thompson" class="w-full h-64 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-1 text-amber-900">Michael Thompson</h3>
+                    <p class="text-amber-700 mb-3">Co-Founder & Woodworker</p>
+                    <p class="text-gray-600">Michael transforms reclaimed wood into beautiful furniture, combining traditional joinery with modern design sensibilities.</p>
+                </div>
+            </div>
+            <div class="team-member bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300">
+                <img src="http://static.photos/people/640x360/3" alt="Elena Rodriguez" class="w-full h-64 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-1 text-amber-900">Elena Rodriguez</h3>
+                    <p class="text-amber-700 mb-3">Textile Artist</p>
+                    <p class="text-gray-600">Elena creates beautiful textiles using natural dyes and traditional weaving techniques learned from her grandmother.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-amber-900 text-amber-50 py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 font-playfair">Rustic Roots</h3>
+                    <p class="text-amber-200">Bringing nature's beauty into your home through handcrafted goods.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="hover:text-amber-200 transition">Home</a></li>
+                        <li><a href="about.html" class="hover:text-amber-200 transition">About Us</a></li>
+                        <li><a href="products.html" class="hover:text-amber-200 transition">Products</a></li>
+                        <li><a href="contact.html" class="hover:text-amber-200 transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Contact Us</h4>
+                    <address class="not-italic">
+                        <p class="mb-2">123 Forest Lane</p>
+                        <p class="mb-2">Woodland, CA 95695</p>
+                        <p class="mb-2">hello@rusticroots.com</p>
+                        <p>+1 (234) 567-890</p>
+                    </address>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="hover:text-amber-200 transition"><i data-feather="facebook"></i></a>
+                        <a href="#" class="hover:text-amber-200 transition"><i data-feather="instagram"></i></a>
+                        <a href="#" class="hover:text-amber-200 transition"><i data-feather="twitter"></i></a>
+                        <a href="#" class="hover:text-amber-200 transition"><i data-feather="pinterest"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-amber-800 mt-8 pt-8 text-center text-sm text-amber-200">
+                <p>&copy; 2023 Rustic Roots Emporium. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Feather Icons
+        feather.replace();
+    </script>
+</body>
+</html>
