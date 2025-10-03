@@ -22,185 +22,7 @@
     </script>
     <script src="https://unpkg.com/feather-icons"></script>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-    <style>
-        .hero-pattern {
-            background-image: radial-gradient(circle, #f0f9ff 0%, #e0f2fe 100%);
-        }
-
-        .gradient-border {
-            border: 2px solid transparent;
-            background: linear-gradient(white, white) padding-box,
-                linear-gradient(to right, #4DA8DA, #64748b) border-box;
-        }
-
-        .product-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
-        }
-
-        .main-navbar {
-            transition: all 0.3s ease;
-        }
-
-        .main-navbar.navbar-scrolled {
-            box-shadow: 0 4px 12px rgba(68, 40, 192, 0.25);
-            background: #fff;
-            opacity: 0.95;
-            transform: translateY(0);
-            border-radius: 0;
-            padding: 0.25rem 0;
-        }
-
-        .main-navbar .nav-link,
-        .main-navbar a,
-        .main-navbar .mobile-menu a {
-            font-size: 1.1rem !important;
-            font-weight: 600;
-        }
-        
-        /* New styles for full-width hero with overlay */
-        .hero-full {
-            position: relative;
-            height: 70vh;
-            min-height: 500px;
-            background-image: url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            align-items: center;
-        }
-        
-        .hero-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.5);
-        }
-        
-        .hero-content {
-            position: relative;
-            z-index: 10;
-            color: white;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-        
-        /* Improved Top info bar styles for mobile */
-        .top-info-bar {
-            background-color: #1e293b;
-            color: white;
-            padding: 0.5rem 0;
-            font-size: 0.875rem;
-        }
-        
-        .info-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 1rem;
-        }
-        
-        .info-item {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            white-space: nowrap;
-        }
-        
-        .info-item i {
-            width: 16px;
-            height: 16px;
-            flex-shrink: 0;
-        }
-        
-        .social-icons {
-            display: flex;
-            gap: 0.75rem;
-            align-items: center;
-        }
-        
-        .social-icons a {
-            color: #cbd5e1;
-            transition: color 0.3s ease;
-        }
-        
-        .social-icons a:hover {
-            color: #2563eb;
-        }
-        
-        /* Adjusted logo styles for sleeker navbar */
-        .logo-container img {
-            height: 3.5rem; /* Reduced from 6rem to 3.5rem */
-            width: auto;
-            transition: height 0.3s ease;
-        }
-        
-        .navbar-scrolled .logo-container img {
-            height: 2.5rem; /* Even smaller when scrolled */
-        }
-        
-        /* Mobile-specific styles */
-        @media (max-width: 768px) {
-            .info-content {
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 0.75rem;
-                padding: 0.5rem;
-            }
-            
-            .info-item {
-                flex: 1 0 45%; /* Two items per row on mobile */
-                justify-content: center;
-                min-width: 0;
-                overflow: hidden;
-                text-overflow: ellipsis;
-            }
-            
-            .info-item span {
-                overflow: hidden;
-                text-overflow: ellipsis;
-                white-space: nowrap;
-            }
-            
-            .social-icons {
-                order: -1; /* Move social icons to top on mobile */
-                width: 100%;
-                justify-content: center;
-                padding-bottom: 0.5rem;
-                border-bottom: 1px solid #374151;
-                margin-bottom: 0.5rem;
-            }
-            
-            .hero-full {
-                height: 60vh;
-            }
-            
-            .logo-container img {
-                height: 3rem; /* Smaller on mobile */
-            }
-            
-            .navbar-scrolled .logo-container img {
-                height: 2.25rem; /* Even smaller when scrolled on mobile */
-            }
-        }
-        
-        /* For very small screens */
-        @media (max-width: 480px) {
-            .info-item {
-                flex: 1 0 100%; /* One item per row on very small screens */
-                justify-content: flex-start;
-            }
-            
-            .info-content {
-                gap: 0.5rem;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body class="bg-white text-gray-800 font-sans">
@@ -247,14 +69,14 @@
 
     <!-- Navigation - Made Sleeker -->
     <nav class="bg-white shadow-md sticky top-0 z-50 main-navbar">
-        <div class="max-w-6xl mx-auto px-5 sm:px-6 lg:px-7">
-            <div class="flex justify-between h-32 items-center"> <!-- Reduced from h-36 to h-20 -->
+        <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-7 items-center">
+            <div class="flex justify-between items-center">
                 <div class="flex">
-                    <a href="index.html" class="flex-shrink-0 flex items-center h-20 logo-container">
+                    <a href="index.html" class="flex-shrink-0 flex items-center logo-container">
                         <img src="img/logo/logo1.jpg" alt="Tista Ventures LLP" class="rounded-lg">
                     </a>
                 </div>
-                <div class="hidden md:flex items-center space-x-6"> <!-- Reduced space-x-8 to space-x-6 -->
+                <div class="hidden md:flex items-center space-x-6">
                     <a href="index.html"
                         class="text-primary border-b-2 border-primary px-3 py-2 text-sm font-medium">Home</a>
                     <a href="products.html"
@@ -267,7 +89,7 @@
                 <div class="flex items-center md:hidden">
                     <button type="button"
                         class="mobile-menu-button inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-primary focus:outline-none">
-                        <i data-feather="menu" class="h-5 w-5"></i> <!-- Reduced icon size -->
+                        <i data-feather="menu" class="h-5 w-5"></i>
                     </button>
                 </div>
             </div>
@@ -489,15 +311,25 @@
         });
 
         // Animated sticky navbar on scroll (fade effect)
-        const mainNavbar = document.querySelector('nav');
+        const mainNavbar = document.querySelector('.main-navbar');
+        const navbarItems = document.querySelector('.main-navbar .flex.justify-between');
+
         let lastScrollY = window.scrollY;
         let ticking = false;
 
         function handleNavbarScroll() {
             if (window.scrollY > 60) {
                 mainNavbar.classList.add('navbar-scrolled');
+                // Reduce navbar height
+                mainNavbar.style.height = '60px';
+                navbarItems.style.height = '60px';
+                
+                // Logo size is already handled by CSS
             } else {
                 mainNavbar.classList.remove('navbar-scrolled');
+                // Reset navbar height
+                mainNavbar.style.height = '';
+                navbarItems.style.height = '';
             }
             ticking = false;
         }

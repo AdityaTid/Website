@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - Bolt & Bond Hardware Solutions</title>
-    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <title>Tista Ventures LLP</title>
+    <link rel="icon" type="image/x-icon" href="img/logo/logo1.jpg">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -21,66 +21,67 @@
         }
     </script>
     <script src="https://unpkg.com/feather-icons"></script>
-    <style>
-        .hero-pattern {
-            background-image: radial-gradient(circle, #f0f9ff 0%, #e0f2fe 100%);
-        }
-
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 8px;
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background: #2563eb;
-            border: 3px solid white;
-            box-shadow: 0 0 0 2px #2563eb;
-        }
-
-        .values-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
-        }
-
-        .main-navbar {
-            transition: box-shadow 0.5s, background 0.3s, opacity 0.5s, transform 0.5s;
-        }
-
-        .main-navbar.navbar-scrolled {
-            box-shadow: 0 6px 24px rgba(68, 40, 192, 0.45);
-            background: #fff;
-            opacity: 0.8;
-            transform: translateY(8px) scale(0.90);
-            border-radius: 60px 60px 60px 60px;
-        }
-
-        .main-navbar .nav-link,
-        .main-navbar a,
-        .main-navbar .mobile-menu a {
-            font-size: 1.30rem !important;
-            font-weight: 750;
-        }
-    </style>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body class="bg-white text-gray-800 font-sans">
-    <!-- Navigation -->
+    <!-- Top Information Bar - Improved for Mobile with Social Handles -->
+    <div class="top-info-bar">
+        <div class="info-content">
+            <!-- Social Media Icons -->
+            <div class="social-icons">
+                <a href="#" class="hover:text-primary">
+                    <i data-feather="facebook"></i>
+                </a>
+                <a href="#" class="hover:text-primary">
+                    <i data-feather="twitter"></i>
+                </a>
+                <a href="#" class="hover:text-primary">
+                    <i data-feather="instagram"></i>
+                </a>
+                <a href="#" class="hover:text-primary">
+                    <i data-feather="linkedin"></i>
+                </a>
+                <a href="#" class="hover:text-primary">
+                    <i data-feather="youtube"></i>
+                </a>
+            </div>
+            
+            <div class="info-item">
+                <i data-feather="phone" class="text-primary"></i>
+                <span>+91 98765 43210</span>
+            </div>
+            <div class="info-item">
+                <i data-feather="mail" class="text-primary"></i>
+                <span>info@tistaventures.com</span>
+            </div>
+            <div class="info-item">
+                <i data-feather="clock" class="text-primary"></i>
+                <span>Mon-Sat: 9:00AM-6:00PM</span>
+            </div>
+            <div class="info-item">
+                <i data-feather="truck" class="text-primary"></i>
+                <span>Free Shipping Above ₹2000</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation - Made Sleeker -->
     <nav class="bg-white shadow-md sticky top-0 z-50 main-navbar">
-        <div class="max-w-6xl mx-auto px-3 sm:px-4 lg:px-5">
-            <div class="flex justify-between h-29 items-center">
+        <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-7 items-center">
+            <div class="flex justify-between items-center">
                 <div class="flex">
-                    <a href="index.html" class="flex-shrink-0 flex items-center h-20">
-                        <img src="img/logo/logo1.jpg" alt="Tista Ventures LLP" class="h-16 rounded-lg">
+                    <a href="index.html" class="flex-shrink-0 flex items-center logo-container">
+                        <img src="img/logo/logo1.jpg" alt="Tista Ventures LLP" class="rounded-lg">
                     </a>
                 </div>
-                <div class="hidden md:flex items-center space-x-8">
+                <div class="hidden md:flex items-center space-x-6">
                     <a href="index.html"
-                        class="text-primary border-b-2 border-primary px-3 py-2 text-sm font-medium">Home</a>
+                        class="text-gray-600 hover:text-primary px-3 py-2 text-sm font-medium">Home</a>
                     <a href="products.html"
                         class="text-gray-600 hover:text-primary px-3 py-2 text-sm font-medium">Products</a>
-                    <a href="about-us.html" class="text-gray-600 hover:text-primary px-3 py-2 text-sm font-medium">About
+                    <a href="about-us.html" class="text-primary border-b-2 border-primary px-3 py-2 text-sm font-medium">About
                         Us</a>
                     <a href="contact-us.html"
                         class="text-gray-600 hover:text-primary px-3 py-2 text-sm font-medium">Contact</a>
@@ -88,7 +89,7 @@
                 <div class="flex items-center md:hidden">
                     <button type="button"
                         class="mobile-menu-button inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-primary focus:outline-none">
-                        <i data-feather="menu" class="h-6 w-6"></i>
+                        <i data-feather="menu" class="h-5 w-5"></i>
                     </button>
                 </div>
             </div>
@@ -97,11 +98,11 @@
         <div class="mobile-menu hidden md:hidden">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
                 <a href="index.html"
-                    class="block px-3 py-2 rounded-md text-base font-medium text-primary bg-blue-50">Home</a>
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-primary hover:bg-blue-50">Home</a>
                 <a href="products.html"
                     class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-primary hover:bg-blue-50">Products</a>
                 <a href="about.html"
-                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-primary hover:bg-blue-50">About
+                    class="text-primary border-b-2 border-primary px-3 py-2 text-sm font-medium">About
                     Us</a>
                 <a href="contact.html"
                     class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-primary hover:bg-blue-50">Contact</a>
