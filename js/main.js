@@ -39,6 +39,11 @@
   const prefersReduced =
     window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
+  const heroVideo = document.querySelector(".hero-video");
+  if (heroVideo && !prefersReduced) {
+    heroVideo.play().catch(() => {});
+  }
+
   if (!prefersReduced && revealEls.length && "IntersectionObserver" in window) {
     const io = new IntersectionObserver(
       (entries) => {
