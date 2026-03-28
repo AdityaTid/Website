@@ -44,6 +44,28 @@
     heroVideo.play().catch(() => {});
   }
 
+  document.querySelectorAll("video[data-autoplay-in-view]").forEach((video) => {
+    if (prefersReduced) {
+      video.removeAttribute("autoplay");
+      return;
+    }
+    if (!("IntersectionObserver" in window)) {
+      video.play().catch(() => {});
+      return;
+    }
+    const vo = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.play().catch(() => {});
+          }
+        });
+      },
+      { threshold: 0.2, rootMargin: "0px 0px -5% 0px" }
+    );
+    vo.observe(video);
+  });
+
   if (!prefersReduced && revealEls.length && "IntersectionObserver" in window) {
     const io = new IntersectionObserver(
       (entries) => {
