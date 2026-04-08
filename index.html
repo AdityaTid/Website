@@ -3,10 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="AYURRARTH — Ayurveda clinic and Panchakarma centre in India. Expert care by Dr. Mayuri, MD (Panchakarma). Book your consultation." />
+  <meta name="description" content="AYURRARTH — Ayurveda clinic and Panchakarma centre in India. Expert care by Dr. Mayuri Golap-Deshmukh, B.A.M.S., M.D. (Panchakarma), MUHS Nashik. Book your consultation." />
   <title>AYURRARTH | Ayurveda Clinic &amp; Panchakarma Centre</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://images.unsplash.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
@@ -15,12 +16,8 @@
 
   <header class="site-header" data-header>
     <div class="header-inner">
-      <a href="index.html" class="logo">
-        <span class="logo-mark" aria-hidden="true">ॐ</span>
-        <span class="logo-text">
-          <strong>AYURRARTH</strong>
-          <small>Ayurveda &amp; Panchakarma</small>
-        </span>
+      <a href="index.html" class="logo logo-with-image" aria-label="AYURRARTH home">
+        <img class="logo-image" src="media/logo.png" alt="AYURRARTH — Ayurveda and Panchakarma" width="240" height="72" decoding="async" />
       </a>
       <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>
         <span class="nav-toggle-bar"></span>
@@ -43,11 +40,15 @@
   <main id="main">
     <section id="home" class="hero">
       <div class="hero-media">
-        <video class="hero-video" autoplay muted loop playsinline poster="media/hero-1.jpeg">
-          <source src="media/clinic-intro.mp4" type="video/mp4" />
-        </video>
+        <div class="hero-slideshow" data-hero-slideshow aria-hidden="true">
+          <img class="hero-slide is-active" src="media/hero-1.jpeg" alt="" width="1920" height="1080" fetchpriority="high" decoding="async" />
+          <img class="hero-slide" src="media/hero-2.jpeg" alt="" width="1920" height="1080" decoding="async" />
+          <img class="hero-slide" src="media/gallery-06.jpeg" alt="" width="1200" height="1500" decoding="async" />
+          <img class="hero-slide" src="media/gallery-10.jpeg" alt="" width="1200" height="1500" decoding="async" />
+          <img class="hero-slide" src="media/gallery-07.jpeg" alt="" width="1200" height="1500" decoding="async" />
+          <img class="hero-slide" src="media/gallery-18.jpeg" alt="" width="1200" height="1500" decoding="async" />
+        </div>
         <div class="hero-overlay" aria-hidden="true"></div>
-        <div class="hero-pattern" aria-hidden="true"></div>
       </div>
       <div class="hero-content wrap">
         <p class="hero-eyebrow animate-in" data-animate>Authentic Ayurveda · India</p>
@@ -63,16 +64,16 @@
         </div>
         <div class="hero-cards animate-in" data-animate style="--d: 0.32s">
           <div class="stat-card">
-            <span class="stat-value">10–2</span>
-            <span class="stat-label">Morning hours</span>
+            <span class="stat-value">9:30–9</span>
+            <span class="stat-label">Open daily</span>
           </div>
           <div class="stat-card">
-            <span class="stat-value">5–8</span>
-            <span class="stat-label">Evening hours</span>
+            <span class="stat-value">7</span>
+            <span class="stat-label">Days a week</span>
           </div>
           <div class="stat-card stat-card-accent">
             <span class="stat-value">Sun</span>
-            <span class="stat-label">Closed</span>
+            <span class="stat-label">Open</span>
           </div>
         </div>
       </div>
@@ -87,33 +88,85 @@
         <div class="section-head">
           <p class="section-eyebrow" data-reveal>Explore</p>
           <h2 class="section-title" data-reveal>Your journey with AYURRARTH</h2>
-          <p class="section-sub" data-reveal>Open each section for more detail on our doctor, therapies, Panchakarma, photos, and how to reach us.</p>
+          <p class="section-sub" data-reveal>Classical therapies, doctor-led care, and a calm treatment environment — browse highlights below, then open each area for full detail.</p>
         </div>
-        <div class="explore-grid">
-          <a class="explore-card" href="about.html" data-reveal>
-            <h2>About &amp; doctor</h2>
-            <p>Meet Dr. Mayuri and learn how we approach root-cause healing.</p>
-            <span class="explore-more">Read more →</span>
+        <p class="home-explore-label" data-reveal>Signature therapies</p>
+        <div class="explore-featured">
+          <a class="explore-tile" href="treatments.html" data-reveal>
+            <div class="explore-tile-media">
+              <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Therapeutic oils and calm spa setting (illustrative)" width="640" height="480" loading="lazy" decoding="async" />
+              <span class="explore-tile-tag">Therapy</span>
+            </div>
+            <div class="explore-tile-body">
+              <h2>Shirodhara</h2>
+              <p>Warm medicated oil gently streamed on the forehead — deep relaxation and stress support.</p>
+              <span class="explore-tile-cta">View treatments <span aria-hidden="true">→</span></span>
+            </div>
           </a>
-          <a class="explore-card" href="treatments.html" data-reveal>
-            <h2>Treatments</h2>
-            <p>Joint care, digestion, women’s health, stress, skin, and lifestyle support.</p>
-            <span class="explore-more">View treatments →</span>
+          <a class="explore-tile" href="treatments.html" data-reveal>
+            <div class="explore-tile-media">
+              <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Therapeutic massage and body care (illustrative)" width="640" height="480" loading="lazy" decoding="async" />
+              <span class="explore-tile-tag">Therapy</span>
+            </div>
+            <div class="explore-tile-body">
+              <h2>Abhyanga</h2>
+              <p>Full-body therapeutic oil massage to nourish tissues, circulation, and recovery.</p>
+              <span class="explore-tile-cta">View treatments <span aria-hidden="true">→</span></span>
+            </div>
           </a>
-          <a class="explore-card" href="panchakarma.html" data-reveal>
-            <h2>Panchakarma</h2>
-            <p>Structured detox and rejuvenation under medical supervision.</p>
-            <span class="explore-more">Learn more →</span>
+          <a class="explore-tile" href="panchakarma.html" data-reveal>
+            <div class="explore-tile-media">
+              <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Peaceful wellness and spa environment (illustrative)" width="640" height="480" loading="lazy" decoding="async" />
+              <span class="explore-tile-tag">Programme</span>
+            </div>
+            <div class="explore-tile-body">
+              <h2>Panchakarma</h2>
+              <p>Supervised detox and rejuvenation sequences, tailored after consultation.</p>
+              <span class="explore-tile-cta">Learn more <span aria-hidden="true">→</span></span>
+            </div>
           </a>
-          <a class="explore-card" href="gallery.html" data-reveal>
-            <h2>Gallery &amp; video</h2>
-            <p>See the centre and watch our introductory clip.</p>
-            <span class="explore-more">Open gallery →</span>
+        </div>
+        <p class="home-explore-label" data-reveal>Clinic &amp; care</p>
+        <div class="explore-more-grid">
+          <a class="explore-mini" href="about.html" data-reveal>
+            <div class="explore-mini-media">
+              <img src="media/gallery-10.jpeg" alt="Consultation room at AYURRARTH clinic" width="320" height="240" loading="lazy" decoding="async" />
+            </div>
+            <div class="explore-mini-text">
+              <h3>About &amp; doctor</h3>
+              <p>Meet Dr. Mayuri Golap-Deshmukh and our approach to root-cause healing.</p>
+              <span class="explore-mini-cta">Read more →</span>
+            </div>
           </a>
-          <a class="explore-card" href="contact.html" data-reveal>
-            <h2>Contact</h2>
-            <p>Phone, email, timings, and map — book your visit.</p>
-            <span class="explore-more">Get in touch →</span>
+          <a class="explore-mini" href="treatments.html" data-reveal>
+            <div class="explore-mini-media">
+              <img src="https://images.unsplash.com/photo-1471193945509-9ad0617afabf?auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="Fresh herbs and natural ingredients (illustrative)" width="320" height="240" loading="lazy" decoding="async" />
+            </div>
+            <div class="explore-mini-text">
+              <h3>All treatments</h3>
+              <p>Joints, digestion, women’s health, stress, skin, lifestyle — personalised plans.</p>
+              <span class="explore-mini-cta">Browse →</span>
+            </div>
+          </a>
+          <a class="explore-mini" href="gallery.html" data-reveal>
+            <div class="explore-mini-media">
+              <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="Spa and wellness interior (illustrative)" width="320" height="240" loading="lazy" decoding="async" />
+            </div>
+            <div class="explore-mini-text">
+              <h3>Gallery &amp; video</h3>
+              <p>Tour the centre and watch our introductory clip.</p>
+              <span class="explore-mini-cta">Open gallery →</span>
+            </div>
+          </a>
+          <a class="explore-mini" href="contact.html" data-reveal>
+            <div class="explore-mini-media">
+              <img src="media/gallery-09.jpeg" alt="AYURRARTH centre — visit and contact us" width="320" height="240" loading="lazy" decoding="async" />
+            </div>
+            <div class="explore-mini-text">
+              <h3>Contact</h3>
+              <p>Timings, phone, WhatsApp, and directions — book your visit.</p>
+              <span class="explore-mini-cta">Get in touch →</span>
+            </div>
           </a>
         </div>
       </div>
@@ -134,14 +187,10 @@
   <footer class="site-footer">
     <div class="wrap footer-grid">
       <div>
-        <div class="logo logo-footer">
-          <span class="logo-mark" aria-hidden="true">ॐ</span>
-          <span class="logo-text">
-            <strong>AYURRARTH</strong>
-            <small>Ayurveda clinic &amp; Panchakarma centre</small>
-          </span>
+        <div class="logo logo-footer logo-with-image">
+          <img class="logo-image" src="media/logo.png" alt="" width="200" height="60" decoding="async" loading="lazy" />
         </div>
-        <p class="footer-tag">Dr. Mayuri · M.D. (Panchakarma) · Aayurvedacharya, Ayurveda vachspati</p>
+        <p class="footer-tag">Dr. Mayuri Golap-Deshmukh · B.A.M.S., M.D. (Panchakarma), MUHS Nashik</p>
       </div>
       <div>
         <h3 class="footer-heading">Quick links</h3>

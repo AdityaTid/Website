@@ -15,12 +15,8 @@
 
   <header class="site-header" data-header>
     <div class="header-inner">
-      <a href="index.html" class="logo">
-        <span class="logo-mark" aria-hidden="true">ॐ</span>
-        <span class="logo-text">
-          <strong>AYURRARTH</strong>
-          <small>Ayurveda &amp; Panchakarma</small>
-        </span>
+      <a href="index.html" class="logo logo-with-image" aria-label="AYURRARTH home">
+        <img class="logo-image" src="media/logo.png" alt="AYURRARTH — Ayurveda and Panchakarma" width="240" height="72" decoding="async" />
       </a>
       <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>
         <span class="nav-toggle-bar"></span>
@@ -44,7 +40,7 @@
     <section class="page-hero">
       <div class="wrap">
         <h1>Gallery &amp; video</h1>
-        <p class="page-lead">A glimpse of AYURRARTH — add or replace images anytime in the <span class="mono">media</span> folder.</p>
+        <p class="page-lead">Walk through our centre — treatment spaces, calm interiors, and the people behind your care.</p>
       </div>
     </section>
 
@@ -53,10 +49,10 @@
         <div class="video-copy" data-reveal>
           <p class="section-eyebrow">Inside the centre</p>
           <h2 class="section-title">See AYURRARTH in motion</h2>
-          <p class="section-text">The file <span class="mono">media/clinic-intro.mp4</span> is used here and on the home page hero. Replace that file or update the path in your HTML if you use a new name.</p>
+          <p class="section-text">The file <span class="mono">media/clinic-intro.mp4</span> plays here; the home page uses a rotating photo background. Replace the video file or paths in your HTML if you rename media.</p>
         </div>
         <div class="video-shell" data-reveal>
-          <video class="rounded-video" data-autoplay-in-view autoplay muted loop playsinline poster="media/gallery-4.jpeg">
+          <video class="rounded-video" data-autoplay-in-view autoplay muted loop playsinline poster="media/gallery-5.jpeg">
             <source src="media/clinic-intro.mp4" type="video/mp4" />
             Your browser does not support embedded video.
           </video>
@@ -68,15 +64,61 @@
       <div class="wrap">
         <div class="section-head">
           <p class="section-eyebrow" data-reveal>Photos</p>
-          <h2 class="section-title" data-reveal>Moments from our clinic</h2>
+          <h2 class="section-title" data-reveal>Inside AYURRARTH</h2>
         </div>
-        <div class="gallery-masonry">
-          <figure class="gallery-item" data-reveal><img src="media/gallery-1.jpeg" alt="AYURRARTH clinic gallery image 1" loading="lazy" width="400" height="500" /></figure>
-          <figure class="gallery-item gallery-item-tall" data-reveal><img src="media/gallery-2.jpeg" alt="AYURRARTH clinic gallery image 2" loading="lazy" width="400" height="600" /></figure>
-          <figure class="gallery-item" data-reveal><img src="media/gallery-3.jpeg" alt="AYURRARTH clinic gallery image 3" loading="lazy" width="400" height="500" /></figure>
-          <figure class="gallery-item" data-reveal><img src="media/gallery-4.jpeg" alt="AYURRARTH clinic gallery image 4" loading="lazy" width="400" height="500" /></figure>
-          <figure class="gallery-item" data-reveal><img src="media/gallery-5.jpeg" alt="AYURRARTH clinic gallery image 5" loading="lazy" width="400" height="500" /></figure>
-          <figure class="gallery-item" data-reveal><img src="media/hero-1.jpeg" alt="AYURRARTH clinic space" loading="lazy" width="400" height="500" /></figure>
+        <p class="gallery-intro" data-reveal>Browse photos of the centre — each keeps its natural shape (portrait or landscape).</p>
+        <div class="gallery-showcase">
+          <figure class="gallery-card-wrap" data-reveal>
+            <div class="gallery-card-media"><img src="media/gallery-1.jpeg" alt="AYURRARTH reception and welcome area" loading="eager" fetchpriority="high" decoding="async" width="900" height="600" /></div>
+          </figure>
+          <figure class="gallery-card-wrap" data-reveal>
+            <div class="gallery-card-media"><img src="media/hero-1.jpeg" alt="AYURRARTH clinic ambience" loading="eager" decoding="async" width="600" height="450" /></div>
+          </figure>
+          <figure class="gallery-card-wrap" data-reveal>
+            <div class="gallery-card-media"><img src="media/gallery-07.jpeg" alt="Treatment corridor" loading="eager" decoding="async" width="600" height="450" /></div>
+          </figure>
+          <figure class="gallery-card-wrap" data-reveal>
+            <div class="gallery-card-media"><img src="media/gallery-2.jpeg" alt="Therapy and treatment space at AYURRARTH" loading="eager" decoding="async" width="600" height="450" /></div>
+          </figure>
+          <figure class="gallery-card-wrap" data-reveal>
+            <div class="gallery-card-media"><img src="media/gallery-09.jpeg" alt="AYURRARTH centre view" loading="lazy" width="600" height="450" /></div>
+          </figure>
+          <figure class="gallery-card-wrap" data-reveal>
+            <div class="gallery-card-media"><img src="media/gallery-3.jpeg" alt="Consultation and therapy zone" loading="lazy" width="600" height="450" /></div>
+          </figure>
+          <figure class="gallery-card-wrap" data-reveal>
+            <div class="gallery-card-media"><img src="media/gallery-06.jpeg" alt="AYURRARTH facility" loading="lazy" width="600" height="450" /></div>
+          </figure>
+          <figure class="gallery-card-wrap" data-reveal>
+            <div class="gallery-card-media"><img src="media/gallery-10.jpeg" alt="Therapy preparation area" loading="lazy" width="600" height="450" /></div>
+          </figure>
+          <figure class="gallery-card-wrap" data-reveal>
+            <div class="gallery-card-media"><img src="media/gallery-5.jpeg" alt="Wellness and recovery space" loading="lazy" width="600" height="450" /></div>
+          </figure>
+          <figure class="gallery-card-wrap" data-reveal>
+            <div class="gallery-card-media"><img src="media/gallery-11.jpeg" alt="Treatment room" loading="lazy" width="600" height="450" /></div>
+          </figure>
+          <figure class="gallery-card-wrap" data-reveal>
+            <div class="gallery-card-media"><img src="media/gallery-12.jpeg" alt="Clinic atmosphere" loading="lazy" width="600" height="450" /></div>
+          </figure>
+          <figure class="gallery-card-wrap" data-reveal>
+            <div class="gallery-card-media"><img src="media/gallery-15.jpeg" alt="AYURRARTH interior" loading="lazy" width="600" height="450" /></div>
+          </figure>
+          <figure class="gallery-card-wrap" data-reveal>
+            <div class="gallery-card-media"><img src="media/gallery-08.jpeg" alt="Clinic interior detail" loading="lazy" width="600" height="450" /></div>
+          </figure>
+          <figure class="gallery-card-wrap" data-reveal>
+            <div class="gallery-card-media"><img src="media/gallery-16.jpeg" alt="Clinic space" loading="lazy" width="600" height="450" /></div>
+          </figure>
+          <figure class="gallery-card-wrap" data-reveal>
+            <div class="gallery-card-media"><img src="media/gallery-18.jpeg" alt="Centre environment" loading="lazy" width="600" height="450" /></div>
+          </figure>
+          <figure class="gallery-card-wrap" data-reveal>
+            <div class="gallery-card-media"><img src="media/gallery-17.jpeg" alt="AYURRARTH detail" loading="lazy" width="600" height="450" /></div>
+          </figure>
+          <figure class="gallery-card-wrap" data-reveal>
+            <div class="gallery-card-media"><img src="media/gallery-19.jpeg" alt="AYURRARTH centre moment" loading="lazy" width="600" height="450" /></div>
+          </figure>
         </div>
       </div>
     </section>
@@ -85,14 +127,10 @@
   <footer class="site-footer">
     <div class="wrap footer-grid">
       <div>
-        <div class="logo logo-footer">
-          <span class="logo-mark" aria-hidden="true">ॐ</span>
-          <span class="logo-text">
-            <strong>AYURRARTH</strong>
-            <small>Ayurveda clinic &amp; Panchakarma centre</small>
-          </span>
+        <div class="logo logo-footer logo-with-image">
+          <img class="logo-image" src="media/logo.png" alt="" width="200" height="60" decoding="async" loading="lazy" />
         </div>
-        <p class="footer-tag">Dr. Mayuri · M.D. (Panchakarma) · Aayurvedacharya, Ayurveda vachspati</p>
+        <p class="footer-tag">Dr. Mayuri Golap-Deshmukh · B.A.M.S., M.D. (Panchakarma), MUHS Nashik</p>
       </div>
       <div>
         <h3 class="footer-heading">Quick links</h3>
