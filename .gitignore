@@ -1,0 +1,191 @@
+# AYURRARTH Static Website - Git Ignore Rules
+# This file tells Git which files/folders to exclude from version control
+
+# ============================================================================
+# ENVIRONMENT & SYSTEM FILES
+# ============================================================================
+
+# OS-specific files
+.DS_Store                    # macOS
+Thumbs.db                    # Windows
+Desktop.ini                  # Windows
+.Thumbs.db                   # Windows
+
+# System files
+*.swp                        # Vim swap files
+*.swo                        # Vim swap files
+*~                          # Backup files
+.~*                         # Temporary files
+
+# ============================================================================
+# IDE & EDITOR FILES
+# ============================================================================
+
+# VS Code
+.vscode/
+*.code-workspace
+.vscode/settings.json
+.vscode/extensions.json
+
+# JetBrains IDEs
+.idea/
+*.iml
+*.iws
+*.ipr
+.DS_Store
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Atom
+.atom/
+
+# Visual Studio
+.vs/
+*.sln
+*.vcxproj
+
+# ============================================================================
+# BUILD & DEPENDENCY FILES (if added in future)
+# ============================================================================
+
+# Node.js (if you ever add npm)
+node_modules/
+package-lock.json
+npm-debug.log
+npm-debug.log*
+yarn-error.log*
+.npm
+.eslintcache
+
+# Build outputs (if you add a build process)
+dist/
+build/
+out/
+*.min.js
+*.min.css
+
+# ============================================================================
+# TEMPORARY & LOG FILES
+# ============================================================================
+
+# Log files
+*.log
+logs/
+*.log.*
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.bak
+*.backup
+
+# OS temp files
+$RECYCLE.BIN/
+.Trash-*
+.cache/
+
+# ============================================================================
+# SENSITIVE & LOCAL FILES (NEVER COMMIT)
+# ============================================================================
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# API Keys and credentials (NEVER COMMIT THESE)
+secrets.json
+.secrets
+credentials.json
+.auth
+
+# Local configuration
+config.local.json
+settings.local.js
+
+# ============================================================================
+# DATABASE FILES (if added)
+# ============================================================================
+
+*.db
+*.sqlite
+*.sqlite3
+*.sql
+
+# ============================================================================
+# MEDIA & LARGE FILES
+# ============================================================================
+
+# Large compressed files (if your media folder has them)
+*.zip
+*.rar
+*.7z
+*.tar
+*.gz
+
+# Video backups
+*.mp4.bak
+*.mov.bak
+
+# ============================================================================
+# DOCUMENTATION & BACKUP FILES
+# ============================================================================
+
+# Word/Office documents in root (keep only in docs)
+/*.docx
+/*.doc
+/*.xlsx
+
+# Backup copies of HTML (keep only updated versions)
+*.html.bak
+*.html.backup
+*.css.bak
+
+# ============================================================================
+# THIRD-PARTY & VENDOR FILES
+# ============================================================================
+
+# CDN folders (if downloaded locally)
+vendor/
+third-party/
+
+# ============================================================================
+# TESTING & DEBUG FILES
+# ============================================================================
+
+# Test coverage
+coverage/
+.nyc_output/
+
+# Debug logs
+debug.log
+*.stackdump
+
+# ============================================================================
+# CUSTOM RULES FOR AYURRARTH
+# ============================================================================
+
+# Backup folders
+css_backup/
+js_backup/
+media_backup/
+html_backup/
+
+# Old version files
+*-old.html
+*-old.css
+*-old.js
+
+# Client files (if received from others)
+client_files/
+/NOTES.txt
+/TODO.txt
+/DRAFT*
+
+# Testing files (local)
+test-pages/
+local-test/
+staging/
