@@ -36,6 +36,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -127,6 +128,8 @@ a:hover {
   height: var(--header-h);
   display: flex;
   align-items: center;
+  padding-left: env(safe-area-inset-left, 0px);
+  padding-right: env(safe-area-inset-right, 0px);
   transition: background 0.4s var(--ease-out), box-shadow 0.4s var(--ease-out);
 }
 
@@ -403,7 +406,8 @@ a:hover {
     -webkit-backdrop-filter: blur(12px);
     flex-direction: column;
     align-items: stretch;
-    padding: 1.25rem 1.5rem 1.5rem;
+    padding: 1.25rem max(1.5rem, env(safe-area-inset-right, 0px)) max(1.5rem, env(safe-area-inset-bottom, 0px))
+      max(1.5rem, env(safe-area-inset-left, 0px));
     gap: 1rem;
     border-bottom: 1px solid var(--green-100);
     box-shadow: 0 12px 32px rgba(42, 35, 20, 0.1);
@@ -411,6 +415,9 @@ a:hover {
     opacity: 0;
     pointer-events: none;
     transition: transform 0.45s var(--ease-out), opacity 0.35s ease;
+    max-height: min(calc(100dvh - var(--header-h)), calc(100vh - var(--header-h)));
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
   }
 
   .site-nav.is-open {
@@ -1665,6 +1672,38 @@ a:hover {
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
 }
 
+/* Treatments page: three columns + larger imagery */
+.treatments .card-grid {
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .treatments .card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+  }
+}
+
+@media (min-width: 900px) {
+  .treatments .card-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: clamp(1.25rem, 2vw, 2rem);
+  }
+}
+
+.treatments .treat-card-media {
+  margin: 0;
+  line-height: 0;
+  background: var(--green-100);
+}
+
+.treatments .treat-card-media img {
+  height: clamp(220px, 32vw, 340px);
+  object-fit: cover;
+  object-position: center;
+}
+
 .treat-card {
   background: var(--green-50);
   border: 1px solid var(--green-100);
@@ -1813,13 +1852,32 @@ a:hover {
   background: rgba(255, 255, 255, 0.06);
   border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: var(--radius);
-  padding: 1.5rem 1.75rem;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
   transition: background 0.35s ease, transform 0.35s var(--ease-out);
 }
 
 .pancha-item:hover {
   background: rgba(255, 255, 255, 0.1);
   transform: scale(1.02);
+}
+
+.pancha-item-media {
+  margin: 0;
+  line-height: 0;
+}
+
+.pancha-item-media img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.pancha-item-body {
+  padding: 1.5rem 1.75rem;
 }
 
 .pancha-item h2,
@@ -2062,6 +2120,7 @@ a:hover {
   background: linear-gradient(180deg, #221c16 0%, var(--green-950) 100%);
   color: rgba(255, 254, 251, 0.88);
   padding-top: 3rem;
+  padding-bottom: max(0px, env(safe-area-inset-bottom, 0px));
   border-top: 1px solid rgba(201, 162, 39, 0.2);
 }
 
@@ -2106,15 +2165,19 @@ a:hover {
   margin: 0;
 }
 
-.footer-links a {
-  color: var(--white);
+/* Explicit :link / :visited so mailto matches other footer links (global a:visited in components.css loads later) */
+.site-footer .footer-links a:link,
+.site-footer .footer-links a:visited {
+  color: var(--gold-soft);
   text-decoration: none;
   display: block;
   padding: 0.35rem 0;
+  font-weight: 500;
 }
 
-.footer-links a:hover {
-  color: var(--white);
+.site-footer .footer-links a:hover,
+.site-footer .footer-links a:active {
+  color: var(--green-200);
 }
 
 .footer-bar {
@@ -2130,8 +2193,8 @@ a:hover {
 /* FAB WhatsApp */
 .fab-wa {
   position: fixed;
-  bottom: 1.5rem;
-  right: 1.5rem;
+  bottom: max(1.5rem, env(safe-area-inset-bottom, 0px));
+  right: max(1.5rem, env(safe-area-inset-right, 0px));
   width: 58px;
   height: 58px;
   border-radius: 50%;

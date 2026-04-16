@@ -33,6 +33,20 @@ export const Header = (() => {
     window.addEventListener('scroll', onScroll, { passive: true });
     window.addEventListener('resize', onScroll, { passive: true });
     onScroll(); // Initial check
+
+    window.addEventListener(
+      'resize',
+      () => {
+        if (window.innerWidth > 900) closeMenuIfOpen();
+      },
+      { passive: true }
+    );
+  };
+
+  const closeMenuIfOpen = () => {
+    if (!elements.navToggle || !elements.nav) return;
+    if (elements.navToggle.getAttribute('aria-expanded') !== 'true') return;
+    setMenuState(false);
   };
 
   /**
