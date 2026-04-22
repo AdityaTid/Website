@@ -47,70 +47,43 @@ export const Animations = (() => {
   };
 
   /**
-   * Setup cinematic scroll effect (parallax-like motion)
+   * Cinematic section — subtle parallax on the background image only.
+   * The scroll-pin / tall-track approach is replaced by a CSS animation on
+   * the card, so this function only drives a lightweight image parallax.
    */
   const setupCinematicEffects = () => {
     const cinematicRoot = document.querySelector('[data-cinematic]');
     if (!cinematicRoot) return;
 
-    const cinematicTrack = cinematicRoot.querySelector('.cinematic-track');
     const cinematicImg = cinematicRoot.querySelector('.cinematic-media img');
-    const cinematicCard = cinematicRoot.querySelector('.cinematic-card');
-    const cinematicScrim = cinematicRoot.querySelector('.cinematic-scrim');
+    if (!cinematicImg) return;
 
-    if (!cinematicTrack || !cinematicImg) return;
+    // Gentle vertical parallax on the background image as the user scrolls past
+    let rafPending = false;
 
-    const cinematicSmooth = { p: 0 };
-    let cinematicRafPending = false;
+    const applyParallax = () => {
+      rafPending = false;
+      const rect = cinematicRoot.getBoundingClientRect();
+      const vh = window.innerHeight;
 
-    const applyCinematic = (p) => {
-      const t = Math.min(1, Math.max(0, p));
-      const scale = 1.11 - t * 0.11;
-      const drift = t * 2.2;
+      // p: 0 when section bottom enters viewport, 1 when section top leaves
+      const p = Math.min(1, Math.max(0, 1 - rect.bottom / (vh + rect.height)));
+      const drift = p * 6; // max 6% vertical drift
 
-      cinematicImg.style.transform = `scale(${scale}) translate3d(0, ${drift}%, 0)`;
+      cinematicImg.style.transform = `scale(1.06) translateY(${drift}%)`;
+    };
 
-      if (cinematicCard) {
-        cinematicCard.style.opacity = String(0.22 + t * 0.78);
-        cinematicCard.style.transform = `translate3d(0, ${(1 - t) * 40}px, 0)`;
-      }
-
-      if (cinematicScrim) {
-        cinematicScrim.style.opacity = String(0.88 - t * 0.22);
+    const queue = () => {
+      if (!rafPending) {
+        rafPending = true;
+        requestAnimationFrame(() => { applyParallax(); rafPending = false; });
       }
     };
 
-    const cinematicFrame = () => {
-      cinematicRafPending = false;
-
-      const rect = cinematicTrack.getBoundingClientRect();
-      const total = cinematicTrack.offsetHeight - window.innerHeight;
-
-      if (total <= 0) return;
-
-      const target = Math.min(1, Math.max(0, -rect.top / total));
-      const cur = cinematicSmooth.p;
-      const alpha = 0.12;
-      const next = cur + (target - cur) * alpha;
-
-      cinematicSmooth.p = Math.abs(target - next) < 0.0015 ? target : next;
-      applyCinematic(cinematicSmooth.p);
-
-      if (Math.abs(cinematicSmooth.p - target) > 0.003) {
-        cinematicRafPending = true;
-        requestAnimationFrame(cinematicFrame);
-      }
-    };
-
-    const queueCinematic = () => {
-      if (!cinematicRafPending) {
-        cinematicRafPending = true;
-        requestAnimationFrame(cinematicFrame);
-      }
-    };
-
-    window.addEventListener('scroll', queueCinematic, { passive: true });
-    window.addEventListener('resize', queueCinematic, { passive: true });
+    // Run once on load, then on scroll/resize
+    applyParallax();
+    window.addEventListener('scroll', queue, { passive: true });
+    window.addEventListener('resize', queue, { passive: true });
   };
 
   return { init };
