@@ -1,0 +1,261 @@
+/* Tista Ventures — force blue theme on ALL pages */
+/* Logo blue: #2481C4 */
+
+:root {
+  --tista-blue: #2481C4;
+  --tista-blue-dark: #1a6aa3;
+  --tista-blue-darker: #155a8a;
+  --tista-blue-light: #3a96d4;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+/* ===== Logo sizing ===== */
+.b-logo {
+  float: left;
+  display: block;
+  max-width: 220px;
+  margin: 8px 0;
+  line-height: 0;
+}
+
+.b-logo img,
+a.b-logo img {
+  display: block !important;
+  width: auto !important;
+  height: auto !important;
+  max-height: 64px !important;
+  max-width: 200px !important;
+  object-fit: contain !important;
+}
+
+.is-fixed-header .b-logo img,
+.is-fixed-header a.b-logo img {
+  max-height: 44px !important;
+  max-width: 150px !important;
+}
+
+.b-header__box {
+  overflow: hidden;
+  min-height: 70px;
+}
+
+.b-header-r {
+  max-width: calc(100% - 230px);
+}
+
+img.b-footer-logo,
+.b-footer-logo {
+  display: inline-block !important;
+  max-height: 80px !important;
+  max-width: 180px !important;
+  width: auto !important;
+  height: auto !important;
+  object-fit: contain !important;
+}
+
+.b-slidercontainer {
+  overflow: hidden;
+  max-width: 100%;
+}
+
+/* ===== FORCE BLUE EVERYWHERE ===== */
+
+/* Top contact bar */
+.b-top-options-panel,
+.b-top-options-panel--color,
+.b-top-options-panel--color.b-top-options-panel {
+  background: var(--tista-blue) !important;
+  background-color: var(--tista-blue) !important;
+}
+
+.b-top-options-panel a,
+.f-option-contacts a {
+  color: #fff !important;
+}
+
+/* Header border */
+header {
+  border-bottom-color: var(--tista-blue) !important;
+}
+
+/* Nav pills / active / hover */
+.b-top-nav__1level.is-active-top-nav__1level,
+.is-active-top-nav__1level,
+.b-top-nav__1level:hover,
+.f-top-nav .b-top-nav__1level:hover {
+  background: var(--tista-blue) !important;
+  background-color: var(--tista-blue) !important;
+}
+
+.is-active-top-nav__1level > a,
+.is-active-top-nav__1level > span,
+.b-top-nav__1level:hover > a,
+.f-top-nav .is-active-top-nav__1level > a {
+  color: #fff !important;
+}
+
+.b-top-nav__2level a:hover,
+.f-top-nav__2level a:hover,
+.is-active-top-nav__2level > a,
+.f-top-nav__2level_title.is-active-top-nav__2level-title {
+  color: var(--tista-blue) !important;
+}
+
+/* Headings & accents */
+.f-primary-b,
+.f-primary-l,
+h1, h2, h3, h4,
+.b-hr-stars__group .fa,
+.f-hr-stars .fa,
+.f-list-markers__ico,
+.b-list-markers__ico,
+.fa-check-circle-o,
+.f-more,
+.c-default {
+  color: var(--tista-blue) !important;
+}
+
+a.f-more:hover,
+.b-breadcrumbs a:hover,
+.f-breadcrumbs a:hover {
+  color: var(--tista-blue-dark) !important;
+}
+
+/* Buttons — all default CTAs */
+.b-btn,
+.b-btn-default,
+.b-btn.b-btn-default,
+a.b-btn,
+a.b-btn-default,
+button.b-btn-default,
+.button-xs,
+.button-sm,
+.button-md,
+.b-btn-md,
+input[type="submit"],
+button[type="submit"] {
+  background: var(--tista-blue) !important;
+  background-color: var(--tista-blue) !important;
+  border-color: var(--tista-blue-dark) !important;
+  color: #fff !important;
+}
+
+.b-btn:hover,
+.b-btn-default:hover,
+a.b-btn-default:hover,
+.button-xs:hover,
+input[type="submit"]:hover,
+button[type="submit"]:hover {
+  background: var(--tista-blue-dark) !important;
+  background-color: var(--tista-blue-dark) !important;
+  border-color: var(--tista-blue-darker) !important;
+  color: #fff !important;
+}
+
+/* Footer */
+.b-footer-secondary,
+footer .b-footer-secondary {
+  background: var(--tista-blue-darker) !important;
+  background-color: var(--tista-blue-darker) !important;
+}
+
+.b-footer-primary,
+footer .b-footer-primary {
+  background: var(--tista-blue-dark) !important;
+  background-color: var(--tista-blue-dark) !important;
+}
+
+.b-btn-group-hor__item,
+.f-btn-group-hor__item,
+.b-footer__btn_up,
+.f-footer__btn_up,
+.j-footer__btn_up {
+  background: var(--tista-blue) !important;
+  background-color: var(--tista-blue) !important;
+  color: #fff !important;
+}
+
+footer a:hover {
+  color: #fff !important;
+}
+
+/* Icons / contact */
+.b-benefits__item_icon,
+.f-benefits__item_icon,
+.f-contacts-short-item__icon,
+.b-contacts-short-item__icon,
+.b-contacts-short-item__icon .fa,
+.f-contacts-short-item__icon .fa {
+  color: var(--tista-blue) !important;
+}
+
+/* Slider timer / bullets */
+.tp-bannertimer {
+  background: var(--tista-blue) !important;
+}
+
+.tp-bullets .bullet.selected,
+.tp-bullets .bullet:hover {
+  background: var(--tista-blue) !important;
+}
+
+/* Forms */
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--tista-blue) !important;
+}
+
+/* Tabs / accordion accents */
+.ui-tabs .ui-tabs-nav li.ui-tabs-active,
+.ui-state-active,
+.ui-widget-header .ui-state-active {
+  background: var(--tista-blue) !important;
+  border-color: var(--tista-blue) !important;
+  color: #fff !important;
+}
+
+.ui-accordion .ui-accordion-header.ui-state-active {
+  background: var(--tista-blue) !important;
+  color: #fff !important;
+}
+
+/* Product logo hover */
+.b-logo-item a:hover {
+  box-shadow: 0 0 4px rgba(36, 129, 196, 0.45) !important;
+}
+
+/* Inner page header strip */
+.b-inner-page-header {
+  border-bottom-color: var(--tista-blue) !important;
+}
+
+/* Pagination */
+.pagination > .active > a,
+.pagination > .active > span,
+.pagination > li > a:hover {
+  background: var(--tista-blue) !important;
+  border-color: var(--tista-blue) !important;
+  color: #fff !important;
+}
+
+/* Progress bars */
+.progress-bar,
+.progress-striped .progress-bar {
+  background-color: var(--tista-blue) !important;
+}
+
+@media screen and (max-width: 767px) {
+  .b-logo img,
+  a.b-logo img {
+    max-height: 48px !important;
+    max-width: 140px !important;
+  }
+
+  .b-header-r {
+    max-width: 100%;
+  }
+}

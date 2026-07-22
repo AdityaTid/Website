@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tista Ventures LLP</title>
+    <link rel="icon" type="image/x-icon" href="img/logo/logo1.jpg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2563eb',
+                        secondary: '#64748b',
+                        accent: '#f59e0b'
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-white text-gray-800 font-sans">
+    <!-- Top Information Bar - Improved for Mobile with Social Handles -->
+    <div class="top-info-bar">
+        <div class="info-content">
+            <!-- Social Media Icons -->
+            <div class="social-icons">
+                <a href="#" class="hover:text-primary">
+                    <i data-feather="facebook"></i>
+                </a>
+                <a href="#" class="hover:text-primary">
+                    <i data-feather="twitter"></i>
+                </a>
+                <a href="#" class="hover:text-primary">
+                    <i data-feather="instagram"></i>
+                </a>
+                <a href="#" class="hover:text-primary">
+                    <i data-feather="linkedin"></i>
+                </a>
+                <a href="#" class="hover:text-primary">
+                    <i data-feather="youtube"></i>
+                </a>
+            </div>
+            
+            <div class="info-item">
+                <i data-feather="phone" class="text-primary"></i>
+                <span>+91 98765 43210</span>
+            </div>
+            <div class="info-item">
+                <i data-feather="mail" class="text-primary"></i>
+                <span>info@tistaventures.com</span>
+            </div>
+            <div class="info-item">
+                <i data-feather="clock" class="text-primary"></i>
+                <span>Mon-Sat: 9:00AM-6:00PM</span>
+            </div>
+            <div class="info-item">
+                <i data-feather="truck" class="text-primary"></i>
+                <span>Free Shipping Above ₹2000</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation - Made Sleeker -->
+    <nav class="bg-white shadow-md sticky top-0 z-50 main-navbar">
+        <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-7 items-center">
+            <div class="flex justify-between items-center">
+                <div class="flex">
+                    <a href="index.html" class="flex-shrink-0 flex items-center logo-container">
+                        <img src="img/logo/logo1.jpg" alt="Tista Ventures LLP" class="rounded-lg">
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="index.html"
+                        class="text-primary border-b-2 border-primary px-3 py-2 text-sm font-medium">Home</a>
+                    <a href="products.html"
+                        class="text-gray-600 hover:text-primary px-3 py-2 text-sm font-medium">Products</a>
+                    <a href="about-us.html" class="text-gray-600 hover:text-primary px-3 py-2 text-sm font-medium">About
+                        Us</a>
+                    <a href="contact-us.html"
+                        class="text-gray-600 hover:text-primary px-3 py-2 text-sm font-medium">Contact</a>
+                </div>
+                <div class="flex items-center md:hidden">
+                    <button type="button"
+                        class="mobile-menu-button inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-primary focus:outline-none">
+                        <i data-feather="menu" class="h-5 w-5"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div class="mobile-menu hidden md:hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
+                <a href="index.html"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-primary bg-blue-50">Home</a>
+                <a href="products.html"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-primary hover:bg-blue-50">Products</a>
+                <a href="about.html"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-primary hover:bg-blue-50">About
+                    Us</a>
+                <a href="contact.html"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-primary hover:bg-blue-50">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Full Photo -->
+    <section class="hero-full">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="max-w-2xl">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">Precision Hardware for Professional Results</h1>
+                <p class="text-lg md:text-xl mb-8 text-gray-200">Discover our premium collection of screws, strong adhesives, and hardware solutions engineered for durability and performance.</p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="products.html"
+                        class="bg-primary hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg transition duration-300">Explore
+                        Products</a>
+                    <a href="contact.html"
+                        class="bg-transparent border-2 border-white text-white font-medium py-3 px-6 rounded-lg hover:bg-white hover:text-primary transition duration-300">Get
+                        Expert Advice</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Why Choose Tista Ventures</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">Our commitment to quality and innovation sets us
+                    apart in the hardware industry</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition duration-300">
+                    <div class="bg-blue-100 p-3 rounded-full w-12 h-12 flex items-center justify-center mb-4">
+                        <i data-feather="shield" class="h-6 w-6 text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Premium Quality</h3>
+                    <p class="text-gray-600">Manufactured to the highest standards using superior materials for
+                        unmatched durability.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition duration-300">
+                    <div class="bg-blue-100 p-3 rounded-full w-12 h-12 flex items-center justify-center mb-4">
+                        <i data-feather="truck" class="h-6 w-6 text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Fast Delivery</h3>
+                    <p class="text-gray-600">Nationwide shipping with most orders delivered within 2-3 business days.
+                    </p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition duration-300">
+                    <div class="bg-blue-100 p-3 rounded-full w-12 h-12 flex items-center justify-center mb-4">
+                        <i data-feather="headphones" class="h-6 w-6 text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Expert Support</h3>
+                    <p class="text-gray-600">Our team of hardware specialists is ready to assist with your project
+                        needs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Preview -->
+    <section class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Featured Products</h2>
+                <p class="text-lg text-gray-600">Explore our top-rated hardware solutions</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="product-card bg-white rounded-xl overflow-hidden shadow-sm transition duration-300">
+                    <img src="http://static.photos/construction/400x300/5" alt="Titanium Screws"
+                        class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Titanium Construction Screws</h3>
+                        <p class="text-gray-600 mb-4">High-strength corrosion-resistant screws for demanding
+                            applications.</p>
+                        <div class="flex justify-between items-center">
+                            <a href="products.html#screws" class="text-secondary hover:text-primary flex items-center">
+                                <span class="mr-1">View details</span>
+                                <i data-feather="arrow-right" class="h-4 w-4"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card bg-white rounded-xl overflow-hidden shadow-sm transition duration-300">
+                    <img src="http://static.photos/industry/400x300/7" alt="Industrial Adhesive"
+                        class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Industrial Strength Adhesive</h3>
+                        <p class="text-gray-600 mb-4">Bonds metal, wood, plastic, and more with incredible holding
+                            power.</p>
+                        <div class="flex justify-between items-center">
+                            <a href="products.html#adhesives"
+                                class="text-secondary hover:text-primary flex items-center">
+                                <span class="mr-1">View details</span>
+                                <i data-feather="arrow-right" class="h-4 w-4"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card bg-white rounded-xl overflow-hidden shadow-sm transition duration-300">
+                    <img src="http://static.photos/tools/400x300/3" alt="Hardware Kit" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Professional Hardware Kit</h3>
+                        <p class="text-gray-600 mb-4">Comprehensive set including screws, bolts, nuts, and washers.</p>
+                        <div class="flex justify-between items-center">
+                            <a href="products.html#kits" class="text-secondary hover:text-primary flex items-center">
+                                <span class="mr-1">View details</span>
+                                <i data-feather="arrow-right" class="h-4 w-4"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <a href="products.html" class="inline-flex items-center text-primary font-medium hover:text-blue-700">
+                    <span>View All Products</span>
+                    <i data-feather="arrow-right" class="ml-2 h-5 w-5"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="bg-primary py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold text-white mb-4">Ready to Start Your Project?</h2>
+            <p class="text-blue-100 text-lg mb-8 max-w-3xl mx-auto">Our hardware experts are standing by to help you
+                select the perfect products for your specific needs.</p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="contact.html"
+                    class="bg-white text-primary font-medium py-3 px-8 rounded-lg hover:bg-gray-100 transition duration-300">Contact
+                    Our Team</a>
+                <a href="products.html"
+                    class="border-2 border-white text-white font-medium py-3 px-8 rounded-lg hover:bg-white hover:text-primary transition duration-300">Browse
+                    Catalog</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <a href="index.html" class="flex items-center mb-4">
+                        <i data-feather="tool" class="h-8 w-8 text-primary"></i>
+                        <span class="ml-2 text-xl font-bold">Tista Ventures</span>
+                    </a>
+                    <p class="text-gray-400 mb-4">Premium hardware solutions for professionals and DIY enthusiasts.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-primary"><i data-feather="facebook"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-primary"><i data-feather="twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-primary"><i data-feather="instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-primary"><i data-feather="linkedin"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Products</h3>
+                    <ul class="space-y-2">
+                        <li><a href="products.html#screws" class="text-gray-400 hover:text-primary">Screws &
+                                Fasteners</a></li>
+                        <li><a href="products.html#adhesives" class="text-gray-400 hover:text-primary">Adhesives &
+                                Sealants</a></li>
+                        <li><a href="products.html#tools" class="text-gray-400 hover:text-primary">Tools & Equipment</a>
+                        </li>
+                        <li><a href="products.html#kits" class="text-gray-400 hover:text-primary">Hardware Kits</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Company</h3>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="text-gray-400 hover:text-primary">About Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary">Our Story</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary">Careers</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary">Press</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Support</h3>
+                    <ul class="space-y-2">
+                        <li><a href="contact.html" class="text-gray-400 hover:text-primary">Contact Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary">Shipping Info</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary">Returns</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm">© 2023 Tista Ventures. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-400 hover:text-primary text-sm">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-primary text-sm">Terms of Service</a>
+                    <a href="#" class="text-gray-400 hover:text-primary text-sm">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu-button').addEventListener('click', function () {
+            document.querySelector('.mobile-menu').classList.toggle('hidden');
+        });
+
+        // Animated sticky navbar on scroll (fade effect)
+        const mainNavbar = document.querySelector('.main-navbar');
+        const navbarItems = document.querySelector('.main-navbar .flex.justify-between');
+
+        let lastScrollY = window.scrollY;
+        let ticking = false;
+
+        function handleNavbarScroll() {
+            if (window.scrollY > 60) {
+                mainNavbar.classList.add('navbar-scrolled');
+                // Reduce navbar height
+                mainNavbar.style.height = '60px';
+                navbarItems.style.height = '60px';
+                
+                // Logo size is already handled by CSS
+            } else {
+                mainNavbar.classList.remove('navbar-scrolled');
+                // Reset navbar height
+                mainNavbar.style.height = '';
+                navbarItems.style.height = '';
+            }
+            ticking = false;
+        }
+
+        window.addEventListener('scroll', function () {
+            if (!ticking) {
+                window.requestAnimationFrame(handleNavbarScroll);
+                ticking = true;
+            }
+        });
+
+        // Feather icons
+        feather.replace();
+    </script>
+</body>
+
+</html>

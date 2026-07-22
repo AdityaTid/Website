@@ -1,434 +1,426 @@
+
 <!DOCTYPE html>
-<html lang="en">
 
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tista Ventures LLP</title>
-    <link rel="icon" type="image/x-icon" href="img/logo/logo1.jpg">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#2563eb',
-                        secondary: '#64748b',
-                        accent: '#f59e0b'
-                    }
-                }
-            }
-        }
-    </script>
-    <script src="https://unpkg.com/feather-icons"></script>
-    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8">
+    <title>Tista Ventures</title>
+    <link rel="shortcut icon" href="img/logo/logo1.jpg">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+<!-- bxslider -->
+<link type="text/css" rel='stylesheet' href="js/bxslider/jquery.bxslider.css">
+<!-- End bxslider -->
+<!-- flexslider -->
+<link type="text/css" rel='stylesheet' href="js/flexslider/flexslider.css">
+<!-- End flexslider -->
+
+<!-- bxslider -->
+<link type="text/css" rel='stylesheet' href="js/radial-progress/style.css">
+<!-- End bxslider -->
+
+<!-- Animate css -->
+<link type="text/css" rel='stylesheet' href="css/animate.css">
+<!-- End Animate css -->
+
+<!-- Bootstrap css -->
+<link type="text/css" rel='stylesheet' href="css/bootstrap.min.css">
+<link type="text/css" rel='stylesheet' href="js/bootstrap-progressbar/bootstrap-progressbar-3.2.0.min.css">
+<!-- End Bootstrap css -->
+
+<!-- Jquery UI css -->
+<link type="text/css" rel='stylesheet' href="js/jqueryui/jquery-ui.css">
+<link type="text/css" rel='stylesheet' href="js/jqueryui/jquery-ui.structure.css">
+<!-- End Jquery UI css -->
+
+<!-- Fancybox -->
+<link type="text/css" rel='stylesheet' href="js/fancybox/jquery.fancybox.css">
+<!-- End Fancybox -->
+
+<link type="text/css" rel='stylesheet' href="fonts/fonts.css">
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+
+<link type="text/css" data-themecolor="default" rel='stylesheet' href="css/main-default.css?v=blue2">
+<link type="text/css" rel="stylesheet" href="css/tista-overrides.css?v=blue2">
+
+<link type="text/css" rel='stylesheet' href="js/rs-plugin/css/settings.css">
+<link type="text/css" rel='stylesheet' href="js/rs-plugin/css/settings-custom.css">
+<link type="text/css" rel='stylesheet' href="js/rs-plugin/videojs/video-js.css">
 </head>
+<body>
+<div class="mask-l" style="background-color: #fff; width: 100%; height: 100%; position: fixed; top: 0; left:0; z-index: 9999999;"></div> <!--removed by integration-->
+<header>
 
-<body class="bg-white text-gray-800 font-sans">
-    <!-- Top Information Bar - Improved for Mobile with Social Handles -->
-    <div class="top-info-bar">
-        <div class="info-content">
-            <!-- Social Media Icons -->
-            <div class="social-icons">
-                <a href="#" class="hover:text-primary">
-                    <i data-feather="facebook"></i>
-                </a>
-                <a href="#" class="hover:text-primary">
-                    <i data-feather="twitter"></i>
-                </a>
-                <a href="#" class="hover:text-primary">
-                    <i data-feather="instagram"></i>
-                </a>
-                <a href="#" class="hover:text-primary">
-                    <i data-feather="linkedin"></i>
-                </a>
-                <a href="#" class="hover:text-primary">
-                    <i data-feather="youtube"></i>
-                </a>
-            </div>
+<div class="b-top-options-panel b-top-options-panel--color">
+          <div class="container">
+              <div class="b-option-contacts f-option-contacts">
+                  <a href="#"><i class="fa fa-envelope-o"></i> info@tistaventures.com</a>
+                  <a href="#"><i class="fa fa-phone"></i> +91 98765 43210 </a>
+                  <a href="#"><i class="fa fa-skype"></i> tista.ventures</a>
+              </div>
+              <div class="b-option-total-cart">
+                   <div class="b-right">
+                  <span class="b-header__social-box b-header__social-box--no-fon">
+                      <a href="#"><i class="fa fa-facebook"></i></a>
+                      <a href="#"><i class="fa fa-twitter"></i></a>
+                      <a href="#"><i class="fa fa-pinterest"></i></a>
+                      <a href="#"><i class="fa fa-linkedin"></i></a>
+                      <a href="#"><i class="fa fa-dribbble"></i></a>
+                  </span>
+              </div>
+              </div>
+          </div>
+      </div>
 
-            <div class="info-item">
-                <i data-feather="phone" class="text-primary"></i>
-                <span>+91 98765 43210</span>
-            </div>
-            <div class="info-item">
-                <i data-feather="mail" class="text-primary"></i>
-                <span>info@tistaventures.com</span>
-            </div>
-            <div class="info-item">
-                <i data-feather="clock" class="text-primary"></i>
-                <span>Mon-Sat: 9:00AM-6:00PM</span>
-            </div>
-            <div class="info-item">
-                <i data-feather="truck" class="text-primary"></i>
-                <span>Free Shipping Above ₹2000</span>
-            </div>
+      <div class="container b-header__box b-relative">
+    <a href="index.html" class="b-left b-logo"><img src="img/logo/logo-header.jpg" alt="Tista Ventures" /></a>
+    <div class="b-header-r b-right">
+      <div class="b-top-nav-show-slide f-top-nav-show-slide b-right j-top-nav-show-slide"><i class="fa fa-align-justify"></i></div>
+      <nav class="b-top-nav f-top-nav b-right j-top-nav">
+          <ul class="b-top-nav__1level_wrap">
+    <li class="b-top-nav__1level f-top-nav__1level is-active-top-nav__1level f-primary-b">
+	<a href="index.html"><i class="fa fa-home b-menu-1level-ico"></i>Home <span class="b-ico-dropdown"><i class="fa fa-arrow-circle-down"></i></span></a>
+       
+    </li>
+    <li class="b-top-nav__1level f-top-nav__1level f-primary-b b-top-nav-big">
+        <a href="about-us.html"><i class="fa fa-folder-open b-menu-1level-ico"></i>About Us<span class="b-ico-dropdown"><i class="fa fa-arrow-circle-down"></i></span></a>
+        
+    </li>
+   <li class="b-top-nav__1level f-top-nav__1level f-primary-b b-top-nav-big">
+        <a href="products.html"><i class="fa fa-folder-open b-menu-1level-ico"></i>Products<span class="b-ico-dropdown"><i class="fa fa-arrow-circle-down"></i></span></a>
+        <div class="b-top-nav__dropdomn">
+             <ul class="b-top-nav__1level_wrap">
+                 
+                 <li class="b-top-nav__2level f-top-nav__2level f-primary"><a href="framework-fasteners.html"><i class="fa fa-angle-right"></i>Klimas</a></li>
+                 <li class="b-top-nav__2level f-top-nav__2level f-primary"><a href="https://www.cotswoldap.com/products"><i class="fa fa-angle-right"></i>Cotswold</a></li>
+				 <li class="b-top-nav__2level f-top-nav__2level f-primary"><a href="https://www.siderise.com/products/facades"><i class="fa fa-angle-right"></i>SideRise</a></li>
+                 <li class="b-top-nav__2level f-top-nav__2level f-primary"><a href="https://www.tremcosealants.com/markets/commercial/"><i class="fa fa-angle-right"></i>Tremco</a></li>
+            </ul>
+            
         </div>
+    </li>
+    <li class="b-top-nav__1level f-top-nav__1level f-primary-b b-top-nav-big">
+        <a href="quality.html"><i class="fa fa-code b-menu-1level-ico"></i>Quality <span class="b-ico-dropdown"><i class="fa fa-arrow-circle-down"></i></span></a>
+        
+    </li>
+    <li class="b-top-nav__1level f-top-nav__1level f-primary-b b-top-nav-big">
+        <a href="career.html"><i class="fa fa-cloud-download b-menu-1level-ico"></i>Career<span class="b-ico-dropdown"><i class="fa fa-arrow-circle-down"></i></span></a>
+        
+    </li>
+    <li class="b-top-nav__1level f-top-nav__1level f-primary-b b-top-nav-big">
+        <a href="enquiry.html"><i class="fa fa-inbox b-menu-1level-ico"></i>Enquiry <span class="b-ico-dropdown"><i class="fa fa-arrow-circle-down"></i></span></a>
+
+           
+    </li>
+    
+    <li class="b-top-nav__1level f-top-nav__1level f-primary-b b-top-nav-big">
+        <a href="contact-us.html"><i class="fa fa-folder-open b-menu-1level-ico"></i>Contact us<span class="b-ico-dropdown"><i class="fa fa-arrow-circle-down"></i></span></a>
+       
+    </li>
+    
+</ul>
+
+      </nav>
+    </div>
+  </div>
+</header>
+<div class="j-menu-container"></div>
+<div class="b-inner-page-header f-inner-page-header b-bg-header-inner-page">
+  <div class="b-inner-page-header__content">
+    <div class="container">
+      <h1 class="f-primary-l c-default">Our Products</h1>
+    </div>
+  </div>
+</div>
+<div class="b-breadcrumbs f-breadcrumbs" >
+    <div class="container">
+        <ul>
+            <li><a href="index.html"><i class="fa fa-home"></i>Home</a></li>
+            <li><i class="fa fa-angle-right"></i><span>Our Products</span></li>
+        </ul>
+    </div>
+</div>
+
+ <div class="container l-inner-page-container">
+ 
+	  <div class="col-md-31 col-sm-4 col-xs-12">           
+    <a href="framework-fasteners.html"><img class="j-data-element" data-animate="fadeInDown" data-retina src="img/products/products-main/framework-fasteners.jpg" alt=""/></a>  
+	<a href="framework-fasteners.html" class="b-btn f-btn b-btn-default b-btn-md f-primary-b">Read More</a>
+	</div>
+	
+    <div class="col-md-31 col-sm-4 col-xs-12">           
+    <a href="systems-thermoinsulation-wallsfasteners.html"><img class="j-data-element" data-animate="fadeInDown" data-retina src="img/products/products-main/wall-fasteners.jpg" alt=""/></a> 
+    <a href="systems-thermoinsulation-wallsfasteners.html" class="b-btn f-btn b-btn-default b-btn-md f-primary-b">Read More</a>	
+    </div>
+	
+	
+	
+   <div class="col-md-31 col-sm-4 col-xs-12">           
+    <a href="system-fastenings-thermal-and-hydro-insulation-flat-roofs.html"><img class="j-data-element" data-animate="fadeInDown" data-retina src="img/products/products-main/thermal-hydro insulation.jpg" alt=""/></a> 
+    <a href="system-fastenings-thermal-and-hydro-insulation-flat-roofs.html" class="b-btn f-btn b-btn-default b-btn-md f-primary-b">Read More</a>	
+    </div>
+	
+	
+    <div class="col-md-31 col-sm-4 col-xs-12">           
+    <a href="fastening-system-lightweight-cladding-roofing-and-walls.html"><img class="j-data-element" data-animate="fadeInDown" data-retina src="img/products/products-main/Fastening-systems-lightweight-housing.jpg" alt=""/></a> 
+    <a href="fastening-system-lightweight-cladding-roofing-and-walls.html" class="b-btn f-btn b-btn-default b-btn-md f-primary-b">Read More</a>	
+    </div>
+	
+	
+    <div class="col-md-31 col-sm-4 col-xs-12">           
+    <a href="screws-and-fasteners-wooden-constructions.html"><img class="j-data-element" data-animate="fadeInDown" data-retina src="img/products/products-main/screws-fasteners-wooden-constructions.jpg" alt=""/></a> 
+    <a href="screws-and-fasteners-wooden-constructions.html" class="b-btn f-btn b-btn-default b-btn-md f-primary-b">Read More</a>	
+    </div>
+	
+	
+	<div class="col-md-31 col-sm-4 col-xs-12">           
+    <a href="screws-and-fasteners-joinery.html"><img class="j-data-element" data-animate="fadeInDown" data-retina src="img/products/products-main/Screws-fasteners-joinery.jpg" alt=""/></a> 
+    <a href="screws-and-fasteners-joinery.html" class="b-btn f-btn b-btn-default b-btn-md f-primary-b">Read More</a>	
+    </div>
+	
+	
+   <div class="col-md-31 col-sm-4 col-xs-12">           
+    <a href="fastening-systems-furniture-sector.html"><img class="j-data-element" data-animate="fadeInDown" data-retina src="img/products/products-main/Fasteningsystems-furnituresector.jpg" alt=""/></a> 
+    <a href="fastening-systems-furniture-sector.html" class="b-btn f-btn b-btn-default b-btn-md f-primary-b">Read More</a>	
+    </div>
+	
+	
+    <div class="col-md-31 col-sm-4 col-xs-12">           
+    <a href="drywall-fastener-systems.html"><img class="j-data-element" data-animate="fadeInDown" data-retina src="img/products/products-main/drywall-fastener-systems.jpg" alt=""/></a> 
+    <a href="drywall-fastener-systems.html" class="b-btn f-btn b-btn-default b-btn-md f-primary-b">Read More</a>	
+    </div>
+	
+   <div class="col-md-31 col-sm-4 col-xs-12">           
+    <a href="bolts-and-screws.html"><img class="j-data-element" data-animate="fadeInDown" data-retina src="img/products/products-main/bolts-screws.jpg" alt=""/></a> 
+    <a href="bolts-and-screws.html" class="b-btn f-btn b-btn-default b-btn-md f-primary-b">Read More</a>	
+    </div>
+	
+    <div class="col-md-31 col-sm-4 col-xs-12">           
+    <a href="mechanical-anchors.html"><img class="j-data-element" data-animate="fadeInDown" data-retina src="img/products/products-main/mechanical-anchors.jpg" alt=""/></a> 
+    <a href="mechanical-anchors.html" class="b-btn f-btn b-btn-default b-btn-md f-primary-b">Read More </a>
+    </div>
+	
+	<div class="col-md-31 col-sm-4 col-xs-12">           
+    <a href="chemical-anchoring-systems.html"><img class="j-data-element" data-animate="fadeInDown" data-retina src="img/products/products-main/chemical-anchoring-systems.jpg" alt=""/></a> 
+    <a href="chemical-anchoring-systems.html" class="b-btn f-btn b-btn-default b-btn-md f-primary-b">Read More</a>	
+    </div>
+	
+	<div class="col-md-31 col-sm-4 col-xs-12">           
+    <a href="construction-chemicals.html"><img class="j-data-element" data-animate="fadeInDown" data-retina src="img/products/products-main/construction-chemicals.jpg" alt=""/></a> 
+    <a href="construction-chemicals.html" class="b-btn f-btn b-btn-default b-btn-md f-primary-b">Read More</a>	
+    </div>
+	
+	<div class="col-md-31 col-sm-4 col-xs-12">           
+    <a href="installation-systems-and-sanitary-fixings-clamps-and-bands.html"><img class="j-data-element" data-animate="fadeInDown" data-retina src="img/products/products-main/sanitary-fixings.jpg" alt=""/></a> 
+    <a href="installation-systems-and-sanitary-fixings-clamps-and-bands.html" class="b-btn f-btn b-btn-default b-btn-md f-primary-b">Read More</a>	
+    </div>
+	
+	<div class="col-md-31 col-sm-4 col-xs-12">           
+    <a href="electrical-fasteners.html"><img class="j-data-element" data-animate="fadeInDown" data-retina src="img/products/products-main/electrical-fasteners.jpg" alt=""/></a> 
+    <a href="electrical-fasteners.html" class="b-btn f-btn b-btn-default b-btn-md f-primary-b">Read More</a>	
+    </div>
+	
+	<div class="col-md-31 col-sm-4 col-xs-12">           
+    <a href="diamond-and-corundum-blades-drill-bits-and-driver-bits.html"><img class="j-data-element" data-animate="fadeInDown" data-retina src="img/products/products-main/diamond-corundum-blades.jpg" alt=""/></a> 
+    <a href="diamond-and-corundum-blades-drill-bits-and-driver-bits.html" class="b-btn f-btn b-btn-default b-btn-md f-primary-b">Read More</a>	
+    </div>
+	
+	<div class="col-md-31 col-sm-4 col-xs-12">           
+    <a href="painters-tapes-and-films.html"><img class="j-data-element" data-animate="fadeInDown" data-retina src="img/products/products-main/painters-tapes-films.jpg" alt=""/></a> 
+    <a href="painters-tapes-and-films.html" class="b-btn f-btn b-btn-default b-btn-md f-primary-b">Read More</a>	
+    </div>
+	
+	<div class="col-md-31 col-sm-4 col-xs-12">           
+    <a href="construction-membranes-and-protection-plastic-foils.html"><img class="j-data-element" data-animate="fadeInDown" data-retina src="img/products/products-main/construction-membranes.jpg" alt=""/></a> 
+    <a href="construction-membranes-and-protection-plastic-foils.html" class="b-btn f-btn b-btn-default b-btn-md f-primary-b">Read More</a>	
+    </div>
+	
+	<div class="col-md-31 col-sm-4 col-xs-12">           
+    <a href="butyl-tapes.html"><img class="j-data-element" data-animate="fadeInDown" data-retina src="img/products/products-main/butyl-tapes.jpg" alt=""/></a> 
+    <a href="butyl-tapes.html" class="b-btn f-btn b-btn-default b-btn-md f-primary-b">Read More</a>	
     </div>
 
-    <!-- Navigation - Made Sleeker -->
-    <nav class="bg-white shadow-md sticky top-0 z-50 main-navbar">
-        <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-7 items-center">
-            <div class="flex justify-between items-center">
-                <div class="flex">
-                    <a href="index.html" class="flex-shrink-0 flex items-center logo-container">
-                        <img src="img/logo/logo1.jpg" alt="Tista Ventures LLP" class="rounded-lg">
-                    </a>
-                </div>
-                <div class="hidden md:flex items-center space-x-6">
-                    <a href="index.html"
-                        class="text-gray-600 hover:text-primary px-3 py-2 text-sm font-medium">Home</a>
-                    <a href="products.html"
-                        class="text-primary border-b-2 border-primary px-3 py-2 text-sm font-medium">Products</a>
-                    <a href="about-us.html" class="text-gray-600 hover:text-primary px-3 py-2 text-sm font-medium">About
-                        Us</a>
-                    <a href="contact-us.html"
-                        class="text-gray-600 hover:text-primary px-3 py-2 text-sm font-medium">Contact</a>
-                </div>
-                <div class="flex items-center md:hidden">
-                    <button type="button"
-                        class="mobile-menu-button inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-primary focus:outline-none">
-                        <i data-feather="menu" class="h-5 w-5"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-        <!-- Mobile menu -->
-        <div class="mobile-menu hidden md:hidden">
-            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
-                <a href="index.html"
-                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-primary hover:bg-blue-50">Home</a>
-                <a href="products.html"
-                    class="text-primary border-b-2 border-primary px-3 py-2 text-sm font-medium">Products</a>
-                <a href="about.html"
-                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-primary hover:bg-blue-50">About
-                    Us</a>
-                <a href="contact.html"
-                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-primary hover:bg-blue-50">Contact</a>
-            </div>
-        </div>
-    </nav>
+</div>
 
-    <!-- Page Header -->
-    <div class="py-12" style="background-color: #4DA8DA;">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 class="text-4xl font-bold text-white mb-4">Our Premium Hardware Collection</h1>
-            <p class="text-blue-100 text-lg">Discover the finest screws, adhesives, and hardware solutions for
-                professionals and DIY enthusiasts</p>
+<footer>
+ 
+  <div class="container">
+    <div class="b-footer-secondary row">
+      <div class="col-md-3 col-sm-12 col-xs-12 f-center b-footer-logo-containter">
+          <a href=""><img data-retina class="b-footer-logo" src="img/logo/logo-footer.jpg" alt="Logo"/></a>
+          <div class="b-footer-logo-text f-footer-logo-text">
+          <p>We deliver services which strive to reduce energy consumption in residences, commercial complexes, IT/ITES buildings and industrial furnaces.</p>
+          <div class="b-btn-group-hor f-btn-group-hor">
+            <a href="#" class="b-btn-group-hor__item f-btn-group-hor__item">
+              <i class="fa fa-twitter"></i>
+            </a>
+            <a href="#" class="b-btn-group-hor__item f-btn-group-hor__item">
+              <i class="fa fa-facebook"></i>
+            </a>
+            <a href="#" class="b-btn-group-hor__item f-btn-group-hor__item">
+              <i class="fa fa-dribbble"></i>
+            </a>
+            <a href="#" class="b-btn-group-hor__item f-btn-group-hor__item">
+              <i class="fa fa-linkedin"></i>
+            </a>
+          </div>
         </div>
+      </div>
+	   
+	   <div class="col-md-6 col-sm-8 col-xs-8  ">
+        <h4 style="font-weight: bold;text-align:center";>Our Products</h4>
+		
+		<div class="b-blog-short-post row">
+          <div class="b-blog-short-post__item col-md-12 col-sm-4 col-xs-12 f-center">
+            <div class="b-blog-short-post__item_text f-blog-short-post__item_text">
+              <a href="framework-fasteners.html">Klimas</a>
+            </div>  
+          </div>
+          <div class="b-blog-short-post__item col-md-12 col-sm-4 col-xs-12 f-center">
+            <div class="b-blog-short-post__item_text f-blog-short-post__item_text">
+              <a href="https://www.cotswoldap.com/products">cotswold</a>
+            </div>    
+          </div>
+          <div class="b-blog-short-post__item col-md-12 col-sm-4 col-xs-12 f-center">
+            <div class="b-blog-short-post__item_text f-blog-short-post__item_text">
+              <a href="https://www.siderise.com/products/facades">SideRise</a>
+            </div>
+          </div>
+		   <div class="b-blog-short-post__item col-md-12 col-sm-4 col-xs-12 f-center">
+            <div class="b-blog-short-post__item_text f-blog-short-post__item_text">
+              <a href="https://www.tremcosealants.com/markets/commercial/">Tremco</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-12 col-xs-12">
+        <h4 class="f-primary-b">contact info</h4>
+        <div class="b-contacts-short-item-group">
+          <div class="b-contacts-short-item col-md-12 col-sm-4 col-xs-12">
+            <div class="b-contacts-short-item__icon f-contacts-short-item__icon f-contacts-short-item__icon_lg b-left">
+              <i class="fa fa-map-marker"></i>
+            </div>
+            <div class="b-remaining f-contacts-short-item__text">
+             Tista Ventures<br/>Address will be updated soon.<br/>
+            </div>
+          </div>
+          
+          <div class="b-contacts-short-item col-md-12 col-sm-4 col-xs-12">
+            <div class="b-contacts-short-item__icon f-contacts-short-item__icon b-left f-contacts-short-item__icon_xs">
+              <i class="fa fa-envelope"></i>
+            </div>
+            <div class="b-remaining f-contacts-short-item__text f-contacts-short-item__text_email">
+              <a href="mailto:info@tistaventures.com">info@tistaventures.com</a>
+            </div>
+          </div>
+		  <div class="b-contacts-short-item col-md-12 col-sm-4 col-xs-12">
+            <div class="b-contacts-short-item__icon f-contacts-short-item__icon b-left f-contacts-short-item__icon_xs">
+              <i class="fa fa-phone"></i>
+            </div>
+            <div class="b-remaining f-contacts-short-item__text f-contacts-short-item__text_email">
+             +91 98765 43210 , +91 98765 43210</br>+91 98765 43210 
+            </div>
+          </div>
+        </div>
+      </div>
+	 
     </div>
-
-    <!-- Category Navigation -->
-    <div class="bg-white shadow-sm sticky-categories">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex overflow-x-auto space-x-6 py-4" id="category-nav">
-                <a href="#screws"
-                    class="category-link whitespace-nowrap px-4 py-2 rounded-full bg-primary text-white text-sm font-medium"
-                    data-category="screws">Screws & Fasteners</a>
-                <a href="#adhesives"
-                    class="category-link whitespace-nowrap px-4 py-2 rounded-full bg-gray-100 text-gray-700 hover:bg-gray-200 text-sm font-medium"
-                    data-category="adhesives">Adhesives</a>
-                <a href="#tools"
-                    class="category-link whitespace-nowrap px-4 py-2 rounded-full bg-gray-100 text-gray-700 hover:bg-gray-200 text-sm font-medium"
-                    data-category="tools">Tools</a>
-                <a href="#kits"
-                    class="category-link whitespace-nowrap px-4 py-2 rounded-full bg-gray-100 text-gray-700 hover:bg-gray-200 text-sm font-medium"
-                    data-category="kits">Hardware Kits</a>
-            </div>
-        </div>
-    </div>
-
-    <!-- Products Section -->
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <!-- Screws Category -->
-        <section id="screws" class="category-anchor mb-16">
-            <div class="flex items-center justify-between mb-8">
-                <h2 class="text-3xl font-bold text-gray-900">Screws & Fasteners</h2>
-
-            </div>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Product 1 -->
-                <div class="product-card bg-white rounded-xl overflow-hidden shadow-sm transition duration-300">
-                    <img src="http://static.photos/construction/400x300/5" alt="Titanium Construction Screws"
-                        class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <div class="flex items-center mb-2">
-                            <span
-                                class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded">Bestseller</span>
-                        </div>
-                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Titanium Construction Screws</h3>
-                        <p class="text-gray-600 mb-4">High-strength corrosion-resistant screws for demanding
-                            applications. Perfect for outdoor and marine use.</p>
-                    </div>
+  </div>
+  
+ <div class="b-footer-primary">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4 col-xs-12 f-copyright b-copyright">Copyright © 2026 - All Rights Reserved</div>
+            <div class="col-sm-8 col-xs-12">
+                <div class="b-btn f-btn b-btn-default b-right b-footer__btn_up f-footer__btn_up j-footer__btn_up">
+                    <i class="fa fa-chevron-up"></i>
                 </div>
-                <!-- Product 2 -->
-                <div class="product-card bg-white rounded-xl overflow-hidden shadow-sm transition duration-300">
-                    <img src="http://static.photos/industry/400x300/8" alt="Stainless Steel Bolts"
-                        class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Stainless Steel Bolts</h3>
-                        <p class="text-gray-600 mb-4">Premium grade 304 stainless steel bolts with excellent corrosion
-                            resistance and durability.</p>
-
-                    </div>
-                </div>
-                <!-- Product 3 -->
-                <div class="product-card bg-white rounded-xl overflow-hidden shadow-sm transition duration-300">
-                    <img src="http://static.photos/construction/400x300/6" alt="Wood Screw Assortment"
-                        class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <div class="flex items-center mb-2">
-                            <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">New</span>
-                        </div>
-                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Wood Screw Assortment</h3>
-                        <p class="text-gray-600 mb-4">Complete set of wood screws in various sizes with sharp points for
-                            easy driving.</p>
-
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Adhesives Category -->
-        <section id="adhesives" class="category-anchor mb-16">
-            <div class="flex items-center justify-between mb-8">
-                <h2 class="text-3xl font-bold text-gray-900">Industrial Adhesives</h2>
-
-            </div>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Product 1 -->
-                <div class="product-card bg-white rounded-xl overflow-hidden shadow-sm transition duration-300">
-                    <img src="http://static.photos/industry/400x300/7" alt="Industrial Strength Adhesive"
-                        class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <div class="flex items-center mb-2">
-                            <span
-                                class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded">Bestseller</span>
-                        </div>
-                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Industrial Strength Adhesive</h3>
-                        <p class="text-gray-600 mb-4">Bonds metal, wood, plastic, and more with incredible holding
-                            power. Waterproof and weather resistant.</p>
-
-                    </div>
-                </div>
-                <!-- Product 2 -->
-                <div class="product-card bg-white rounded-xl overflow-hidden shadow-sm transition duration-300">
-                    <img src="http://static.photos/industry/400x300/9" alt="Epoxy Resin Kit"
-                        class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Epoxy Resin Kit</h3>
-                        <p class="text-gray-600 mb-4">Two-part epoxy system for high-strength bonding, filling, and
-                            sealing applications.</p>
-
-                    </div>
-                </div>
-                <!-- Product 3 -->
-                <div class="product-card bg-white rounded-xl overflow-hidden shadow-sm transition duration-300">
-                    <img src="http://static.photos/industry/400x300/10" alt="Construction Adhesive"
-                        class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Heavy-Duty Construction Adhesive</h3>
-                        <p class="text-gray-600 mb-4">Professional grade adhesive for bonding building materials
-                            including drywall, paneling, and trim.</p>
-
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Tools Category -->
-        <section id="tools" class="category-anchor mb-16">
-            <div class="flex items-center justify-between mb-8">
-                <h2 class="text-3xl font-bold text-gray-900">Professional Tools</h2>
-
-            </div>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Product 1 -->
-                <div class="product-card bg-white rounded-xl overflow-hidden shadow-sm transition duration-300">
-                    <img src="http://static.photos/tools/400x300/11" alt="Impact Driver Set"
-                        class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Professional Impact Driver Set</h3>
-                        <p class="text-gray-600 mb-4">Cordless impact driver with brushless motor technology for maximum
-                            power and runtime.</p>
-
-                    </div>
-                </div>
-                <!-- Product 2 -->
-                <div class="product-card bg-white rounded-xl overflow-hidden shadow-sm transition duration-300">
-                    <img src="http://static.photos/tools/400x300/12" alt="Screwdriver Set"
-                        class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <div class="flex items-center mb-2">
-                            <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">New</span>
-                        </div>
-                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Precision Screwdriver Set</h3>
-                        <p class="text-gray-600 mb-4">32-piece set with magnetic tips, comfortable handles, and various
-                            screw head types.</p>
-
-                    </div>
-                </div>
-                <!-- Product 3 -->
-                <div class="product-card bg-white rounded-xl overflow-hidden shadow-sm transition duration-300">
-                    <img src="http://static.photos/tools/400x300/13" alt="Torque Wrench"
-                        class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Digital Torque Wrench</h3>
-                        <p class="text-gray-600 mb-4">Precision torque measurement with digital display, audible alert,
-                            and memory function.</p>
-
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Kits Category -->
-        <section id="kits" class="category-anchor">
-            <div class="flex items-center justify-between mb-8">
-                <h2 class="text-3xl font-bold text-gray-900">Hardware Kits</h2>
-
-            </div>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Product 1 -->
-                <div class="product-card bg-white rounded-xl overflow-hidden shadow-sm transition duration-300">
-                    <img src="http://static.photos/tools/400x300/3" alt="Professional Hardware Kit"
-                        class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <div class="flex items-center mb-2">
-                            <span
-                                class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded">Bestseller</span>
-                        </div>
-                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Ultimate
-                            Professional Hardware Kit</h3>
-                        <p class="text-gray-600 mb-4">Comprehensive kit with screws, anchors, and tools for a variety of
-                            projects.</p>
-
-                    </div>
-                </div>
-                <!-- Product 2 -->
-                <div class="product-card bg-white rounded-xl overflow-hidden shadow-sm transition duration-300">
-                    <img src="http://static.photos/tools/400x300/4" alt="Basic Home Repair Kit"
-                        class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Basic Home Repair Kit</h3>
-                        <p class="text-gray-600 mb-4">Essential screws, nails, and tools for everyday home repairs and
-                            maintenance.</p>
-
-                    </div>
-                </div>
-                <!-- Product 3 -->
-                <div class="product-card bg-white rounded-xl overflow-hidden shadow-sm transition duration-300
-                    ">
-                    <img src="http://static.photos/tools/400x300/5" alt="Deluxe Woodworking Kit"
-                        class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Deluxe Woodworking Kit</h3>
-                        <p class="text-gray-600 mb-4">Complete set of wood screws, dowels, and clamps for professional
-                            woodworking projects.</p>
-
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-4 gap-8">
-                <div>
-                    <a href="index.html" class="flex items-center mb-4">
-                        <i data-feather="tool" class="h-8 w-8 text-primary"></i>
-                        <span class="ml-2 text-xl font-bold">Tista Ventures LLP</span>
-                    </a>
-                    <p class="text-gray-400 mb-4">Premium hardware solutions for professionals and DIY enthusiasts.</p>
-                    <div class="flex space-x-4">
-                        <a href="#" class="text-gray-400 hover:text-primary"><i data-feather="facebook"></i></a>
-                        <a href="#" class="text-gray-400 hover:text-primary"><i data-feather="twitter"></i></a>
-                        <a href="#" class="text-gray-400 hover:text-primary"><i data-feather="instagram"></i></a>
-                        <a href="#" class="text-gray-400 hover:text-primary"><i data-feather="linkedin"></i></a>
-                    </div>
-                </div>
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">Products</h3>
-                    <ul class="space-y-2">
-                        <li><a href="products.html#screws" class="text-gray-400 hover:text-primary">Screws &
-                                Fasteners</a></li>
-                        <li><a href="products.html#adhesives" class="text-gray-400 hover:text-primary">Adhesives &
-                                Sealants</a></li>
-                        <li><a href="products.html#tools" class="text-gray-400 hover:text-primary">Tools & Equipment</a>
-                        </li>
-                        <li><a href="products.html#kits" class="text-gray-400 hover:text-primary">Hardware Kits</a></li>
+                <nav class="b-bottom-nav f-bottom-nav b-right hidden-xs">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about-us.html">AboutsUs</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="quality.html">Quality</a></li>
+                        <li><a href="career.html">Career</a></li>
+                        <li><a href="enquiry.html">Enquiry</a></li>
+                        <li><a href="contact-us.html">ContactUs</a></li>
                     </ul>
-                </div>
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">Company</h3>
-                    <ul class="space-y-2">
-                        <li><a href="about.html" class="text-gray-400 hover:text-primary">About Us</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-primary">Our Story</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-primary">Careers</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-primary">Press</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">Support</h3>
-                    <ul class="space-y-2">
-                        <li><a href="contact.html" class="text-gray-400 hover:text-primary">Contact Us</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-primary">FAQs</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-primary">Shipping & Returns</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-primary">Warranty</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="mt-12 border-t border-gray-800 pt-6 text-center ">
-                <p class="text-gray-400 text-sm">&copy; 2024 Tista Ventures LLP Hardware Solutions. All rights reserved.
-                </p>
+                </nav>
             </div>
         </div>
-    </footer>
-    <script>
-        // Mobile menu toggle
-        document.querySelector('.mobile-menu-button').addEventListener('click', function () {
-            document.querySelector('.mobile-menu').classList.toggle('hidden');
-        });
+    </div>
+</div>
 
-        // Animated sticky navbar on scroll (fade effect)
-        const mainNavbar = document.querySelector('nav');
-        let lastScrollY = window.scrollY;
-        let ticking = false;
+  
+  
+</footer>
+<script src="js/breakpoints.js"></script>
+<script src="js/jquery/jquery-1.11.1.min.js"></script>
+<!-- bootstrap -->
+<script src="js/scrollspy.js"></script>
+<script src="js/bootstrap-progressbar/bootstrap-progressbar.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<!-- end bootstrap -->
+<script src="js/masonry.pkgd.min.js"></script>
+<script src='js/imagesloaded.pkgd.min.js'></script>
+<!-- bxslider -->
+<script src="js/bxslider/jquery.bxslider.min.js"></script>
+<!-- end bxslider -->
+<!-- flexslider -->
+<script src="js/flexslider/jquery.flexslider.js"></script>
+<!-- end flexslider -->
+<!-- smooth-scroll -->
+<script src="js/smooth-scroll/SmoothScroll.js"></script>
+<!-- end smooth-scroll -->
+<!-- carousel -->
+<script src="js/jquery.carouFredSel-6.2.1-packed.js"></script>
+<!-- end carousel -->
+<script src="js/rs-plugin/js/jquery.themepunch.plugins.min.js"></script>
+<script src="js/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+<script src="js/rs-plugin/videojs/video.js"></script>
 
-        function handleNavbarScroll() {
-            if (window.scrollY > 60) {
-                mainNavbar.classList.add('navbar-scrolled');
-            } else {
-                mainNavbar.classList.remove('navbar-scrolled');
-            }
-            ticking = false;
-        }
+<!-- jquery ui -->
+<script src="js/jqueryui/jquery-ui.js"></script>
+<!-- end jquery ui -->
+<script type="text/javascript" language="javascript"
+        src="https://maps.google.com/maps/api/js?sensor=false&key=AIzaSyCfVS1-Dv9bQNOIXsQhTSvj7jaDX7Oocvs"></script>
+<!-- Modules -->
+<script src="js/modules/sliders.js"></script>
+<script src="js/modules/ui.js"></script>
+<script src="js/modules/retina.js"></script>
+<script src="js/modules/animate-numbers.js"></script>
+<script src="js/modules/parallax-effect.js"></script>
+<script src="js/modules/settings.js"></script>
+<script src="js/modules/maps-google.js"></script>
+<script src="js/modules/color-themes.js"></script>
+<!-- End Modules -->
 
-        window.addEventListener('scroll', function () {
-            if (!ticking) {
-                window.requestAnimationFrame(handleNavbarScroll);
-                ticking = true;
-            }
-        });
+<!-- radial Progress -->
+<script src="js/radial-progress/jquery.easing.1.3.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.4.13/d3.min.js"></script>
+<script src="js/radial-progress/radialProgress.js"></script>
+<script src="js/progressbars.js"></script>
+<!-- end Progress -->
 
-        // Feather icons
-        feather.replace();
+<!-- Google services -->
+<script type="text/javascript" src="https://www.google.com/jsapi?autoload={'modules':[{'name':'visualization','version':'1','packages':['corechart']}]}"></script>
+<script src="js/google-chart.js"></script>
+<!-- end Google services -->
+<script src="js/j.placeholder.js"></script>
 
-        // Category selection highlight
-        const categoryLinks = document.querySelectorAll('.category-link');
-        categoryLinks.forEach(link => {
-            link.addEventListener('click', function () {
-                categoryLinks.forEach(l => {
-                    l.classList.remove('bg-primary', 'text-white');
-                    l.classList.add('bg-gray-100', 'text-gray-700');
-                });
-                this.classList.add('bg-primary', 'text-white');
-                this.classList.remove('bg-gray-100', 'text-gray-700');
-            });
-        });
-    </script>
+<!-- Fancybox -->
+<script src="js/fancybox/jquery.fancybox.pack.js"></script>
+<script src="js/fancybox/jquery.mousewheel.pack.js"></script>
+<script src="js/fancybox/jquery.fancybox.custom.js"></script>
+<!-- End Fancybox -->
+<script src="js/user.js"></script>
+<script src="js/timeline.js"></script>
+<script src="js/fontawesome-markers.js"></script>
+<script src="js/markerwithlabel.js"></script>
+<script src="js/cookie.js"></script>
+<script src="js/loader.js"></script>
+<script src="js/scrollIt/scrollIt.min.js"></script>
+<script src="js/modules/navigation-slide.js"></script>
 </body>
-
 </html>
