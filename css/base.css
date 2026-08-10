@@ -1,0 +1,94 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: var(--ink);
+  background:
+    radial-gradient(1200px 600px at 10% -10%, rgba(31, 111, 139, 0.12), transparent 55%),
+    radial-gradient(900px 500px at 90% 0%, rgba(197, 220, 234, 0.7), transparent 50%),
+    linear-gradient(180deg, var(--atmosphere-2) 0%, var(--bg) 35%, var(--bg) 100%);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: var(--accent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+
+a:hover {
+  color: var(--accent-deep);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  font-weight: 550;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin: 0 0 0.75rem;
+  color: var(--ink);
+}
+
+h1 {
+  font-size: clamp(2.4rem, 5vw, 4.25rem);
+}
+
+h2 {
+  font-size: clamp(1.85rem, 3.2vw, 2.75rem);
+}
+
+h3 {
+  font-size: clamp(1.25rem, 2vw, 1.55rem);
+}
+
+p {
+  margin: 0 0 1rem;
+  color: var(--ink-soft);
+}
+
+ul,
+ol {
+  margin: 0 0 1rem;
+  padding-left: 1.2rem;
+  color: var(--ink-soft);
+}
+
+strong {
+  color: var(--ink);
+  font-weight: 650;
+}
+
+::selection {
+  background: rgba(31, 111, 139, 0.22);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}

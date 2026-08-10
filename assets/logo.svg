@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="GetKloud">
+  <defs>
+    <linearGradient id="g" x1="8" y1="8" x2="56" y2="56" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1F6F8B"/>
+      <stop offset="1" stop-color="#173246"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="10" fill="url(#g)"/>
+  <path d="M18 38c0-9.4 6.7-16 16-16 6.2 0 11.4 3.1 14.2 7.8l-6.2 3.4C40.4 30.4 37.5 28 34 28c-5.2 0-9 4-9 10s3.8 10 9 10c3.7 0 6.7-1.9 8.2-4.8H34v-7h18v3c0 9.5-7 16.8-18 16.8-10.8 0-16-7.8-16-18z" fill="#F4F8FB"/>
+</svg>
