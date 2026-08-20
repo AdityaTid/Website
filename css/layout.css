@@ -97,8 +97,11 @@
 }
 
 .brand__mark {
-  width: 2.1rem;
-  height: 2.1rem;
+  width: auto;
+  height: 3.4rem;
+  max-width: 11.5rem;
+  object-fit: contain;
+  display: block;
 }
 
 .brand__name {
@@ -115,6 +118,8 @@
 }
 
 .nav a {
+  display: inline-flex;
+  align-items: center;
   color: var(--ink-soft);
   text-decoration: none;
   font-weight: 600;
@@ -313,7 +318,7 @@
   inset: 0;
   background:
     linear-gradient(120deg, rgba(15, 40, 55, 0.72) 0%, rgba(23, 50, 70, 0.45) 45%, rgba(31, 111, 139, 0.35) 100%),
-    url("../assets/images/hero-cloud.jpg") center / cover no-repeat;
+    url("../assets/images/heroes/home-hero.jpg") center / cover no-repeat;
   transform: scale(1.04);
 }
 

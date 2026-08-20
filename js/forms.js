@@ -44,6 +44,7 @@
 
   document.querySelectorAll('[data-action="whatsapp"]').forEach((el) => {
     el.addEventListener("click", (event) => {
+      event.preventDefault();
       const form = document.querySelector("[data-enquire-form]");
       let text = el.dataset.message || "Hi GetKloud, I would like to know more about your services.";
       if (form) {
@@ -53,12 +54,7 @@
         }
       }
       const url = `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(text)}`;
-      if (el.tagName === "A") {
-        el.href = url;
-      } else {
-        event.preventDefault();
-        window.open(url, "_blank", "noopener");
-      }
+      window.open(url, "_blank", "noopener");
     });
   });
 })();

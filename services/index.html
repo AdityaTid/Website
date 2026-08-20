@@ -13,20 +13,19 @@
   <link rel="stylesheet" href="../css/layout.css" />
   <link rel="stylesheet" href="../css/components.css" />
   <link rel="stylesheet" href="../css/animations.css" />
-  <link rel="icon" href="../assets/logo.svg" type="image/svg+xml" />
+  <link rel="icon" href="../assets/logo.png" type="image/png" />
 </head>
 <body data-page="services">
   <header class="site-header">
     <div class="site-header__inner">
       <a class="brand" href="../index.html" aria-label="GetKloud home">
-        <img class="brand__mark" src="../assets/logo.svg" alt="" />
-        <span class="brand__name">GetKloud</span>
+        <img class="brand__mark" src="../assets/logo.png" alt="GetKloud Solutions" />
       </a>
       <nav class="nav" aria-label="Primary">
         <a href="../index.html" data-nav="home">Home</a>
         <a href="../about.html" data-nav="about">About</a>
         <div class="nav__dropdown">
-          <a href="../services/index.html" data-nav="services">Services</a>
+          <a href="../services/index.html" data-nav="services">Services <svg class="icon icon--nav" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m7 10 5 5 5-5"/></svg></a>
           <div class="nav__dropdown-menu">
             <a href="../services/cloud-services.html">Cloud Services</a>
             <a href="../services/email-solutions.html">Email Solutions</a>
@@ -74,33 +73,54 @@
     </section>
     <section class="section">
       <div class="container service-links">
-        <a class="service-link" href="cloud-services.html" data-animate>
-          <h3>Cloud Services</h3>
-          <p>Migration, management, and optimization across Azure, AWS, and hybrid environments — with performance, security, and cost clarity.</p>
+        <a class="service-link service-link--media" href="cloud-services.html" data-animate>
+          <img src="../assets/images/gateways/cloud-sm.jpg" alt="" loading="lazy" />
+          <div>
+            <h3><span class="service-link__icon service-link__icon--inline"><svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 18h10.5A4.5 4.5 0 0 0 20 9.6 6 6 0 0 0 8.7 7.1 5 5 0 0 0 7 18Z"/></svg></span>Cloud Services</h3>
+            <p>Migration, management, and optimization across Azure, AWS, and hybrid environments — with performance, security, and cost clarity.</p>
+          </div>
         </a>
-<a class="service-link" href="email-solutions.html" data-animate>
-          <h3>Email Solutions</h3>
-          <p>Office 365, Google Workspace, Zoho Mail, and Webmail — chosen, configured, and supported for your domain.</p>
+<a class="service-link service-link--media" href="email-solutions.html" data-animate>
+          <img src="../assets/images/gateways/email-sm.jpg" alt="" loading="lazy" />
+          <div>
+            <h3><span class="service-link__icon service-link__icon--inline"><svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3.5" y="5.5" width="17" height="13" rx="1.6"/><path d="m4.2 7.2 7.8 6.2 7.8-6.2"/></svg></span>Email Solutions</h3>
+            <p>Office 365, Google Workspace, Zoho Mail, and Webmail — chosen, configured, and supported for your domain.</p>
+          </div>
         </a>
-<a class="service-link" href="lead-generation.html" data-animate>
-          <h3>Lead Generation</h3>
-          <p>Paid ads and automation that turn attention into qualified conversations.</p>
+<a class="service-link service-link--media" href="lead-generation.html" data-animate>
+          <img src="../assets/images/services/s-1-lead.webp" alt="" loading="lazy" />
+          <div>
+            <h3><span class="service-link__icon service-link__icon--inline"><svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 19V9l7-5 7 5v10H5Z"/><path d="M10 19v-6h4v6"/></svg></span>Lead Generation</h3>
+            <p>Paid ads and automation that turn attention into qualified conversations.</p>
+          </div>
         </a>
-<a class="service-link" href="google-ranking.html" data-animate>
-          <h3>Google Ranking</h3>
-          <p>Technical SEO, content, local presence, and audits that move you toward page-one visibility.</p>
+<a class="service-link service-link--media" href="google-ranking.html" data-animate>
+          <img src="../assets/images/services/s-2-search.webp" alt="" loading="lazy" />
+          <div>
+            <h3><span class="service-link__icon service-link__icon--inline"><svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="6.2"/><path d="m20 20-4.2-4.2"/></svg></span>Google Ranking</h3>
+            <p>Technical SEO, content, local presence, and audits that move you toward page-one visibility.</p>
+          </div>
         </a>
-<a class="service-link" href="ecommerce.html" data-animate>
-          <h3>eCommerce Development</h3>
-          <p>Fast, secure, mobile-first commerce experiences for B2B, B2C, D2C, and more.</p>
+<a class="service-link service-link--media" href="ecommerce.html" data-animate>
+          <img src="../assets/images/services/s-3-b2b.webp" alt="" loading="lazy" />
+          <div>
+            <h3><span class="service-link__icon service-link__icon--inline"><svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 8h14l-1.2 11.2A2 2 0 0 1 15.8 21H8.2a2 2 0 0 1-2-1.8L5 8Z"/><path d="M8 8V6.5A4 4 0 0 1 16 6.5V8"/></svg></span>eCommerce Development</h3>
+            <p>Fast, secure, mobile-first commerce experiences for B2B, B2C, D2C, and more.</p>
+          </div>
         </a>
-<a class="service-link" href="website-development.html" data-animate>
-          <h3>Website Development</h3>
-          <p>High-performance, mobile-friendly, SEO-ready sites for brands that need results.</p>
+<a class="service-link service-link--media" href="website-development.html" data-animate>
+          <img src="../assets/images/services/s-4-corporate.webp" alt="" loading="lazy" />
+          <div>
+            <h3><span class="service-link__icon service-link__icon--inline"><svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m8 8-4 4 4 4"/><path d="m16 8 4 4-4 4"/><path d="m13.2 5-2.4 14"/></svg></span>Website Development</h3>
+            <p>High-performance, mobile-friendly, SEO-ready sites for brands that need results.</p>
+          </div>
         </a>
-<a class="service-link" href="business-automation.html" data-animate>
-          <h3>Business Automation</h3>
-          <p>Custom ERP, CRM, and software that streamline operations and free your team.</p>
+<a class="service-link service-link--media" href="business-automation.html" data-animate>
+          <img src="../assets/images/services/s-5-erp.webp" alt="" loading="lazy" />
+          <div>
+            <h3><span class="service-link__icon service-link__icon--inline"><svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="3"/><path d="M12 3.5v2.2M12 18.3V20.5M4.9 6.5l1.6 1.6M17.5 16l1.6 1.6M3.5 12h2.2M18.3 12H20.5M4.9 17.5l1.6-1.6M17.5 8l1.6-1.6"/></svg></span>Business Automation</h3>
+            <p>Custom ERP, CRM, and software that streamline operations and free your team.</p>
+          </div>
         </a>
       </div>
     </section>
@@ -110,15 +130,18 @@
     <div class="container site-footer__grid">
       <div>
         <a class="brand" href="../index.html">
-          <img class="brand__mark" src="../assets/logo.svg" alt="" />
-          <span class="brand__name">GetKloud</span>
+          <img class="brand__mark" src="../assets/logo.png" alt="GetKloud Solutions" />
         </a>
         <p style="margin-top:1rem;">Website development, cloud, and digital growth partner serving Pune and across India.</p>
       </div>
       <div>
         <h3>Services</h3>
+        <a href="../services/index.html">All services</a>
         <a href="../services/cloud-services.html">Cloud Services</a>
+        <a href="../services/email-solutions.html">Email Solutions</a>
         <a href="../services/lead-generation.html">Lead Generation</a>
+        <a href="../services/google-ranking.html">Google Ranking</a>
+        <a href="../services/ecommerce.html">eCommerce</a>
         <a href="../services/website-development.html">Website Development</a>
         <a href="../services/business-automation.html">Business Automation</a>
       </div>
@@ -131,18 +154,18 @@
       </div>
       <div>
         <h3>Contact</h3>
-        <a href="tel:+918421174747">+91 8421174747</a>
-        <a href="mailto:info@getkloud.in">info@getkloud.in</a>
-        <p>Sinhagad Road, Pune 411041</p>
+        <a href="tel:+918421174747"><svg class="icon icon--sm" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6.7 3.9c.5-.5 1.3-.5 1.8 0l1.7 1.7c.4.4.5 1.1.2 1.6L9.4 9c1.3 2.4 3.2 4.3 5.6 5.6l1.8-1c.5-.3 1.2-.2 1.6.2l1.7 1.7c.5.5.5 1.3 0 1.8l-1.1 1.1c-.7.7-1.8 1-2.8.7C11.4 18 6 12.6 4.9 7.8c-.3-1 0-2.1.7-2.8L6.7 3.9Z"/></svg> +91 8421174747</a>
+        <a href="mailto:info@getkloud.in"><svg class="icon icon--sm" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3.5" y="5.5" width="17" height="13" rx="1.6"/><path d="m4.2 7.2 7.8 6.2 7.8-6.2"/></svg> info@getkloud.in</a>
+        <p class="footer-pin"><svg class="icon icon--sm" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 21s6.5-5.4 6.5-10.2A6.5 6.5 0 0 0 5.5 10.8C5.5 15.6 12 21 12 21Z"/><circle cx="12" cy="10.6" r="2.1"/></svg> Sinhagad Road, Pune 411041</p>
       </div>
     </div>
     <div class="container site-footer__bottom">© 2026 GetKloud Solutions. All rights reserved.</div>
   </footer>
 
   <div class="float-dock" aria-label="Quick contact">
-    <a href="../contact.html">Enquire</a>
-    <a href="tel:+918421174747">Call</a>
-    <a href="https://wa.me/918421174747" data-action="whatsapp" target="_blank" rel="noopener">WhatsApp</a>
+    <a href="../contact.html" aria-label="Enquire"><svg class="icon icon--dock" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="4" y="4.2" width="16" height="12.2" rx="1.4"/><path d="M8 19.2 10.4 16.4"/><path d="M8 9h8M8 12.2h5.5"/></svg></a>
+    <a href="tel:+918421174747" aria-label="Call"><svg class="icon icon--dock" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6.7 3.9c.5-.5 1.3-.5 1.8 0l1.7 1.7c.4.4.5 1.1.2 1.6L9.4 9c1.3 2.4 3.2 4.3 5.6 5.6l1.8-1c.5-.3 1.2-.2 1.6.2l1.7 1.7c.5.5.5 1.3 0 1.8l-1.1 1.1c-.7.7-1.8 1-2.8.7C11.4 18 6 12.6 4.9 7.8c-.3-1 0-2.1.7-2.8L6.7 3.9Z"/></svg></a>
+    <a href="https://wa.me/918421174747" data-action="whatsapp" target="_blank" rel="noopener" aria-label="WhatsApp"><svg class="icon icon--dock" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" stroke="none" d="M12.04 3.5A8.45 8.45 0 0 0 3.6 11.96c0 1.49.39 2.94 1.13 4.22L3.5 20.5l4.44-1.16a8.46 8.46 0 0 0 4.1 1.06h.01A8.46 8.46 0 0 0 20.5 12 8.45 8.45 0 0 0 12.04 3.5Zm4.93 11.96c-.2.57-1.18 1.09-1.63 1.16-.42.06-.95.09-1.53-.1-.35-.11-.8-.26-1.38-.51-2.43-1.05-4.01-3.5-4.13-3.66-.12-.16-1-1.18-1-2.25s.63-1.6.86-1.82c.22-.22.48-.27.64-.27h.46c.15 0 .35 0 .53.4.2.45.66 1.56.72 1.67.06.12.1.25.02.4-.08.16-.12.25-.24.39-.12.13-.25.3-.36.4-.12.12-.24.24-.1.47.14.22.62 1.02 1.33 1.65.91.82 1.68 1.07 1.91 1.19.23.12.37.1.5-.06.14-.16.58-.68.73-.91.16-.23.31-.19.52-.12.22.08 1.37.65 1.6.76.24.12.39.17.45.27.06.1.06.58-.14 1.15Z"/></svg></a>
   </div>
 
   <script src="../js/site.js"></script>
