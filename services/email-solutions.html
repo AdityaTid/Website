@@ -7,59 +7,69 @@
   <meta name="description" content="Office 365, Google Workspace, Zoho Mail, and Webmail — chosen, configured, and supported for your domain." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Syne:wght@600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../css/tokens.css" />
   <link rel="stylesheet" href="../css/base.css" />
   <link rel="stylesheet" href="../css/layout.css" />
   <link rel="stylesheet" href="../css/components.css" />
   <link rel="stylesheet" href="../css/animations.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
   <link rel="icon" href="../assets/logo.png" type="image/png" />
 </head>
 <body data-page="services">
   <header class="site-header">
-    <div class="site-header__inner">
-      <a class="brand" href="../index.html" aria-label="GetKloud home">
-        <img class="brand__mark" src="../assets/logo.png" alt="GetKloud Solutions" />
-      </a>
-      <nav class="nav" aria-label="Primary">
-        <a href="../index.html" data-nav="home">Home</a>
-        <a href="../about.html" data-nav="about">About</a>
-        <div class="nav__dropdown">
-          <a href="../services/index.html" data-nav="services">Services <svg class="icon icon--nav" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m7 10 5 5 5-5"/></svg></a>
-          <div class="nav__dropdown-menu">
-            <a href="../services/cloud-services.html">Cloud Services</a>
-            <a href="../services/email-solutions.html">Email Solutions</a>
-            <a href="../services/lead-generation.html">Lead Generation</a>
-            <a href="../services/google-ranking.html">Google Ranking</a>
-            <a href="../services/ecommerce.html">eCommerce</a>
-            <a href="../services/website-development.html">Website Development</a>
-            <a href="../services/business-automation.html">Business Automation</a>
+    <div class="site-header__wrap">
+      <div class="site-header__bar">
+        <a class="brand brand--nav" href="../index.html" aria-label="GetKloud home">
+          <img class="brand__mark brand__mark--nav" src="../assets/logo.png" alt="GetKloud Solutions" />
+        </a>
+        <nav class="nav" aria-label="Primary">
+          <a href="../index.html" data-nav="home">Home</a>
+          <a href="../about.html" data-nav="about">About</a>
+          <div class="nav__dropdown">
+            <a href="../services/index.html" data-nav="services">Services <svg class="icon icon--nav" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m7.2 9.8 4.8 4.8 4.8-4.8"/></svg></a>
+            <div class="nav__dropdown-menu">
+              <a href="../services/cloud-services.html">Cloud Services</a>
+              <a href="../services/email-solutions.html">Email Solutions</a>
+              <a href="../services/lead-generation.html">Lead Generation</a>
+              <a href="../services/google-ranking.html">Google Ranking</a>
+              <a href="../services/ecommerce.html">eCommerce</a>
+              <a href="../services/website-development.html">Website Development</a>
+              <a href="../services/business-automation.html">Business Automation</a>
+            </div>
           </div>
-        </div>
-        <a href="../how-we-work.html" data-nav="process">How We Work</a>
-        <a href="../contact.html" data-nav="contact">Contact</a>
-      </nav>
-      <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">
-        <span></span>
-      </button>
+          <a href="../how-we-work.html" data-nav="process">How We Work</a>
+          <a href="../contact.html" data-nav="contact">Contact</a>
+        </nav>
+        <a class="nav-cta" href="../contact.html">Get Quote</a>
+        <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+          <svg class="icon icon--menu" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 7h16"/><path d="M4 12h16"/><path d="M4 17h16"/></svg>
+        </button>
+      </div>
     </div>
   </header>
 
-  <nav class="mobile-nav" aria-label="Mobile">
-    <a href="../index.html">Home</a>
-    <a href="../about.html">About</a>
-    <a href="../services/index.html">Services</a>
-    <div class="mobile-nav__group">
-      <a href="../services/cloud-services.html">Cloud Services</a>
-      <a href="../services/email-solutions.html">Email Solutions</a>
-      <a href="../services/lead-generation.html">Lead Generation</a>
-      <a href="../services/google-ranking.html">Google Ranking</a>
-      <a href="../services/ecommerce.html">eCommerce</a>
-      <a href="../services/website-development.html">Website Development</a>
-      <a href="../services/business-automation.html">Business Automation</a>
+  <nav class="mobile-nav" aria-label="Mobile" aria-hidden="true">
+    <button class="mobile-nav__close" type="button" aria-label="Close menu">
+      <svg class="icon icon--menu" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m6 6 12 12"/><path d="m18 6-12 12"/></svg>
+    </button>
+    <div class="mobile-nav__inner">
+      <a class="mobile-nav__item" href="../index.html" style="--nav-delay:0.1s">Home</a>
+      <a class="mobile-nav__item" href="../about.html" style="--nav-delay:0.16s">About</a>
+      <a class="mobile-nav__item" href="../services/index.html" style="--nav-delay:0.22s">Services</a>
+      <div class="mobile-nav__group">
+        <a class="mobile-nav__item mobile-nav__item--sub" href="../services/cloud-services.html" style="--nav-delay:0.28s">Cloud Services</a>
+        <a class="mobile-nav__item mobile-nav__item--sub" href="../services/email-solutions.html" style="--nav-delay:0.34s">Email Solutions</a>
+        <a class="mobile-nav__item mobile-nav__item--sub" href="../services/lead-generation.html" style="--nav-delay:0.4s">Lead Generation</a>
+        <a class="mobile-nav__item mobile-nav__item--sub" href="../services/google-ranking.html" style="--nav-delay:0.46s">Google Ranking</a>
+        <a class="mobile-nav__item mobile-nav__item--sub" href="../services/ecommerce.html" style="--nav-delay:0.52s">eCommerce</a>
+        <a class="mobile-nav__item mobile-nav__item--sub" href="../services/website-development.html" style="--nav-delay:0.58s">Website Development</a>
+        <a class="mobile-nav__item mobile-nav__item--sub" href="../services/business-automation.html" style="--nav-delay:0.64s">Business Automation</a>
+      </div>
+      <a class="mobile-nav__item" href="../how-we-work.html" style="--nav-delay:0.7s">How We Work</a>
+      <a class="mobile-nav__item" href="../contact.html" style="--nav-delay:0.76s">Contact</a>
+      <a class="mobile-nav__cta mobile-nav__item" href="../contact.html" style="--nav-delay:0.84s">Get Quote</a>
     </div>
-    <a href="../how-we-work.html">How We Work</a>
-    <a href="../contact.html">Contact</a>
   </nav>
 
   <main>
@@ -71,7 +81,7 @@
         <h1>Business email that teams actually trust.</h1>
         <p class="section__lead">Office 365, Google Workspace, Zoho Mail, and Webmail — chosen, configured, and supported for your domain.</p>
         <div class="btn-row" style="margin-top:1.25rem;">
-          <a class="btn btn--primary" href="../contact.html"><svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg> Start a project</a>
+          <a class="btn btn--primary" href="../contact.html"><svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4.8 12h14.4"/><path d="m13 6.4 6.2 5.6L13 17.6"/></svg> Start a project</a>
           <a class="btn btn--ghost" href="https://wa.me/918421174747" data-action="whatsapp" target="_blank" rel="noopener"><svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" stroke="none" d="M12.04 3.5A8.45 8.45 0 0 0 3.6 11.96c0 1.49.39 2.94 1.13 4.22L3.5 20.5l4.44-1.16a8.46 8.46 0 0 0 4.1 1.06h.01A8.46 8.46 0 0 0 20.5 12 8.45 8.45 0 0 0 12.04 3.5Zm4.93 11.96c-.2.57-1.18 1.09-1.63 1.16-.42.06-.95.09-1.53-.1-.35-.11-.8-.26-1.38-.51-2.43-1.05-4.01-3.5-4.13-3.66-.12-.16-1-1.18-1-2.25s.63-1.6.86-1.82c.22-.22.48-.27.64-.27h.46c.15 0 .35 0 .53.4.2.45.66 1.56.72 1.67.06.12.1.25.02.4-.08.16-.12.25-.24.39-.12.13-.25.3-.36.4-.12.12-.24.24-.1.47.14.22.62 1.02 1.33 1.65.91.82 1.68 1.07 1.91 1.19.23.12.37.1.5-.06.14-.16.58-.68.73-.91.16-.23.31-.19.52-.12.22.08 1.37.65 1.6.76.24.12.39.17.45.27.06.1.06.58-.14 1.15Z"/></svg> WhatsApp</a>
         </div>
       </div>
@@ -116,7 +126,7 @@
       <div class="container">
         <h2 data-animate>Ready to talk email solutions?</h2>
         <p data-animate>Tell us where you are today — we’ll recommend a clear next step.</p>
-        <a class="btn btn--primary" href="../contact.html" style="background:#fff;color:var(--ink);margin-top:1rem;" data-animate><svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="4" y="4.2" width="16" height="12.2" rx="1.4"/><path d="M8 19.2 10.4 16.4"/><path d="M8 9h8M8 12.2h5.5"/></svg> Contact GetKloud</a>
+        <a class="btn btn--primary" href="../contact.html" style="background:#fff;color:var(--ink);margin-top:1rem;" data-animate><svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="4" y="4.2" width="16" height="12.2" rx="2"/><path d="M8 19.2 10.4 16.4"/><path d="M8 9h8M8 12.2h5.5"/></svg> Contact GetKloud</a>
       </div>
     </section>
   </main>
@@ -150,15 +160,15 @@
       <div>
         <h3>Contact</h3>
         <a href="tel:+918421174747"><svg class="icon icon--sm" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6.7 3.9c.5-.5 1.3-.5 1.8 0l1.7 1.7c.4.4.5 1.1.2 1.6L9.4 9c1.3 2.4 3.2 4.3 5.6 5.6l1.8-1c.5-.3 1.2-.2 1.6.2l1.7 1.7c.5.5.5 1.3 0 1.8l-1.1 1.1c-.7.7-1.8 1-2.8.7C11.4 18 6 12.6 4.9 7.8c-.3-1 0-2.1.7-2.8L6.7 3.9Z"/></svg> +91 8421174747</a>
-        <a href="mailto:info@getkloud.in"><svg class="icon icon--sm" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3.5" y="5.5" width="17" height="13" rx="1.6"/><path d="m4.2 7.2 7.8 6.2 7.8-6.2"/></svg> info@getkloud.in</a>
-        <p class="footer-pin"><svg class="icon icon--sm" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 21s6.5-5.4 6.5-10.2A6.5 6.5 0 0 0 5.5 10.8C5.5 15.6 12 21 12 21Z"/><circle cx="12" cy="10.6" r="2.1"/></svg> Sinhagad Road, Pune 411041</p>
+        <a href="mailto:info@getkloud.in"><svg class="icon icon--sm" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3.6" y="5.4" width="16.8" height="13.2" rx="2"/><path d="m5 7.8 7 5.4 7-5.4"/></svg> info@getkloud.in</a>
+        <p class="footer-pin"><svg class="icon icon--sm" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 21s6.4-5.3 6.4-10A6.4 6.4 0 0 0 5.6 11C5.6 15.7 12 21 12 21Z"/><circle cx="12" cy="10.7" r="2.1"/></svg> Sinhagad Road, Pune 411041</p>
       </div>
     </div>
     <div class="container site-footer__bottom">© 2026 GetKloud Solutions. All rights reserved.</div>
   </footer>
 
   <div class="float-dock" aria-label="Quick contact">
-    <a href="../contact.html" aria-label="Enquire"><svg class="icon icon--dock" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="4" y="4.2" width="16" height="12.2" rx="1.4"/><path d="M8 19.2 10.4 16.4"/><path d="M8 9h8M8 12.2h5.5"/></svg></a>
+    <a href="../contact.html" aria-label="Enquire"><svg class="icon icon--dock" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="4" y="4.2" width="16" height="12.2" rx="2"/><path d="M8 19.2 10.4 16.4"/><path d="M8 9h8M8 12.2h5.5"/></svg></a>
     <a href="tel:+918421174747" aria-label="Call"><svg class="icon icon--dock" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6.7 3.9c.5-.5 1.3-.5 1.8 0l1.7 1.7c.4.4.5 1.1.2 1.6L9.4 9c1.3 2.4 3.2 4.3 5.6 5.6l1.8-1c.5-.3 1.2-.2 1.6.2l1.7 1.7c.5.5.5 1.3 0 1.8l-1.1 1.1c-.7.7-1.8 1-2.8.7C11.4 18 6 12.6 4.9 7.8c-.3-1 0-2.1.7-2.8L6.7 3.9Z"/></svg></a>
     <a href="https://wa.me/918421174747" data-action="whatsapp" target="_blank" rel="noopener" aria-label="WhatsApp"><svg class="icon icon--dock" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" stroke="none" d="M12.04 3.5A8.45 8.45 0 0 0 3.6 11.96c0 1.49.39 2.94 1.13 4.22L3.5 20.5l4.44-1.16a8.46 8.46 0 0 0 4.1 1.06h.01A8.46 8.46 0 0 0 20.5 12 8.45 8.45 0 0 0 12.04 3.5Zm4.93 11.96c-.2.57-1.18 1.09-1.63 1.16-.42.06-.95.09-1.53-.1-.35-.11-.8-.26-1.38-.51-2.43-1.05-4.01-3.5-4.13-3.66-.12-.16-1-1.18-1-2.25s.63-1.6.86-1.82c.22-.22.48-.27.64-.27h.46c.15 0 .35 0 .53.4.2.45.66 1.56.72 1.67.06.12.1.25.02.4-.08.16-.12.25-.24.39-.12.13-.25.3-.36.4-.12.12-.24.24-.1.47.14.22.62 1.02 1.33 1.65.91.82 1.68 1.07 1.91 1.19.23.12.37.1.5-.06.14-.16.58-.68.73-.91.16-.23.31-.19.52-.12.22.08 1.37.65 1.6.76.24.12.39.17.45.27.06.1.06.58-.14 1.15Z"/></svg></a>
   </div>
@@ -166,5 +176,6 @@
   <script src="../js/site.js"></script>
   <script src="../js/animate.js"></script>
   <script src="../js/forms.js"></script>
+
 </body>
 </html>

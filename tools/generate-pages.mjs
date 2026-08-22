@@ -27,6 +27,37 @@ const clients = [
   ["25-years-logo.webp", "25 Years"],
 ];
 
+const founder = {
+  name: "Shailesh Patil",
+  role: "Founder & Owner",
+  company: "GetKloud Solutions",
+  headline: "Cloud Consultant · AWS",
+  location: "Pune, Maharashtra, India",
+  linkedin: "https://www.linkedin.com/in/shaileshpatilcloud/",
+  email: "info@getkloud.in",
+  statusText: "Available for projects",
+  glowText: "Scaling cloud-first businesses across India",
+  image: "team/shailesh-patil.jpg",
+  experience: "13+ years",
+  network: "11K+",
+  connections: "500+",
+  founded: "2021",
+  education: "MBA Marketing · Savitribai Phule Pune University",
+  languages: ["English", "Hindi", "Marathi"],
+  bio:
+    "Shailesh founded GetKloud Solutions to help Indian businesses adopt cloud, hosting, email, and digital growth with clarity and confidence. With 13+ years across AWS, Google Cloud, SaaS, and enterprise sales, he turns complex infrastructure into practical outcomes for SMBs and growing teams.",
+  highlights: [
+    "Cloud sales leadership across AWS, Google Cloud & Azure",
+    "Experience at Sela, CloudCompanions, Ingram Micro & Shivaami",
+    "Specialist in SaaS, PaaS, cost optimization, DevOps & AI/ML",
+    "National-level seminar presenter on cloud technology (Pune University)",
+  ],
+  quote:
+    "Shailesh is an amazing professional, who brings all of the skills and expertise in cloud projects. He is very proactive, dedicated, self driven with great teamwork spirit.",
+  quoteBy: "Shubham Gosavi",
+  skills: ["AWS", "Azure", "Google Cloud", "SaaS & PaaS", "DevOps", "Cost Optimization"],
+};
+
 const services = [
   {
     slug: "cloud-services",
@@ -167,51 +198,58 @@ const services = [
 function icon(name, extraClass = "") {
   const paths = {
     cloud:
-      '<path d="M7 18h10.5A4.5 4.5 0 0 0 20 9.6 6 6 0 0 0 8.7 7.1 5 5 0 0 0 7 18Z"/>',
+      '<path d="M7.5 18h9.2a4.3 4.3 0 0 0 .5-8.6 5.8 5.8 0 0 0-11.1 1.7A4.2 4.2 0 0 0 7.5 18Z"/><path d="M9.2 13.2h5.6"/>',
     hosting:
-      '<rect x="4" y="4" width="16" height="6" rx="1.4"/><rect x="4" y="14" width="16" height="6" rx="1.4"/><circle cx="8" cy="7" r=".9" fill="currentColor" stroke="none"/><circle cx="8" cy="17" r=".9" fill="currentColor" stroke="none"/>',
+      '<rect x="4" y="4.2" width="16" height="5.4" rx="1.6"/><rect x="4" y="14.4" width="16" height="5.4" rx="1.6"/><path d="M7.2 6.9h.01M7.2 17.1h.01M10.2 6.9h4M10.2 17.1h4"/>',
     email:
-      '<rect x="3.5" y="5.5" width="17" height="13" rx="1.6"/><path d="m4.2 7.2 7.8 6.2 7.8-6.2"/>',
-    ads: '<path d="M5 19V9l7-5 7 5v10H5Z"/><path d="M10 19v-6h4v6"/>',
+      '<rect x="3.6" y="5.4" width="16.8" height="13.2" rx="2"/><path d="m5 7.8 7 5.4 7-5.4"/>',
+    ads: '<path d="M4.8 19.2V8.4L12 4.2l7.2 4.2v10.8"/><path d="M9.4 19.2v-5.4h5.2v5.4"/><path d="M9.4 10.8h5.2"/>',
     search:
-      '<circle cx="11" cy="11" r="6.2"/><path d="m20 20-4.2-4.2"/>',
-    shop: '<path d="M5 8h14l-1.2 11.2A2 2 0 0 1 15.8 21H8.2a2 2 0 0 1-2-1.8L5 8Z"/><path d="M8 8V6.5A4 4 0 0 1 16 6.5V8"/>',
-    code: '<path d="m8 8-4 4 4 4"/><path d="m16 8 4 4-4 4"/><path d="m13.2 5-2.4 14"/>',
-    cog: '<circle cx="12" cy="12" r="3"/><path d="M12 3.5v2.2M12 18.3V20.5M4.9 6.5l1.6 1.6M17.5 16l1.6 1.6M3.5 12h2.2M18.3 12H20.5M4.9 17.5l1.6-1.6M17.5 8l1.6-1.6"/>',
+      '<circle cx="11" cy="11" r="6.2"/><path d="m20 20-3.8-3.8"/><path d="M8.8 11h4.4"/>',
+    shop: '<path d="M5.2 8.2h13.6l-1.1 10.4a2 2 0 0 1-2 1.8H8.3a2 2 0 0 1-2-1.8L5.2 8.2Z"/><path d="M8.4 8.2V6.6a3.6 3.6 0 0 1 7.2 0v1.6"/>',
+    code: '<path d="m8.2 8-3.8 4 3.8 4"/><path d="m15.8 8 3.8 4-3.8 4"/><path d="m13.4 5.5-2.8 13"/>',
+    cog: '<circle cx="12" cy="12" r="3.1"/><path d="M12 3.4v2.4M12 18.2v2.4M4.7 6.5l1.7 1.7M17.6 16l1.7 1.7M3.4 12h2.4M18.2 12h2.4M4.7 17.5l1.7-1.7M17.6 8l1.7-1.7"/>',
     chart:
-      '<path d="M4.5 19.5h15"/><path d="M7 16v-4"/><path d="M12 16V8"/><path d="M17 16v-7"/>',
-    star: '<path d="m12 3.6 2.3 4.7 5.2.8-3.8 3.6.9 5.2L12 15.5 7.4 17.9l.9-5.2-3.8-3.6 5.2-.8Z"/>',
+      '<path d="M4.4 19.4h15.2"/><path d="M7 16.2V11"/><path d="M12 16.2V7.4"/><path d="M17 16.2v-6"/><path d="M7 11h10"/>',
+    star: '<path d="m12 3.5 2.2 4.5 5 .7-3.6 3.5.9 5-4.5-2.4-4.5 2.4.9-5L4.8 8.7l5-.7Z"/>',
     users:
-      '<circle cx="9" cy="8" r="2.4"/><path d="M4.6 17.4c.5-2.6 2.4-4 4.4-4s3.9 1.4 4.4 4"/><circle cx="16.2" cy="8.4" r="2"/><path d="M15.2 13.6c1.8.2 3.3 1.4 3.8 3.8"/>',
+      '<circle cx="9" cy="8" r="2.5"/><path d="M4.4 17.6c.5-2.7 2.5-4.1 4.6-4.1s4.1 1.4 4.6 4.1"/><circle cx="16.4" cy="8.5" r="2"/><path d="M15.2 13.6c1.9.2 3.5 1.4 4 3.9"/>',
     analyze:
-      '<circle cx="11" cy="11" r="6"/><path d="m20 20-3.6-3.6"/><path d="M9 11h4M11 9v4"/>',
-    plan: '<rect x="5" y="3.8" width="14" height="16.4" rx="1.6"/><path d="M8.5 2.8v2.2M15.5 2.8v2.2M5 8.4h14"/><path d="M8.5 12h7M8.5 15.4h4.5"/>',
-    execute:
-      '<path d="M5 12h14"/><path d="m13 6 6 6-6 6"/>',
+      '<circle cx="11" cy="11" r="6.1"/><path d="m20 20-3.5-3.5"/><path d="M9 11h4M11 9v4"/>',
+    plan: '<rect x="5" y="3.6" width="14" height="16.8" rx="2"/><path d="M8.5 2.6v2.2M15.5 2.6v2.2M5 8.2h14"/><path d="M8.4 12h7.2M8.4 15.4h4.8"/>',
+    execute: '<path d="M4.8 12h14.4"/><path d="m13 6.4 6.2 5.6L13 17.6"/>',
     optimize:
-      '<path d="M4 16c2.4-6 5.2-9 8-9s5.6 3 8 9"/><path d="M8 16h8"/><circle cx="12" cy="16" r="2"/>',
+      '<path d="M4.2 16.4c2.5-6.2 5.4-9.2 7.8-9.2s5.3 3 7.8 9.2"/><path d="M8.2 16.4h7.6"/><circle cx="12" cy="16.4" r="2"/>',
     report:
-      '<path d="M7 3.8h7.2L20 9.6V20.2H7A1.4 1.4 0 0 1 5.6 18.8V5.2A1.4 1.4 0 0 1 7 3.8Z"/><path d="M14 3.8V9.6h6"/><path d="M9 13.2h6M9 16.4h4"/>',
+      '<path d="M7 3.6h7l6 6v10.2a1.6 1.6 0 0 1-1.6 1.6H7A1.6 1.6 0 0 1 5.4 19.8V5.2A1.6 1.6 0 0 1 7 3.6Z"/><path d="M14 3.6v6h6"/><path d="M9 13h6M9 16.3h4"/>',
     launch:
-      '<path d="M14 4c4 1 6 5 6 10-4 0-8-2-10-6 2-2 3-4 4-4Z"/><path d="M10 12 5 17"/><path d="M8.5 17.5 6.5 19.5"/><path d="m13 14 2.2 4.6 1.2-3.2 3.2-1.2Z"/>',
+      '<path d="M14.2 4.2c3.8 1.1 5.8 4.8 5.8 9.4-3.8 0-7.6-1.9-9.6-5.7 1.8-1.8 2.8-3.7 3.8-3.7Z"/><path d="m10.2 12.2-5 5"/><path d="m8.4 17.4-1.8 1.8"/><path d="m13.2 14.2 2 4.2 1.2-2.9 2.9-1.2Z"/>',
     shield:
-      '<path d="M12 3.4 19 6v6.2c0 4.4-2.8 7.4-7 8.4-4.2-1-7-4-7-8.4V6l7-2.6Z"/><path d="m9 12 2 2 4-4"/>',
+      '<path d="M12 3.2 19.2 6v6c0 4.3-2.9 7.3-7.2 8.4C7.7 19.3 4.8 16.3 4.8 12V6L12 3.2Z"/><path d="m9.1 12 2 2 3.8-3.8"/>',
     headset:
-      '<path d="M5 13v-1a7 7 0 0 1 14 0v1"/><rect x="3.6" y="12.2" width="3.6" height="5.4" rx="1.2"/><rect x="16.8" y="12.2" width="3.6" height="5.4" rx="1.2"/><path d="M17 18.4c0 1.6-1.4 2.8-3.2 2.8H12"/>',
+      '<path d="M5 13.2v-1a7 7 0 0 1 14 0v1"/><rect x="3.5" y="12.2" width="3.6" height="5.2" rx="1.3"/><rect x="16.9" y="12.2" width="3.6" height="5.2" rx="1.3"/><path d="M17.1 18.5c0 1.5-1.4 2.7-3.2 2.7H12"/>',
     layers:
-      '<path d="m12 3.6 8 4.2-8 4.2-8-4.2 8-4.2Z"/><path d="m4 12 8 4.2L20 12"/><path d="m4 16.2 8 4.2 8-4.2"/>',
+      '<path d="m12 3.4 8 4.1-8 4.1-8-4.1 8-4.1Z"/><path d="m4 12.1 8 4.1 8-4.1"/><path d="m4 16.4 8 4.1 8-4.1"/>',
     spark:
-      '<path d="M12 3.2 13.7 9l5.8 1-4.6 3.8L16.2 20 12 16.8 7.8 20l1.3-6.2L4.5 10l5.8-1Z"/>',
-    pin: '<path d="M12 21s6.5-5.4 6.5-10.2A6.5 6.5 0 0 0 5.5 10.8C5.5 15.6 12 21 12 21Z"/><circle cx="12" cy="10.6" r="2.1"/>',
-    mail: '<rect x="3.5" y="5.5" width="17" height="13" rx="1.6"/><path d="m4.2 7.2 7.8 6.2 7.8-6.2"/>',
+      '<path d="M12 3 13.6 9l5.9.9-4.5 3.8 1.3 5.8L12 16.8 7.7 19.5l1.3-5.8L4.5 9.9 10.4 9Z"/>',
+    pin: '<path d="M12 21s6.4-5.3 6.4-10A6.4 6.4 0 0 0 5.6 11C5.6 15.7 12 21 12 21Z"/><circle cx="12" cy="10.7" r="2.1"/>',
+    mail: '<rect x="3.6" y="5.4" width="16.8" height="13.2" rx="2"/><path d="m5 7.8 7 5.4 7-5.4"/>',
     phone:
       '<path d="M6.7 3.9c.5-.5 1.3-.5 1.8 0l1.7 1.7c.4.4.5 1.1.2 1.6L9.4 9c1.3 2.4 3.2 4.3 5.6 5.6l1.8-1c.5-.3 1.2-.2 1.6.2l1.7 1.7c.5.5.5 1.3 0 1.8l-1.1 1.1c-.7.7-1.8 1-2.8.7C11.4 18 6 12.6 4.9 7.8c-.3-1 0-2.1.7-2.8L6.7 3.9Z"/>',
     whatsapp:
       '<path fill="currentColor" stroke="none" d="M12.04 3.5A8.45 8.45 0 0 0 3.6 11.96c0 1.49.39 2.94 1.13 4.22L3.5 20.5l4.44-1.16a8.46 8.46 0 0 0 4.1 1.06h.01A8.46 8.46 0 0 0 20.5 12 8.45 8.45 0 0 0 12.04 3.5Zm4.93 11.96c-.2.57-1.18 1.09-1.63 1.16-.42.06-.95.09-1.53-.1-.35-.11-.8-.26-1.38-.51-2.43-1.05-4.01-3.5-4.13-3.66-.12-.16-1-1.18-1-2.25s.63-1.6.86-1.82c.22-.22.48-.27.64-.27h.46c.15 0 .35 0 .53.4.2.45.66 1.56.72 1.67.06.12.1.25.02.4-.08.16-.12.25-.24.39-.12.13-.25.3-.36.4-.12.12-.24.24-.1.47.14.22.62 1.02 1.33 1.65.91.82 1.68 1.07 1.91 1.19.23.12.37.1.5-.06.14-.16.58-.68.73-.91.16-.23.31-.19.52-.12.22.08 1.37.65 1.6.76.24.12.39.17.45.27.06.1.06.58-.14 1.15Z"/>',
     enquire:
-      '<rect x="4" y="4.2" width="16" height="12.2" rx="1.4"/><path d="M8 19.2 10.4 16.4"/><path d="M8 9h8M8 12.2h5.5"/>',
-    arrow: '<path d="M5 12h14"/><path d="m13 6 6 6-6 6"/>',
-    chevron: '<path d="m7 10 5 5 5-5"/>',
+      '<rect x="4" y="4.2" width="16" height="12.2" rx="2"/><path d="M8 19.2 10.4 16.4"/><path d="M8 9h8M8 12.2h5.5"/>',
+    arrow: '<path d="M4.8 12h14.4"/><path d="m13 6.4 6.2 5.6L13 17.6"/>',
+    chevron: '<path d="m7.2 9.8 4.8 4.8 4.8-4.8"/>',
+    menu: '<path d="M4 7h16"/><path d="M4 12h16"/><path d="M4 17h16"/>',
+    close: '<path d="m6 6 12 12"/><path d="m18 6-12 12"/>',
+    linkedin:
+      '<path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-12h4v1.7"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/>',
+    clock: '<circle cx="12" cy="12" r="8.2"/><path d="M12 7.5V12l3 2"/>',
+    plus: '<path d="M12 5v14"/><path d="M5 12h14"/>',
+    copy: '<rect x="8.2" y="8.2" width="11.6" height="11.6" rx="1.6"/><path d="M6.2 15.8H4.8a1.6 1.6 0 0 1-1.6-1.6V4.8a1.6 1.6 0 0 1 1.6-1.6h9.4a1.6 1.6 0 0 1 1.6 1.6v1.4"/>',
+    zap: '<path d="M13 2 4 14h7l-1 8 9-12h-7l1-8Z"/>',
   };
   const d = paths[name] || paths.arrow;
   return `<svg class="icon ${extraClass}" viewBox="0 0 24 24" aria-hidden="true" focusable="false">${d}</svg>`;
@@ -221,7 +259,7 @@ function assetPrefix(depth) {
   return depth ? "../".repeat(depth) : "";
 }
 
-function shell({ depth, page, title, description, body, cinematicHero = false }) {
+function shell({ depth, page, title, description, body, cinematicHero = false, extraScripts = "" }) {
   const p = assetPrefix(depth);
   return `<!DOCTYPE html>
 <html lang="en">
@@ -232,59 +270,69 @@ function shell({ depth, page, title, description, body, cinematicHero = false })
   <meta name="description" content="${description}" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Syne:wght@600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="${p}css/tokens.css" />
   <link rel="stylesheet" href="${p}css/base.css" />
   <link rel="stylesheet" href="${p}css/layout.css" />
   <link rel="stylesheet" href="${p}css/components.css" />
   <link rel="stylesheet" href="${p}css/animations.css" />
+  <link rel="stylesheet" href="${p}css/responsive.css" />
   <link rel="icon" href="${p}assets/logo.png" type="image/png" />
 </head>
 <body data-page="${page}">
   <header class="site-header">
-    <div class="site-header__inner">
-      <a class="brand" href="${p}index.html" aria-label="GetKloud home">
-        <img class="brand__mark" src="${p}assets/logo.png" alt="GetKloud Solutions" />
-      </a>
-      <nav class="nav" aria-label="Primary">
-        <a href="${p}index.html" data-nav="home">Home</a>
-        <a href="${p}about.html" data-nav="about">About</a>
-        <div class="nav__dropdown">
-          <a href="${p}services/index.html" data-nav="services">Services ${icon("chevron", "icon--nav")}</a>
-          <div class="nav__dropdown-menu">
-            <a href="${p}services/cloud-services.html">Cloud Services</a>
-            <a href="${p}services/email-solutions.html">Email Solutions</a>
-            <a href="${p}services/lead-generation.html">Lead Generation</a>
-            <a href="${p}services/google-ranking.html">Google Ranking</a>
-            <a href="${p}services/ecommerce.html">eCommerce</a>
-            <a href="${p}services/website-development.html">Website Development</a>
-            <a href="${p}services/business-automation.html">Business Automation</a>
+    <div class="site-header__wrap">
+      <div class="site-header__bar">
+        <a class="brand brand--nav" href="${p}index.html" aria-label="GetKloud home">
+          <img class="brand__mark brand__mark--nav" src="${p}assets/logo.png" alt="GetKloud Solutions" />
+        </a>
+        <nav class="nav" aria-label="Primary">
+          <a href="${p}index.html" data-nav="home">Home</a>
+          <a href="${p}about.html" data-nav="about">About</a>
+          <div class="nav__dropdown">
+            <a href="${p}services/index.html" data-nav="services">Services ${icon("chevron", "icon--nav")}</a>
+            <div class="nav__dropdown-menu">
+              <a href="${p}services/cloud-services.html">Cloud Services</a>
+              <a href="${p}services/email-solutions.html">Email Solutions</a>
+              <a href="${p}services/lead-generation.html">Lead Generation</a>
+              <a href="${p}services/google-ranking.html">Google Ranking</a>
+              <a href="${p}services/ecommerce.html">eCommerce</a>
+              <a href="${p}services/website-development.html">Website Development</a>
+              <a href="${p}services/business-automation.html">Business Automation</a>
+            </div>
           </div>
-        </div>
-        <a href="${p}how-we-work.html" data-nav="process">How We Work</a>
-        <a href="${p}contact.html" data-nav="contact">Contact</a>
-      </nav>
-      <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">
-        <span></span>
-      </button>
+          <a href="${p}how-we-work.html" data-nav="process">How We Work</a>
+          <a href="${p}contact.html" data-nav="contact">Contact</a>
+        </nav>
+        <a class="nav-cta" href="${p}contact.html">Get Quote</a>
+        <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+          ${icon("menu", "icon--menu")}
+        </button>
+      </div>
     </div>
   </header>
 
-  <nav class="mobile-nav" aria-label="Mobile">
-    <a href="${p}index.html">Home</a>
-    <a href="${p}about.html">About</a>
-    <a href="${p}services/index.html">Services</a>
-    <div class="mobile-nav__group">
-      <a href="${p}services/cloud-services.html">Cloud Services</a>
-      <a href="${p}services/email-solutions.html">Email Solutions</a>
-      <a href="${p}services/lead-generation.html">Lead Generation</a>
-      <a href="${p}services/google-ranking.html">Google Ranking</a>
-      <a href="${p}services/ecommerce.html">eCommerce</a>
-      <a href="${p}services/website-development.html">Website Development</a>
-      <a href="${p}services/business-automation.html">Business Automation</a>
+  <nav class="mobile-nav" aria-label="Mobile" aria-hidden="true">
+    <button class="mobile-nav__close" type="button" aria-label="Close menu">
+      ${icon("close", "icon--menu")}
+    </button>
+    <div class="mobile-nav__inner">
+      <a class="mobile-nav__item" href="${p}index.html" style="--nav-delay:0.1s">Home</a>
+      <a class="mobile-nav__item" href="${p}about.html" style="--nav-delay:0.16s">About</a>
+      <a class="mobile-nav__item" href="${p}services/index.html" style="--nav-delay:0.22s">Services</a>
+      <div class="mobile-nav__group">
+        <a class="mobile-nav__item mobile-nav__item--sub" href="${p}services/cloud-services.html" style="--nav-delay:0.28s">Cloud Services</a>
+        <a class="mobile-nav__item mobile-nav__item--sub" href="${p}services/email-solutions.html" style="--nav-delay:0.34s">Email Solutions</a>
+        <a class="mobile-nav__item mobile-nav__item--sub" href="${p}services/lead-generation.html" style="--nav-delay:0.4s">Lead Generation</a>
+        <a class="mobile-nav__item mobile-nav__item--sub" href="${p}services/google-ranking.html" style="--nav-delay:0.46s">Google Ranking</a>
+        <a class="mobile-nav__item mobile-nav__item--sub" href="${p}services/ecommerce.html" style="--nav-delay:0.52s">eCommerce</a>
+        <a class="mobile-nav__item mobile-nav__item--sub" href="${p}services/website-development.html" style="--nav-delay:0.58s">Website Development</a>
+        <a class="mobile-nav__item mobile-nav__item--sub" href="${p}services/business-automation.html" style="--nav-delay:0.64s">Business Automation</a>
+      </div>
+      <a class="mobile-nav__item" href="${p}how-we-work.html" style="--nav-delay:0.7s">How We Work</a>
+      <a class="mobile-nav__item" href="${p}contact.html" style="--nav-delay:0.76s">Contact</a>
+      <a class="mobile-nav__cta mobile-nav__item" href="${p}contact.html" style="--nav-delay:0.84s">Get Quote</a>
     </div>
-    <a href="${p}how-we-work.html">How We Work</a>
-    <a href="${p}contact.html">Contact</a>
   </nav>
 
   <main>
@@ -336,6 +384,7 @@ ${body}
   <script src="${p}js/site.js"></script>
   <script src="${p}js/animate.js"></script>
   <script src="${p}js/forms.js"></script>
+${extraScripts}
 </body>
 </html>
 `;
@@ -348,21 +397,130 @@ function write(rel, content) {
   console.log("wrote", rel);
 }
 
-const homeBody = `
-    <section class="hero">
-      <div class="hero__media" aria-hidden="true"></div>
-      <div class="hero__content">
-        <div class="hero__brand">GetKloud</div>
-        <h1>Cloud-backed growth for modern business.</h1>
-        <p class="hero__text">Empower your company with cloud, hosting, email, and digital services built for clarity, speed, and scale.</p>
-        <div class="btn-row">
-          <a class="btn btn--primary" href="services/index.html">${icon("arrow")} Explore Services</a>
-          <a class="btn btn--ghost" href="contact.html">${icon("enquire")} Talk to Us</a>
+function serviceThumb(s, depth = 0) {
+  const p = depth ? "../".repeat(depth) : "";
+  return `${p}assets/images/${s.image}`;
+}
+
+function ownerProfileCard(depth = 0) {
+  const p = depth ? "../".repeat(depth) : "";
+  const initials = founder.name
+    .split(" ")
+    .map((part) => part[0])
+    .join("");
+  const contactHref = `${p}contact.html`;
+  return `<div class="founder-card" data-animate data-founder-card>
+      <div class="founder-card__glow" aria-hidden="true"></div>
+      <div class="founder-card__glow-text" aria-hidden="true">
+        ${icon("zap", "icon--founder")} ${founder.glowText}
+      </div>
+      <article class="founder-card__panel">
+        <div class="founder-card__top">
+          <div class="founder-card__status">
+            <span class="founder-card__status-dot" aria-hidden="true"></span>
+            <span>${founder.statusText}</span>
+          </div>
+          <div class="founder-card__clock" data-founder-clock>
+            ${icon("clock", "icon--founder")}
+            <time class="founder-card__time" datetime="">--:--</time>
+          </div>
         </div>
+
+        <div class="founder-card__profile">
+          <div class="founder-card__avatar-wrap">
+            <img
+              class="founder-card__photo"
+              src="${p}assets/images/${founder.image}"
+              alt="${founder.name}"
+              width="208"
+              height="208"
+              loading="lazy"
+              onerror="this.hidden=true;this.nextElementSibling.style.display='grid'"
+            />
+            <span class="founder-card__avatar-fallback" aria-hidden="true">${initials}</span>
+          </div>
+          <h3 class="founder-card__name">${founder.name}</h3>
+          <p class="founder-card__role">${founder.role} · ${founder.company}</p>
+          <p class="founder-card__headline">${founder.headline}</p>
+          <p class="founder-card__location">${founder.location}</p>
+        </div>
+
+        <div class="founder-card__stats">
+          <div><strong>${founder.experience}</strong><span>Experience</span></div>
+          <div><strong>${founder.network}</strong><span>Followers</span></div>
+          <div><strong>${founder.founded}</strong><span>Founded</span></div>
+        </div>
+
+        <div class="founder-card__actions">
+          <a class="founder-card__btn" href="${contactHref}">${icon("plus", "icon--founder")} Hire Me</a>
+          <button class="founder-card__btn" type="button" data-copy-email="${founder.email}">
+            ${icon("copy", "icon--founder")} <span data-copy-label>Copy Email</span>
+          </button>
+        </div>
+
+        <div class="founder-card__tags">
+          ${founder.skills.slice(0, 4).map((skill) => `<span>${skill}</span>`).join("")}
+        </div>
+
+        <a class="founder-card__linkedin" href="${founder.linkedin}" target="_blank" rel="noopener noreferrer">
+          ${icon("linkedin", "icon--founder")} LinkedIn profile
+        </a>
+      </article>
+    </div>`;
+}
+
+const homeBody = `
+    <section class="hero hero--split">
+      <div class="hero__glow hero__glow--1" aria-hidden="true"></div>
+      <div class="hero__glow hero__glow--2" aria-hidden="true"></div>
+      <div class="hero__media" aria-hidden="true"></div>
+      <div class="container hero__grid">
+        <div class="hero__content">
+          <div class="hero__badge"><span class="pulse-dot" aria-hidden="true"></span> IT Solutions · Cloud · Digital · Pune</div>
+          <h1>Cloud-backed growth for modern business.</h1>
+          <p class="hero__text">Empower your company with cloud, hosting, email, and digital services built for clarity, speed, and scale.</p>
+          <div class="btn-row">
+            <a class="btn btn--primary" href="services/index.html">${icon("arrow")} Explore Services</a>
+            <a class="btn btn--ghost" href="contact.html">${icon("enquire")} Talk to Us</a>
+          </div>
+          <div class="hero__tags">
+            <span>${icon("cloud")} Azure & AWS</span>
+            <span>${icon("shield")} Secure Hosting</span>
+            <span>${icon("code")} Web & Apps</span>
+            <span>${icon("search")} SEO & Ads</span>
+          </div>
+        </div>
+        <aside class="hero__panel" data-animate="scale" aria-label="Company highlights">
+          <div class="hero__panel-card">
+            <div class="hero__panel-top">
+              <span class="hero__panel-label">${icon("spark")} Trusted IT Partner</span>
+              <span class="hero__panel-pill">4+ Years</span>
+            </div>
+            <div class="hero__panel-stats">
+              <div><strong data-count="99" data-suffix="%">0%</strong><span>Reporting accuracy</span></div>
+              <div><strong data-count="4.98" data-decimals="2">0</strong><span>Client rating</span></div>
+              <div><strong data-count="98" data-suffix="%">0%</strong><span>Repeat clients</span></div>
+            </div>
+            <p>From cloud migration to lead generation — one team, enterprise-grade delivery.</p>
+            <a class="btn btn--outline btn--panel" href="contact.html">${icon("arrow")} Start a project</a>
+          </div>
+        </aside>
       </div>
     </section>
 
-    <section class="section section--tight">
+    <section class="trust-strip" aria-label="Trusted by clients">
+      <div class="trust-strip__track">
+        ${clients
+          .concat(clients)
+          .map(
+            ([file, name]) =>
+              `<img class="trust-strip__logo" src="assets/images/clients/${file}" alt="${name}" loading="lazy" />`
+          )
+          .join("")}
+      </div>
+    </section>
+
+    <section class="section section--tight section--panel">
       <div class="container">
         <p class="section__eyebrow" data-animate>Start here</p>
         <h2 data-animate>Choose your gateway</h2>
@@ -386,7 +544,7 @@ const homeBody = `
       </div>
     </section>
 
-    <section class="section">
+    <section class="section section--panel">
       <div class="container grid-2">
         <div>
           <p class="section__eyebrow" data-animate>About us</p>
@@ -394,23 +552,7 @@ const homeBody = `
           <p class="section__lead" data-animate>Founded in 2021, GetKloud Solutions is a trusted partner in cloud transformation and digital growth — delivering scalable, secure services across Microsoft Azure, AWS, and private hosting.</p>
           <a class="btn btn--outline" href="about.html" data-animate>${icon("arrow")} Learn about GetKloud</a>
         </div>
-        <div class="stat-row">
-          <div class="stat" data-animate>
-            <div class="stat__icon">${icon("chart")}</div>
-            <div class="stat__value">99%</div>
-            <p class="stat__label">Track and analyze business reports.</p>
-          </div>
-          <div class="stat" data-animate>
-            <div class="stat__icon">${icon("star")}</div>
-            <div class="stat__value">4.98</div>
-            <p class="stat__label">Best rated agency experience.</p>
-          </div>
-          <div class="stat" data-animate>
-            <div class="stat__icon">${icon("users")}</div>
-            <div class="stat__value">98%</div>
-            <p class="stat__label">Genuine repeated happy customers.</p>
-          </div>
-        </div>
+        ${ownerProfileCard()}
       </div>
     </section>
 
@@ -419,13 +561,13 @@ const homeBody = `
         <p class="section__eyebrow" data-animate>Our services</p>
         <h2 data-animate>Everything your digital stack needs</h2>
         <p class="section__lead" data-animate>From infrastructure to acquisition to custom software — one partner, clear execution.</p>
-        <div class="service-links" style="margin-top:2rem;">
+        <div class="service-links service-links--home" style="margin-top:2rem;">
           ${services
             .map(
-              (s) => `<a class="service-link service-link--icon" href="services/${s.slug}.html" data-animate>
-            <span class="service-link__icon">${icon(s.icon)}</span>
+              (s) => `<a class="service-link service-link--media" href="services/${s.slug}.html" data-animate>
+            <img src="${serviceThumb(s)}" alt="" loading="lazy" />
             <div>
-              <h3>${s.title}</h3>
+              <h3><span class="service-link__icon service-link__icon--inline">${icon(s.icon)}</span>${s.title}</h3>
               <p>${s.lead}</p>
             </div>
           </a>`
@@ -435,7 +577,7 @@ const homeBody = `
       </div>
     </section>
 
-    <section class="section">
+    <section class="section section--panel">
       <div class="container grid-2">
         <div>
           <p class="section__eyebrow" data-animate>How we work</p>
@@ -550,6 +692,16 @@ write(
           <p data-animate>Whether you are migrating legacy systems, optimizing infrastructure, or building hybrid environments, our team focuses on seamless execution and dependable ongoing support.</p>
         </div>
         <div class="visual-panel" data-animate="scale" aria-hidden="true"></div>
+      </div>
+    </section>
+    <section class="section section--tight section--panel">
+      <div class="container">
+        <p class="section__eyebrow" data-animate>Leadership</p>
+        <h2 data-animate>Meet the founder</h2>
+        <p class="section__lead" data-animate>GetKloud is led by a cloud practitioner with 13+ years helping businesses adopt AWS, Google Cloud, and modern digital systems.</p>
+        <div style="margin-top:2rem;max-width:24rem;margin-inline:auto;">
+          ${ownerProfileCard()}
+        </div>
       </div>
     </section>
     <section class="section section--tight">

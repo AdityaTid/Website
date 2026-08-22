@@ -57,4 +57,43 @@
       window.open(url, "_blank", "noopener");
     });
   });
+
+  function formatFounderTime(date) {
+    let h = date.getHours();
+    const m = date.getMinutes().toString().padStart(2, "0");
+    const hour12 = ((h + 11) % 12) + 1;
+    const ampm = h >= 12 ? "PM" : "AM";
+    return `${hour12}:${m}${ampm}`;
+  }
+
+  function updateFounderClocks() {
+    const now = new Date();
+    const text = formatFounderTime(now);
+    const iso = now.toISOString();
+    document.querySelectorAll("[data-founder-clock] time").forEach((el) => {
+      el.textContent = text;
+      el.dateTime = iso;
+    });
+  }
+
+  updateFounderClocks();
+  setInterval(updateFounderClocks, 30000);
+
+  document.querySelectorAll("[data-copy-email]").forEach((btn) => {
+    btn.addEventListener("click", async () => {
+      const email = btn.dataset.copyEmail || EMAIL;
+      const label = btn.querySelector("[data-copy-label]");
+      try {
+        await navigator.clipboard.writeText(email);
+        if (label) label.textContent = "Copied";
+        btn.classList.add("is-copied");
+        setTimeout(() => {
+          if (label) label.textContent = "Copy Email";
+          btn.classList.remove("is-copied");
+        }, 1500);
+      } catch {
+        window.location.href = `mailto:${email}`;
+      }
+    });
+  });
 })();
