@@ -29,168 +29,316 @@ const clients = [
 
 const founder = {
   name: "Shailesh Patil",
-  role: "Founder & Owner",
+  role: "Founder & Cloud Solutions Architect",
   company: "GetKloud Solutions",
-  headline: "Cloud Consultant · AWS",
+  headline: "Cloud Consultant · AWS & Azure Specialist",
   location: "Pune, Maharashtra, India",
   linkedin: "https://www.linkedin.com/in/shaileshpatilcloud/",
   email: "info@getkloud.in",
-  statusText: "Available for projects",
-  glowText: "Scaling cloud-first businesses across India",
-  image: "team/shailesh-patil.jpg",
+  phone: "+91 8421174747",
+  statusText: "Available for Consultations",
   experience: "13+ years",
   network: "11K+",
-  connections: "500+",
   founded: "2021",
   education: "MBA Marketing · Savitribai Phule Pune University",
-  languages: ["English", "Hindi", "Marathi"],
   bio:
-    "Shailesh founded GetKloud Solutions to help Indian businesses adopt cloud, hosting, email, and digital growth with clarity and confidence. With 13+ years across AWS, Google Cloud, SaaS, and enterprise sales, he turns complex infrastructure into practical outcomes for SMBs and growing teams.",
-  highlights: [
-    "Cloud sales leadership across AWS, Google Cloud & Azure",
-    "Experience at Sela, CloudCompanions, Ingram Micro & Shivaami",
-    "Specialist in SaaS, PaaS, cost optimization, DevOps & AI/ML",
-    "National-level seminar presenter on cloud technology (Pune University)",
-  ],
-  quote:
-    "Shailesh is an amazing professional, who brings all of the skills and expertise in cloud projects. He is very proactive, dedicated, self driven with great teamwork spirit.",
-  quoteBy: "Shubham Gosavi",
-  skills: ["AWS", "Azure", "Google Cloud", "SaaS & PaaS", "DevOps", "Cost Optimization"],
+    "Shailesh founded GetKloud Solutions to empower Indian businesses with clear, cost-optimized, and enterprise-grade cloud, hosting, email, and digital systems. With over 13 years of expertise across AWS, Google Cloud, Microsoft Azure, and SaaS infrastructure, he turns complex technology into dependable business growth.",
+  skills: ["AWS Cloud", "Microsoft Azure", "Google Workspace", "Cost Optimization", "DevOps & CI/CD", "Enterprise Security"],
 };
 
 const services = [
   {
     slug: "cloud-services",
     icon: "cloud",
-    title: "Cloud Services",
+    title: "Cloud Services & Infrastructure",
     nav: "services",
-    cinematic: true,
-    image: "gateways/cloud-sm.jpg",
-    eyebrow: "Cloud Services",
-    headline: "Cloud that scales with your ambition.",
-    lead: "Migration, management, and optimization across Azure, AWS, and hybrid environments — with performance, security, and cost clarity.",
+    eyebrow: "Cloud Solutions",
+    headline: "Scalable, secure cloud architecture engineered for high growth.",
+    lead: "Seamless migration, managed infrastructure, and cost optimization across AWS, Microsoft Azure, and private hosting environments.",
     intro:
-      "GetKloud simplifies your cloud journey. Whether public, private, or hybrid, we architect resilient platforms and stay with you through ongoing support.",
-    offers: [
-      ["Private Hosting", "Dedicated resources, stronger control, and customizable environments for sensitive or compliance-heavy workloads.", "privateHosting1.png"],
-      ["Cloud Services", "End-to-end cloud adoption — from consultation and migration to management and optimization.", "goggleCloud.png"],
-      ["AWS", "Compute, storage, security, and automation on Amazon Web Services, tailored to your goals.", "aws.webp"],
-      ["Azure & Hybrid", "Microsoft Azure and hybrid setups that balance agility with governance.", "azure.png"],
+      "GetKloud removes the friction of cloud adoption. Whether you are modernizing legacy servers, building multi-cloud redundancy, or reducing monthly cloud bills, our certified architects design resilient, high-availability environments.",
+    features: [
+      {
+        title: "Managed AWS & Azure",
+        desc: "End-to-end architecture, VPC configuration, serverless pipelines, and database clustering tailored to your workload.",
+        tags: ["AWS EC2/S3", "Azure VMs", "Auto-scaling", "Zero-downtime"],
+        icon: "cloud",
+      },
+      {
+        title: "Dedicated Private Hosting",
+        desc: "High-performance isolated servers with customized RAM/CPU allocations, hardware firewalls, and enterprise root control.",
+        tags: ["Custom Hardware", "DDoS Protection", "99.99% SLA", "NVMe SSD"],
+        icon: "hosting",
+      },
+      {
+        title: "Cloud Migration & Modernization",
+        desc: "Zero-data-loss lift-and-shift or refactoring from on-premise servers to modern containerized cloud stacks.",
+        tags: ["Database Migration", "Risk Assessment", "Cutover Plan", "Post-launch QA"],
+        icon: "zap",
+      },
+      {
+        title: "Cloud Cost Optimization (FinOps)",
+        desc: "Deep audit of idle instances, rightsizing resources, reserved instance planning, and cutting cloud bills by 30-50%.",
+        tags: ["Bill Audit", "Auto-shutdown", "Reserved Plans", "Savings Guarantee"],
+        icon: "chart",
+      },
+    ],
+    faqs: [
+      ["How do you ensure zero downtime during cloud migration?", "We conduct comprehensive dry-run testing in staging environments and perform data synchronization in real-time, executing DNS cutovers during off-peak hours so your operations remain uninterrupted."],
+      ["Which cloud provider is best for my business: AWS or Azure?", "It depends on your current software stack and compliance needs. We analyze your workloads (e.g. Windows/.NET favor Azure, microservices/AI favor AWS) to recommend the most cost-effective solution."],
+      ["What post-migration support do you provide?", "We offer 24/7 proactive monitoring, automated backup verification, security patching, and dedicated emergency response with strict SLA guarantees."],
     ],
   },
   {
     slug: "email-solutions",
     icon: "email",
-    title: "Email Solutions",
+    title: "Enterprise Email & Collaboration",
     nav: "services",
-    cinematic: true,
-    image: "gateways/email-sm.jpg",
     eyebrow: "Email Solutions",
-    headline: "Business email that teams actually trust.",
-    lead: "Office 365, Google Workspace, Zoho Mail, and Webmail — chosen, configured, and supported for your domain.",
+    headline: "Professional business email that teams and clients trust.",
+    lead: "Microsoft 365, Google Workspace, Zoho Mail, and encrypted business webmail configured, migrated, and secured for your brand domain.",
     intro:
-      "We help you pick the right platform, migrate cleanly, and keep communication secure so your team stays productive from anywhere.",
-    offers: [
-      ["Office 365", "Secure Outlook email with Word, Excel, Teams, and collaboration across devices.", "office-365.webp"],
-      ["Google Workspace", "Gmail, Drive, Docs, and Meet for fast, cloud-native teamwork.", "workspace.webp"],
-      ["Zoho Mail", "Ad-free business email with strong privacy and Zoho app integrations.", "zoho.webp"],
-      ["Webmail", "Browser-based email access without heavy client installs.", "web-mail.webp"],
+      "Communication downtime costs deals. GetKloud delivers enterprise-grade mail servers with SPF, DKIM, DMARC authentication to prevent spam filtering and ensure 100% email deliverability.",
+    features: [
+      {
+        title: "Microsoft 365 / Office 365",
+        desc: "Full cloud office suite with Exchange email, Teams collaboration, OneDrive cloud storage, and advanced endpoint security.",
+        tags: ["Outlook", "Microsoft Teams", "1TB Cloud Drive", "Security Policy"],
+        icon: "email",
+      },
+      {
+        title: "Google Workspace for Business",
+        desc: "Custom @yourdomain Gmail, Google Meet, Google Drive, Docs, and real-time collaborative workspace setups.",
+        tags: ["Gmail Domain", "Google Meet", "Admin Console", "SSO Login"],
+        icon: "zap",
+      },
+      {
+        title: "Zoho Workplace & Mail",
+        desc: "Ad-free, cost-effective corporate mailboxes with seamless integration into Zoho CRM and productivity applications.",
+        tags: ["Ad-Free Mail", "Zoho CRM Sync", "Encrypted Storage", "Budget Friendly"],
+        icon: "layers",
+      },
+      {
+        title: "DMARC, SPF & Security Hardening",
+        desc: "Complete DNS authentication and spam filter tuning to prevent spoofing, phishing, and domain blacklisting.",
+        tags: ["SPF/DKIM/DMARC", "Anti-Phishing", "TLS Encryption", "Inbox Delivery"],
+        icon: "shield",
+      },
+    ],
+    faqs: [
+      ["Can we migrate our old emails, folders, and calendar data?", "Yes, we handle 100% server-to-server data migration of all emails, folders, contacts, and calendar entries with complete integrity."],
+      ["How do you prevent our business emails from going into Spam?", "We configure cryptographically verified SPF, DKIM, and DMARC DNS records along with reverse DNS lookup and MX priority tuning."],
+      ["Can we mix different license tiers within the same domain?", "Yes, we can optimize costs by assigning basic mail licenses to field staff and premium collaboration licenses to executive teams."],
     ],
   },
   {
     slug: "lead-generation",
     icon: "ads",
-    title: "Lead Generation",
+    title: "Performance Lead Generation",
     nav: "services",
-    cinematic: false,
-    image: "services/s-1-lead.webp",
-    eyebrow: "Lead Generation",
-    headline: "Campaigns that attract the right buyers.",
-    lead: "Paid ads and automation that turn attention into qualified conversations.",
+    eyebrow: "Digital Marketing",
+    headline: "High-intent paid campaigns that generate qualified buyer conversations.",
+    lead: "Data-driven Google Ads, YouTube Video Ads, and LinkedIn B2B acquisition engines tuned for conversion and maximum ROI.",
     intro:
-      "We build data-driven acquisition systems across search and social — measured against clear KPIs, not vanity metrics.",
-    offers: [
-      ["Google Paid Ads", "Search and display campaigns tuned for intent, conversions, and efficient spend.", "i-1-google.webp"],
-      ["YouTube Paid Ads", "Video campaigns that build awareness and drive action with the right viewers.", "i-1-youtube.webp"],
-      ["LinkedIn Paid Ads", "B2B targeting that reaches decision-makers in your niche.", "i-1-linkedin.webp"],
+      "We replace guesswork with rigorous testing, audience segmentation, conversion tracking, and landing page optimization to turn clicks into profitable sales pipelines.",
+    features: [
+      {
+        title: "Google Search & Display Ads",
+        desc: "Capture high-intent commercial searches with targeted keyword clusters, negative matching, and responsive ads.",
+        tags: ["Search Intent", "Display Retargeting", "Conversion Tracking", "A/B Testing"],
+        icon: "ads",
+      },
+      {
+        title: "LinkedIn B2B Lead Engines",
+        desc: "Reach exact decision makers, CXOs, and IT directors through hyper-targeted B2B campaigns and sponsored content.",
+        tags: ["Job Title Targeting", "Lead Gen Forms", "InMail Outreach", "Account-Based"],
+        icon: "users",
+      },
+      {
+        title: "YouTube Video Ad Campaigns",
+        desc: "High-impact video advertising that builds brand authority and drives direct responses from engaged viewers.",
+        tags: ["In-Stream Ads", "Video Discovery", "Audience Retargeting", "Brand Lift"],
+        icon: "zap",
+      },
+      {
+        title: "Landing Page & Funnel Optimization",
+        desc: "High-converting, lightning-fast landing pages with psychological triggers and frictionless contact forms.",
+        tags: ["High Conversion", "Heatmap Analysis", "Micro-copy", "Mobile Optimized"],
+        icon: "chart",
+      },
+    ],
+    faqs: [
+      ["What is the typical timeframe to see leads from Google Ads?", "Search campaigns typically start generating qualified enquiries within the first 48–72 hours after launch and conversion tracking validation."],
+      ["How do you ensure ad budget is not wasted on irrelevant clicks?", "We implement tight keyword match types, exhaustive negative keyword lists, geo-fencing, and manual bid adjustments based on conversion metrics."],
+      ["Do you provide transparent reporting?", "Yes, you receive real-time dashboard access with metrics on cost-per-lead (CPL), conversion rate, click-through-rate (CTR), and lead quality scores."],
     ],
   },
   {
     slug: "google-ranking",
     icon: "search",
-    title: "Google Ranking",
+    title: "Google Ranking & SEO Strategy",
     nav: "services",
-    cinematic: false,
-    image: "services/s-2-search.webp",
-    eyebrow: "SEO & Visibility",
-    headline: "Rank where your customers are searching.",
-    lead: "Technical SEO, content, local presence, and audits that move you toward page-one visibility.",
+    eyebrow: "Search Engine Optimization",
+    headline: "Dominate search results where your high-value clients are looking.",
+    lead: "Technical SEO audits, high-intent keyword strategies, local Google Maps ranking, and authoritative content optimization.",
     intro:
-      "Our SEO work blends keyword strategy, site health, and local optimization so organic traffic becomes a dependable growth channel.",
-    offers: [
-      ["Google Search", "On-page and organic strategies that improve rankings and qualified traffic.", "i-2-rank.webp"],
-      ["Google Locations", "Local SEO and Maps optimization to attract nearby customers.", "i-2-location.webp"],
-      ["Website Audit", "A clear diagnosis of SEO gaps, structure issues, and quick wins.", "i-2-audit.webp"],
-      ["Google Merchant Center", "Product listing setup and optimization for Google Shopping visibility.", "i-2-shop.webp"],
+      "Organic search is the most sustainable growth asset for your business. We optimize every layer of your website—from Core Web Vitals and site structure to schema markup and authoritative backlinks.",
+    features: [
+      {
+        title: "Technical SEO & Core Web Vitals",
+        desc: "Fix indexing issues, crawl errors, site architecture, canonicalization, and speed bottlenecks for top Google scores.",
+        tags: ["PageSpeed 90+", "Schema Markup", "Mobile First", "Clean Architecture"],
+        icon: "search",
+      },
+      {
+        title: "Local SEO & Google Maps (GMB)",
+        desc: "Dominate local search in Pune and your target cities with verified Google Business Profile optimization and reviews.",
+        tags: ["Google Maps Pack", "Local Citations", "Review Management", "Local Keywords"],
+        icon: "pin",
+      },
+      {
+        title: "Commercial Keyword Strategy",
+        desc: "Identify high-conversion, low-competition keywords that your prospective clients use right before making purchasing decisions.",
+        tags: ["Buyer Intent", "Competitor Gap", "Long-tail Keywords", "Content Silos"],
+        icon: "chart",
+      },
+      {
+        title: "Comprehensive Website SEO Audit",
+        desc: "Deep inspection of your website's health, backlink profile, meta tags, and competitor positioning with actionable fixes.",
+        tags: ["Detailed Report", "Broken Link Fixes", "Robots.txt Tuning", "Sitemap Optimization"],
+        icon: "analyze",
+      },
+    ],
+    faqs: [
+      ["How long does it take to see top Google rankings?", "Most technical fixes and local Google Maps improvements show results within 4–8 weeks, with major commercial keywords ranking on page 1 within 3–6 months."],
+      ["Do you follow white-hat SEO guidelines?", "100% white-hat. We follow Google's official Search Essentials and Webmaster Guidelines to ensure sustainable, penalty-proof rankings."],
+      ["Can you help our local Pune business appear on Google Maps?", "Yes, our local SEO package specifically optimizes your Google Business Profile, local citations, geo-tagged signals, and review generation."],
     ],
   },
   {
     slug: "ecommerce",
     icon: "shop",
-    title: "eCommerce Development",
+    title: "eCommerce Platform Engineering",
     nav: "services",
-    cinematic: false,
-    image: "services/s-3-b2b.webp",
-    eyebrow: "eCommerce",
-    headline: "Stores built to convert, not just launch.",
-    lead: "Fast, secure, mobile-first commerce experiences for B2B, B2C, D2C, and more.",
+    eyebrow: "eCommerce Solutions",
+    headline: "Modern digital storefronts engineered for speed, conversions, and scale.",
+    lead: "B2B wholesale portals, D2C brand stores, and multi-vendor marketplaces built with seamless payments, inventory sync, and mobile-first UX.",
     intro:
-      "We design and develop online stores that feel effortless to shop — with the structure, SEO readiness, and performance growth demands.",
-    offers: [
-      ["B2B eCommerce", "Bulk buying flows and buyer-seller workflows for wholesale growth.", "i-3-b2b.webp"],
-      ["B2C eCommerce", "Customer-centric retail experiences that simplify purchase.", "i-3-b2c.webp"],
-      ["D2C eCommerce", "Brand-owned storefronts focused on relationships and margin.", "i-3-d2c.webp"],
-      ["Product Stores", "Catalog platforms tailored to what you sell.", "i-3-product.webp"],
-      ["Service Stores", "Booking-led platforms for service businesses.", "i-3-service.webp"],
-      ["Drop Shipping", "Lean storefronts that streamline sourcing and fulfillment.", "i-3-drop.webp"],
+      "We design eCommerce experiences that turn visitors into repeat buyers. With lightning-fast page speeds, intuitive checkout flows, and automated tax and shipping calculations, your store is built to scale.",
+    features: [
+      {
+        title: "B2B Wholesale & Distributor Portals",
+        desc: "Tiered wholesale pricing, bulk order forms, custom quotation workflows, credit terms, and GST invoicing.",
+        tags: ["Tiered Pricing", "Bulk Orders", "GST Automation", "Distributor Login"],
+        icon: "shop",
+      },
+      {
+        title: "D2C Brand Storefronts",
+        desc: "Visually stunning, frictionless shopping experiences with product recommendations, one-click checkout, and upsells.",
+        tags: ["Shopify / Custom", "1-Click Checkout", "Abandoned Cart", "Visual Merchandising"],
+        icon: "spark",
+      },
+      {
+        title: "Payment Gateway & Logistics Integration",
+        desc: "Seamless integration with Razorpay, Cashfree, Stripe, Shiprocket, and real-time automated tracking updates.",
+        tags: ["Razorpay & Stripe", "UPI & Net Banking", "Shiprocket Sync", "Instant Webhooks"],
+        icon: "shield",
+      },
+      {
+        title: "Inventory & ERP Sync",
+        desc: "Automated real-time inventory management across multiple sales channels, warehouses, and physical outlets.",
+        tags: ["Multi-Warehouse", "Low Stock Alerts", "Auto-Invoicing", "Catalogue Sync"],
+        icon: "layers",
+      },
+    ],
+    faqs: [
+      ["Which eCommerce platform do you recommend: Shopify, WooCommerce, or Custom?", "We recommend Shopify for fast direct-to-consumer launches, WooCommerce for content-heavy flexible catalogs, and custom Next.js/Node.js solutions for complex B2B workflows."],
+      ["How secure is the checkout and payment processing?", "We implement SSL encryption, PCI-DSS compliant payment gateways, tokenized checkouts, and automated fraud detection."],
+      ["Can we accept UPI, Credit Cards, Net Banking, and International Payments?", "Yes, we integrate multi-currency gateways supporting UPI, all major Indian banks, EMI options, and global international cards."],
     ],
   },
   {
     slug: "website-development",
     icon: "code",
-    title: "Website Development",
+    title: "Website & Web Application Development",
     nav: "services",
-    cinematic: true,
-    image: "services/s-4-corporate.webp",
-    eyebrow: "Website Development",
-    headline: "Websites that look sharp and work harder.",
-    lead: "High-performance, mobile-friendly, SEO-ready sites for brands that need results.",
+    eyebrow: "Web Development",
+    headline: "Ultra-fast, responsive websites that represent your brand with authority.",
+    lead: "Custom corporate websites, high-converting landing pages, and scalable web apps built with modern clean code, stellar SEO, and rock-solid security.",
     intro:
-      "From single-page launches to corporate platforms and ongoing maintenance — we build secure, scalable sites around your goals.",
-    offers: [
-      ["Single Page Websites", "Fast, focused one-page experiences with clear messaging.", "i-4-singlepage.webp"],
-      ["Small Business Websites", "Affordable professional sites built to generate leads.", "i-4-smallshop.webp"],
-      ["Corporate Websites", "Scalable brand platforms for stakeholders and clients.", "i-4-contruction.webp"],
-      ["Landing Pages", "Conversion-first pages for campaigns and offers.", "i-4-landing.webp"],
-      ["Website Maintenance", "Updates, backups, performance checks, and fixes.", "i-4-maintain.webp"],
+      "Your website is the centerpiece of your digital presence. We build clean, modern, mobile-first websites designed to establish credibility, engage visitors, and convert prospective clients.",
+    features: [
+      {
+        title: "Corporate & Enterprise Websites",
+        desc: "Bespoke digital flagships with modern aesthetics, smooth micro-animations, multi-page architectures, and CMS ease.",
+        tags: ["Brand Identity", "Interactive UI", "Modular Architecture", "CMS Integration"],
+        icon: "code",
+      },
+      {
+        title: "High-Performance Landing Pages",
+        desc: "Targeted landing pages engineered specifically for high ad conversion, fast loading speeds (<1s), and clear CTA flows.",
+        tags: ["Sub-second Speed", "A/B Testing", "Mobile First", "Form Optimization"],
+        icon: "zap",
+      },
+      {
+        title: "Custom Web Applications",
+        desc: "Full-stack web applications with React, Next.js, Node.js, and PostgreSQL built around your proprietary business workflows.",
+        tags: ["React & Node.js", "REST / GraphQL", "Secure Auth", "Cloud Deployed"],
+        icon: "layers",
+      },
+      {
+        title: "Ongoing Maintenance & Security Care",
+        desc: "Proactive uptime monitoring, automated daily backups, security patching, SSL management, and rapid content updates.",
+        tags: ["24/7 Monitoring", "Daily Backups", "Malware Scans", "Speed Optimization"],
+        icon: "shield",
+      },
+    ],
+    faqs: [
+      ["Will our website be fully mobile responsive and fast?", "Yes, all our websites are built mobile-first and optimized to achieve 90+ performance scores on Google Lighthouse with sub-second page loads."],
+      ["Will we be able to edit and update content easily?", "Absolutely. We provide clean administration tools and intuitive CMS setups so your team can easily update text, images, and blog posts without coding."],
+      ["Do you include SEO setup with website development?", "Yes, every site comes standard with on-page SEO, semantic HTML5, Schema.org structured data, OpenGraph social cards, XML sitemaps, and robots.txt."],
     ],
   },
   {
     slug: "business-automation",
     icon: "cog",
-    title: "Business Automation",
+    title: "Business Process Automation & ERP",
     nav: "services",
-    cinematic: false,
-    image: "services/s-5-erp.webp",
-    eyebrow: "Automation",
-    headline: "Systems that remove busywork.",
-    lead: "Custom ERP, CRM, and software that streamline operations and free your team.",
+    eyebrow: "Custom Automation",
+    headline: "Custom software systems that eliminate busywork and accelerate ops.",
+    lead: "Custom ERPs, sales CRMs, billing automation, and API integrations that connect your entire business into one smooth engine.",
     intro:
-      "We automate repetitive workflows with tools designed around how your business actually runs — practical, scalable, and measurable.",
-    offers: [
-      ["Custom ERP", "Centralized operations platforms with real-time insight.", "i-5-erp.webp"],
-      ["Custom CRM", "Lead tracking and relationship tools tailored to your sales motion.", "i-5-crm.webp"],
-      ["Custom Software", "Bespoke applications that fit unique processes.", "i-5-develop.webp"],
+      "Stop wasting hundreds of hours on manual spreadsheets and repetitive tasks. GetKloud architects custom business software tailored to your specific manufacturing, distribution, or service workflow.",
+    features: [
+      {
+        title: "Custom ERP Platforms",
+        desc: "Centralized systems managing procurement, production tracking, inventory, employee roles, and financial reporting in real-time.",
+        tags: ["Operations Hub", "Role-Based Access", "Inventory Sync", "Real-Time Reports"],
+        icon: "cog",
+      },
+      {
+        title: "Tailored Sales CRM Systems",
+        desc: "Lead pipeline tracking, automatic follow-up reminders, WhatsApp notification triggers, and sales performance analytics.",
+        tags: ["Pipeline Tracker", "WhatsApp Alerts", "Deal Stages", "Team Analytics"],
+        icon: "users",
+      },
+      {
+        title: "API & Third-Party Integrations",
+        desc: "Connect your payment gateways, accounting tools (Tally, Zoho Books), logistics APIs, and customer databases seamlessly.",
+        tags: ["Tally & Zoho Sync", "Webhook Triggers", "Custom REST APIs", "Data Pipelines"],
+        icon: "zap",
+      },
+      {
+        title: "Workflow Automation & Notifications",
+        desc: "Automate quote generation, customer onboarding emails, invoice reminders, and approval chains with zero manual work.",
+        tags: ["Automated Invoicing", "Instant PDF Gen", "Approval Chains", "Error Logging"],
+        icon: "layers",
+      },
+    ],
+    faqs: [
+      ["Can you integrate our existing software (like Tally or legacy databases)?", "Yes, we build secure API bridges and automated sync pipelines to connect your existing accounting or legacy systems with modern cloud dashboards."],
+      ["Is custom software better than off-the-shelf SaaS?", "Off-the-shelf tools often charge high per-user monthly fees and force you to change your workflows. Custom systems are built around your exact processes and own 100% of your data without recurring seat licenses."],
+      ["How secure is our company data?", "We implement enterprise-grade encryption at rest and in transit, role-based access control (RBAC), automated daily backups, and audit logs."],
     ],
   },
 ];
@@ -218,16 +366,8 @@ function icon(name, extraClass = "") {
       '<circle cx="11" cy="11" r="6.1"/><path d="m20 20-3.5-3.5"/><path d="M9 11h4M11 9v4"/>',
     plan: '<rect x="5" y="3.6" width="14" height="16.8" rx="2"/><path d="M8.5 2.6v2.2M15.5 2.6v2.2M5 8.2h14"/><path d="M8.4 12h7.2M8.4 15.4h4.8"/>',
     execute: '<path d="M4.8 12h14.4"/><path d="m13 6.4 6.2 5.6L13 17.6"/>',
-    optimize:
-      '<path d="M4.2 16.4c2.5-6.2 5.4-9.2 7.8-9.2s5.3 3 7.8 9.2"/><path d="M8.2 16.4h7.6"/><circle cx="12" cy="16.4" r="2"/>',
-    report:
-      '<path d="M7 3.6h7l6 6v10.2a1.6 1.6 0 0 1-1.6 1.6H7A1.6 1.6 0 0 1 5.4 19.8V5.2A1.6 1.6 0 0 1 7 3.6Z"/><path d="M14 3.6v6h6"/><path d="M9 13h6M9 16.3h4"/>',
-    launch:
-      '<path d="M14.2 4.2c3.8 1.1 5.8 4.8 5.8 9.4-3.8 0-7.6-1.9-9.6-5.7 1.8-1.8 2.8-3.7 3.8-3.7Z"/><path d="m10.2 12.2-5 5"/><path d="m8.4 17.4-1.8 1.8"/><path d="m13.2 14.2 2 4.2 1.2-2.9 2.9-1.2Z"/>',
     shield:
       '<path d="M12 3.2 19.2 6v6c0 4.3-2.9 7.3-7.2 8.4C7.7 19.3 4.8 16.3 4.8 12V6L12 3.2Z"/><path d="m9.1 12 2 2 3.8-3.8"/>',
-    headset:
-      '<path d="M5 13.2v-1a7 7 0 0 1 14 0v1"/><rect x="3.5" y="12.2" width="3.6" height="5.2" rx="1.3"/><rect x="16.9" y="12.2" width="3.6" height="5.2" rx="1.3"/><path d="M17.1 18.5c0 1.5-1.4 2.7-3.2 2.7H12"/>',
     layers:
       '<path d="m12 3.4 8 4.1-8 4.1-8-4.1 8-4.1Z"/><path d="m4 12.1 8 4.1 8-4.1"/><path d="m4 16.4 8 4.1 8-4.1"/>',
     spark:
@@ -238,8 +378,6 @@ function icon(name, extraClass = "") {
       '<path d="M6.7 3.9c.5-.5 1.3-.5 1.8 0l1.7 1.7c.4.4.5 1.1.2 1.6L9.4 9c1.3 2.4 3.2 4.3 5.6 5.6l1.8-1c.5-.3 1.2-.2 1.6.2l1.7 1.7c.5.5.5 1.3 0 1.8l-1.1 1.1c-.7.7-1.8 1-2.8.7C11.4 18 6 12.6 4.9 7.8c-.3-1 0-2.1.7-2.8L6.7 3.9Z"/>',
     whatsapp:
       '<path fill="currentColor" stroke="none" d="M12.04 3.5A8.45 8.45 0 0 0 3.6 11.96c0 1.49.39 2.94 1.13 4.22L3.5 20.5l4.44-1.16a8.46 8.46 0 0 0 4.1 1.06h.01A8.46 8.46 0 0 0 20.5 12 8.45 8.45 0 0 0 12.04 3.5Zm4.93 11.96c-.2.57-1.18 1.09-1.63 1.16-.42.06-.95.09-1.53-.1-.35-.11-.8-.26-1.38-.51-2.43-1.05-4.01-3.5-4.13-3.66-.12-.16-1-1.18-1-2.25s.63-1.6.86-1.82c.22-.22.48-.27.64-.27h.46c.15 0 .35 0 .53.4.2.45.66 1.56.72 1.67.06.12.1.25.02.4-.08.16-.12.25-.24.39-.12.13-.25.3-.36.4-.12.12-.24.24-.1.47.14.22.62 1.02 1.33 1.65.91.82 1.68 1.07 1.91 1.19.23.12.37.1.5-.06.14-.16.58-.68.73-.91.16-.23.31-.19.52-.12.22.08 1.37.65 1.6.76.24.12.39.17.45.27.06.1.06.58-.14 1.15Z"/>',
-    enquire:
-      '<rect x="4" y="4.2" width="16" height="12.2" rx="2"/><path d="M8 19.2 10.4 16.4"/><path d="M8 9h8M8 12.2h5.5"/>',
     arrow: '<path d="M4.8 12h14.4"/><path d="m13 6.4 6.2 5.6L13 17.6"/>',
     chevron: '<path d="m7.2 9.8 4.8 4.8 4.8-4.8"/>',
     menu: '<path d="M4 7h16"/><path d="M4 12h16"/><path d="M4 17h16"/>',
@@ -247,8 +385,7 @@ function icon(name, extraClass = "") {
     linkedin:
       '<path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-12h4v1.7"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/>',
     clock: '<circle cx="12" cy="12" r="8.2"/><path d="M12 7.5V12l3 2"/>',
-    plus: '<path d="M12 5v14"/><path d="M5 12h14"/>',
-    copy: '<rect x="8.2" y="8.2" width="11.6" height="11.6" rx="1.6"/><path d="M6.2 15.8H4.8a1.6 1.6 0 0 1-1.6-1.6V4.8a1.6 1.6 0 0 1 1.6-1.6h9.4a1.6 1.6 0 0 1 1.6 1.6v1.4"/>',
+    check: '<path d="m5 12 5 5L20 7"/>',
     zap: '<path d="M13 2 4 14h7l-1 8 9-12h-7l1-8Z"/>',
   };
   const d = paths[name] || paths.arrow;
@@ -259,18 +396,61 @@ function assetPrefix(depth) {
   return depth ? "../".repeat(depth) : "";
 }
 
-function shell({ depth, page, title, description, body, cinematicHero = false, extraScripts = "" }) {
+function renderFAQAccordion(faqList) {
+  return `
+    <div class="faq-accordion" data-animate>
+      ${faqList
+        .map(
+          ([q, a], idx) => `
+        <div class="faq-item">
+          <button class="faq-question" type="button" aria-expanded="false">
+            <span>${q}</span>
+            <span class="faq-icon">${icon("chevron")}</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">${a}</div>
+          </div>
+        </div>
+      `
+        )
+        .join("")}
+    </div>
+  `;
+}
+
+function shell({ depth = 0, page, title, description, body, canonical = "" }) {
   const p = assetPrefix(depth);
+  const currentYear = new Date().getFullYear();
+  const canonicalUrl = canonical || `https://getkloud.in/${depth ? page + "/" : ""}`;
+
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>${title} | GetKloud</title>
+  <title>${title} | GetKloud Solutions Pune</title>
   <meta name="description" content="${description}" />
+  <link rel="canonical" href="${canonicalUrl}" />
+
+  <!-- Open Graph / Facebook / WhatsApp -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="${canonicalUrl}" />
+  <meta property="og:title" content="${title} | GetKloud Solutions" />
+  <meta property="og:description" content="${description}" />
+  <meta property="og:image" content="https://getkloud.in/assets/logo.png" />
+  <meta property="og:site_name" content="GetKloud Solutions" />
+
+  <!-- Twitter Meta -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="${title} | GetKloud Solutions" />
+  <meta name="twitter:description" content="${description}" />
+
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Syne:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Design System CSS -->
   <link rel="stylesheet" href="${p}css/tokens.css" />
   <link rel="stylesheet" href="${p}css/base.css" />
   <link rel="stylesheet" href="${p}css/layout.css" />
@@ -278,62 +458,108 @@ function shell({ depth, page, title, description, body, cinematicHero = false, e
   <link rel="stylesheet" href="${p}css/animations.css" />
   <link rel="stylesheet" href="${p}css/responsive.css" />
   <link rel="icon" href="${p}assets/logo.png" type="image/png" />
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "GetKloud Solutions",
+    "image": "https://getkloud.in/assets/logo.png",
+    "description": "Enterprise Cloud Services, Managed Hosting, Google Workspace, SEO, eCommerce and Website Development in Pune, India.",
+    "telephone": "+918421174747",
+    "email": "info@getkloud.in",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "BHARGAV VIHAR, SN.53/1, Wadgaon Dhayari, Sinhagad Road",
+      "addressLocality": "Pune",
+      "postalCode": "411041",
+      "addressRegion": "Maharashtra",
+      "addressCountry": "IN"
+    },
+    "founder": {
+      "@type": "Person",
+      "name": "Shailesh Patil"
+    },
+    "priceRange": "$$"
+  }
+  </script>
 </head>
 <body data-page="${page}">
   <header class="site-header">
     <div class="site-header__wrap">
       <div class="site-header__bar">
-        <a class="brand brand--nav" href="${p}index.html" aria-label="GetKloud home">
-          <img class="brand__mark brand__mark--nav" src="${p}assets/logo.png" alt="GetKloud Solutions" />
+        <a class="brand" href="${p}index.html" aria-label="GetKloud home">
+          <img class="brand__img" src="${p}assets/logo.png" alt="GetKloud Solutions Pvt. Ltd." />
         </a>
-        <nav class="nav" aria-label="Primary">
+        <nav class="nav" aria-label="Primary Navigation">
           <a href="${p}index.html" data-nav="home">Home</a>
           <a href="${p}about.html" data-nav="about">About</a>
           <div class="nav__dropdown">
-            <a href="${p}services/index.html" data-nav="services">Services ${icon("chevron", "icon--nav")}</a>
+            <a href="${p}services/index.html" data-nav="services">
+              Services ${icon("chevron", "icon--sm")}
+            </a>
             <div class="nav__dropdown-menu">
-              <a href="${p}services/cloud-services.html">Cloud Services</a>
-              <a href="${p}services/email-solutions.html">Email Solutions</a>
-              <a href="${p}services/lead-generation.html">Lead Generation</a>
-              <a href="${p}services/google-ranking.html">Google Ranking</a>
-              <a href="${p}services/ecommerce.html">eCommerce</a>
-              <a href="${p}services/website-development.html">Website Development</a>
-              <a href="${p}services/business-automation.html">Business Automation</a>
+              <a href="${p}services/cloud-services.html">${icon("cloud", "icon--sm")} Cloud Services</a>
+              <a href="${p}services/email-solutions.html">${icon("email", "icon--sm")} Email Solutions</a>
+              <a href="${p}services/lead-generation.html">${icon("ads", "icon--sm")} Lead Generation</a>
+              <a href="${p}services/google-ranking.html">${icon("search", "icon--sm")} Google Ranking & SEO</a>
+              <a href="${p}services/ecommerce.html">${icon("shop", "icon--sm")} eCommerce Stores</a>
+              <a href="${p}services/website-development.html">${icon("code", "icon--sm")} Web Development</a>
+              <a href="${p}services/business-automation.html">${icon("cog", "icon--sm")} Business Automation</a>
             </div>
           </div>
           <a href="${p}how-we-work.html" data-nav="process">How We Work</a>
           <a href="${p}contact.html" data-nav="contact">Contact</a>
         </nav>
-        <a class="nav-cta" href="${p}contact.html">Get Quote</a>
-        <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">
-          ${icon("menu", "icon--menu")}
-        </button>
+        <div class="site-header__actions">
+          <a class="nav-cta" href="${p}contact.html">
+            ${icon("zap", "icon--sm")} Get Quote
+          </a>
+          <button class="nav-toggle" type="button" aria-label="Open mobile menu" aria-expanded="false">
+            ${icon("menu")}
+          </button>
+        </div>
       </div>
     </div>
   </header>
 
-  <nav class="mobile-nav" aria-label="Mobile" aria-hidden="true">
-    <button class="mobile-nav__close" type="button" aria-label="Close menu">
-      ${icon("close", "icon--menu")}
-    </button>
-    <div class="mobile-nav__inner">
-      <a class="mobile-nav__item" href="${p}index.html" style="--nav-delay:0.1s">Home</a>
-      <a class="mobile-nav__item" href="${p}about.html" style="--nav-delay:0.16s">About</a>
-      <a class="mobile-nav__item" href="${p}services/index.html" style="--nav-delay:0.22s">Services</a>
-      <div class="mobile-nav__group">
-        <a class="mobile-nav__item mobile-nav__item--sub" href="${p}services/cloud-services.html" style="--nav-delay:0.28s">Cloud Services</a>
-        <a class="mobile-nav__item mobile-nav__item--sub" href="${p}services/email-solutions.html" style="--nav-delay:0.34s">Email Solutions</a>
-        <a class="mobile-nav__item mobile-nav__item--sub" href="${p}services/lead-generation.html" style="--nav-delay:0.4s">Lead Generation</a>
-        <a class="mobile-nav__item mobile-nav__item--sub" href="${p}services/google-ranking.html" style="--nav-delay:0.46s">Google Ranking</a>
-        <a class="mobile-nav__item mobile-nav__item--sub" href="${p}services/ecommerce.html" style="--nav-delay:0.52s">eCommerce</a>
-        <a class="mobile-nav__item mobile-nav__item--sub" href="${p}services/website-development.html" style="--nav-delay:0.58s">Website Development</a>
-        <a class="mobile-nav__item mobile-nav__item--sub" href="${p}services/business-automation.html" style="--nav-delay:0.64s">Business Automation</a>
+  <div class="mobile-nav" aria-label="Mobile Menu" aria-hidden="true">
+    <div class="mobile-nav__drawer">
+      <div class="mobile-nav__head">
+        <a class="brand" href="${p}index.html">
+          <img class="brand__img" src="${p}assets/logo.png" alt="GetKloud Solutions" />
+        </a>
+        <button class="mobile-nav__close" type="button" aria-label="Close menu">
+          ${icon("close")}
+        </button>
       </div>
-      <a class="mobile-nav__item" href="${p}how-we-work.html" style="--nav-delay:0.7s">How We Work</a>
-      <a class="mobile-nav__item" href="${p}contact.html" style="--nav-delay:0.76s">Contact</a>
-      <a class="mobile-nav__cta mobile-nav__item" href="${p}contact.html" style="--nav-delay:0.84s">Get Quote</a>
+      <div class="mobile-nav__links">
+        <a class="mobile-nav__link" href="${p}index.html">Home</a>
+        <a class="mobile-nav__link" href="${p}about.html">About</a>
+        <a class="mobile-nav__link" href="${p}services/index.html">All Services</a>
+        <div class="mobile-nav__sublinks">
+          <a class="mobile-nav__sublink" href="${p}services/cloud-services.html">Cloud Services</a>
+          <a class="mobile-nav__sublink" href="${p}services/email-solutions.html">Email Solutions</a>
+          <a class="mobile-nav__sublink" href="${p}services/lead-generation.html">Lead Generation</a>
+          <a class="mobile-nav__sublink" href="${p}services/google-ranking.html">Google Ranking</a>
+          <a class="mobile-nav__sublink" href="${p}services/ecommerce.html">eCommerce Stores</a>
+          <a class="mobile-nav__sublink" href="${p}services/website-development.html">Website Development</a>
+          <a class="mobile-nav__sublink" href="${p}services/business-automation.html">Business Automation</a>
+        </div>
+        <a class="mobile-nav__link" href="${p}how-we-work.html">How We Work</a>
+        <a class="mobile-nav__link" href="${p}contact.html">Contact</a>
+      </div>
+      <div class="mobile-nav__footer">
+        <a class="btn btn--primary" href="${p}contact.html" style="width:100%;">
+          ${icon("zap")} Get Custom Quote
+        </a>
+        <a class="btn btn--outline" href="https://wa.me/918421174747" target="_blank" rel="noopener" style="width:100%;">
+          ${icon("whatsapp")} WhatsApp Support
+        </a>
+      </div>
     </div>
-  </nav>
+  </div>
 
   <main>
 ${body}
@@ -343,328 +569,872 @@ ${body}
     <div class="container site-footer__grid">
       <div>
         <a class="brand" href="${p}index.html">
-          <img class="brand__mark" src="${p}assets/logo.png" alt="GetKloud Solutions" />
+          <img class="brand__img brand__img--footer" src="${p}assets/logo.png" alt="GetKloud Solutions Pvt. Ltd." />
         </a>
-        <p style="margin-top:1rem;">Website development, cloud, and digital growth partner serving Pune and across India.</p>
+        <p style="margin-top:1rem;font-size:0.95rem;">
+          Enterprise cloud architecture, business email, SEO, eCommerce, and bespoke web applications built for reliability, scale, and clear ROI.
+        </p>
+        <div style="display:flex;gap:0.75rem;margin-top:1.25rem;">
+          <a class="btn btn--sm btn--ghost" href="https://www.linkedin.com/in/shaileshpatilcloud/" target="_blank" rel="noopener" style="color:#fff;">
+            ${icon("linkedin", "icon--sm")} LinkedIn
+          </a>
+          <a class="btn btn--sm btn--ghost" href="https://wa.me/918421174747" target="_blank" rel="noopener" style="color:#fff;">
+            ${icon("whatsapp", "icon--sm")} WhatsApp
+          </a>
+        </div>
       </div>
       <div>
-        <h3>Services</h3>
-        <a href="${p}services/index.html">All services</a>
-        <a href="${p}services/cloud-services.html">Cloud Services</a>
-        <a href="${p}services/email-solutions.html">Email Solutions</a>
-        <a href="${p}services/lead-generation.html">Lead Generation</a>
-        <a href="${p}services/google-ranking.html">Google Ranking</a>
-        <a href="${p}services/ecommerce.html">eCommerce</a>
-        <a href="${p}services/website-development.html">Website Development</a>
-        <a href="${p}services/business-automation.html">Business Automation</a>
+        <h3>Our Services</h3>
+        <a href="${p}services/cloud-services.html">${icon("cloud", "icon--sm")} Cloud Services & AWS</a>
+        <a href="${p}services/email-solutions.html">${icon("email", "icon--sm")} Google & Office 365</a>
+        <a href="${p}services/lead-generation.html">${icon("ads", "icon--sm")} Google & B2B Ads</a>
+        <a href="${p}services/google-ranking.html">${icon("search", "icon--sm")} Search Engine SEO</a>
+        <a href="${p}services/ecommerce.html">${icon("shop", "icon--sm")} eCommerce Solutions</a>
+        <a href="${p}services/website-development.html">${icon("code", "icon--sm")} Website Development</a>
+        <a href="${p}services/business-automation.html">${icon("cog", "icon--sm")} Custom ERP & Software</a>
       </div>
       <div>
-        <h3>Site map</h3>
-        <a href="${p}index.html">Home</a>
-        <a href="${p}about.html">About</a>
-        <a href="${p}how-we-work.html">How We Work</a>
-        <a href="${p}contact.html">Contact</a>
+        <h3>Company & Process</h3>
+        <a href="${p}index.html">Home Overview</a>
+        <a href="${p}about.html">About GetKloud</a>
+        <a href="${p}how-we-work.html">6-Phase Delivery Process</a>
+        <a href="${p}services/index.html">Solutions Directory</a>
+        <a href="${p}contact.html">Contact & Consultation</a>
       </div>
       <div>
-        <h3>Contact</h3>
+        <h3>Headquarters</h3>
+        <p style="margin-bottom:0.75rem;display:flex;align-items:flex-start;gap:0.5rem;">
+          ${icon("pin", "icon--sm")}
+          <span>BHARGAV VIHAR, SN.53/1, Wadgaon Dhayari, Sinhagad Road, Pune 411041, India</span>
+        </p>
         <a href="tel:+918421174747">${icon("phone", "icon--sm")} +91 8421174747</a>
         <a href="mailto:info@getkloud.in">${icon("mail", "icon--sm")} info@getkloud.in</a>
-        <p class="footer-pin">${icon("pin", "icon--sm")} Sinhagad Road, Pune 411041</p>
       </div>
     </div>
-    <div class="container site-footer__bottom">© ${new Date().getFullYear()} GetKloud Solutions. All rights reserved.</div>
+    <div class="container site-footer__bottom">
+      <div>© ${currentYear} GetKloud Solutions Pvt. Ltd. All rights reserved.</div>
+      <div>Pune, Maharashtra · Serving Clients Across India & Global Markets</div>
+    </div>
   </footer>
 
-  <div class="float-dock" aria-label="Quick contact">
-    <a href="${p}contact.html" aria-label="Enquire">${icon("enquire", "icon--dock")}</a>
-    <a href="tel:+918421174747" aria-label="Call">${icon("phone", "icon--dock")}</a>
-    <a href="https://wa.me/918421174747" data-action="whatsapp" target="_blank" rel="noopener" aria-label="WhatsApp">${icon("whatsapp", "icon--dock")}</a>
+  <div class="float-dock" aria-label="Quick action shortcuts">
+    <a href="${p}contact.html" aria-label="Book a Project Consultation" title="Book Consultation">
+      ${icon("mail", "icon--dock")}
+    </a>
+    <a href="tel:+918421174747" data-action="call" aria-label="Direct Phone Call" title="Call Now">
+      ${icon("phone", "icon--dock")}
+    </a>
+    <a href="https://wa.me/918421174747" data-action="whatsapp" target="_blank" rel="noopener" aria-label="Chat on WhatsApp" title="WhatsApp Us">
+      ${icon("whatsapp", "icon--dock")}
+    </a>
   </div>
 
   <script src="${p}js/site.js"></script>
   <script src="${p}js/animate.js"></script>
   <script src="${p}js/forms.js"></script>
-${extraScripts}
 </body>
-</html>
-`;
+</html>`;
 }
 
 function write(rel, content) {
   const full = path.join(root, rel);
   fs.mkdirSync(path.dirname(full), { recursive: true });
   fs.writeFileSync(full, content, "utf8");
-  console.log("wrote", rel);
+  console.log("Generated:", rel);
 }
 
-function serviceThumb(s, depth = 0) {
-  const p = depth ? "../".repeat(depth) : "";
-  return `${p}assets/images/${s.image}`;
-}
-
-function ownerProfileCard(depth = 0) {
-  const p = depth ? "../".repeat(depth) : "";
-  const initials = founder.name
-    .split(" ")
-    .map((part) => part[0])
-    .join("");
-  const contactHref = `${p}contact.html`;
-  return `<div class="founder-card" data-animate data-founder-card>
-      <div class="founder-card__glow" aria-hidden="true"></div>
-      <div class="founder-card__glow-text" aria-hidden="true">
-        ${icon("zap", "icon--founder")} ${founder.glowText}
-      </div>
-      <article class="founder-card__panel">
-        <div class="founder-card__top">
-          <div class="founder-card__status">
-            <span class="founder-card__status-dot" aria-hidden="true"></span>
-            <span>${founder.statusText}</span>
-          </div>
-          <div class="founder-card__clock" data-founder-clock>
-            ${icon("clock", "icon--founder")}
-            <time class="founder-card__time" datetime="">--:--</time>
-          </div>
-        </div>
-
-        <div class="founder-card__profile">
-          <div class="founder-card__avatar-wrap">
-            <img
-              class="founder-card__photo"
-              src="${p}assets/images/${founder.image}"
-              alt="${founder.name}"
-              width="208"
-              height="208"
-              loading="lazy"
-              onerror="this.hidden=true;this.nextElementSibling.style.display='grid'"
-            />
-            <span class="founder-card__avatar-fallback" aria-hidden="true">${initials}</span>
-          </div>
-          <h3 class="founder-card__name">${founder.name}</h3>
-          <p class="founder-card__role">${founder.role} · ${founder.company}</p>
-          <p class="founder-card__headline">${founder.headline}</p>
-          <p class="founder-card__location">${founder.location}</p>
-        </div>
-
-        <div class="founder-card__stats">
-          <div><strong>${founder.experience}</strong><span>Experience</span></div>
-          <div><strong>${founder.network}</strong><span>Followers</span></div>
-          <div><strong>${founder.founded}</strong><span>Founded</span></div>
-        </div>
-
-        <div class="founder-card__actions">
-          <a class="founder-card__btn" href="${contactHref}">${icon("plus", "icon--founder")} Hire Me</a>
-          <button class="founder-card__btn" type="button" data-copy-email="${founder.email}">
-            ${icon("copy", "icon--founder")} <span data-copy-label>Copy Email</span>
-          </button>
-        </div>
-
-        <div class="founder-card__tags">
-          ${founder.skills.slice(0, 4).map((skill) => `<span>${skill}</span>`).join("")}
-        </div>
-
-        <a class="founder-card__linkedin" href="${founder.linkedin}" target="_blank" rel="noopener noreferrer">
-          ${icon("linkedin", "icon--founder")} LinkedIn profile
-        </a>
-      </article>
-    </div>`;
-}
-
+// ----------------------------------------------------
+// 1. HOMEPAGE
+// ----------------------------------------------------
 const homeBody = `
+    <!-- Hero Section -->
     <section class="hero hero--split">
+      <div class="hero__canvas-wrap">
+        <canvas id="hero-network-canvas" class="hero__canvas"></canvas>
+      </div>
       <div class="hero__glow hero__glow--1" aria-hidden="true"></div>
       <div class="hero__glow hero__glow--2" aria-hidden="true"></div>
-      <div class="hero__media" aria-hidden="true"></div>
       <div class="container hero__grid">
         <div class="hero__content">
-          <div class="hero__badge"><span class="pulse-dot" aria-hidden="true"></span> IT Solutions · Cloud · Digital · Pune</div>
-          <h1>Cloud-backed growth for modern business.</h1>
-          <p class="hero__text">Empower your company with cloud, hosting, email, and digital services built for clarity, speed, and scale.</p>
-          <div class="btn-row">
-            <a class="btn btn--primary" href="services/index.html">${icon("arrow")} Explore Services</a>
-            <a class="btn btn--ghost" href="contact.html">${icon("enquire")} Talk to Us</a>
+          <div class="hero__badge" data-animate>
+            <span class="pulse-dot" aria-hidden="true"></span>
+            Cloud · Infrastructure · Web · Pune, India
           </div>
-          <div class="hero__tags">
-            <span>${icon("cloud")} Azure & AWS</span>
-            <span>${icon("shield")} Secure Hosting</span>
-            <span>${icon("code")} Web & Apps</span>
-            <span>${icon("search")} SEO & Ads</span>
+          <h1 data-animate>Cloud-native growth engineered for modern business.</h1>
+          <p class="hero__text" data-animate>
+            Empower your organization with enterprise cloud architecture, secure business email, high-speed web platforms, and automated digital systems built for clarity and scale.
+          </p>
+          <div class="btn-row" data-animate>
+            <a class="btn btn--primary btn--lg" href="services/index.html">
+              ${icon("arrow")} Explore All Solutions
+            </a>
+            <a class="btn btn--outline btn--lg" href="contact.html">
+              ${icon("zap")} Get Custom Quote
+            </a>
+          </div>
+          <div class="hero__tags" data-animate>
+            <span class="hero__tag">${icon("cloud", "icon--sm")} AWS & Azure Cloud</span>
+            <span class="hero__tag">${icon("shield", "icon--sm")} 99.9% Uptime Hosting</span>
+            <span class="hero__tag">${icon("code", "icon--sm")} Web & SaaS Apps</span>
+            <span class="hero__tag">${icon("search", "icon--sm")} SEO & Lead Gen</span>
           </div>
         </div>
+
         <aside class="hero__panel" data-animate="scale" aria-label="Company highlights">
           <div class="hero__panel-card">
             <div class="hero__panel-top">
-              <span class="hero__panel-label">${icon("spark")} Trusted IT Partner</span>
-              <span class="hero__panel-pill">4+ Years</span>
+              <span class="hero__panel-label">
+                ${icon("spark")} Certified Technology Partner
+              </span>
+              <span class="hero__panel-pill">13+ Yrs Exp</span>
             </div>
             <div class="hero__panel-stats">
-              <div><strong data-count="99" data-suffix="%">0%</strong><span>Reporting accuracy</span></div>
-              <div><strong data-count="4.98" data-decimals="2">0</strong><span>Client rating</span></div>
-              <div><strong data-count="98" data-suffix="%">0%</strong><span>Repeat clients</span></div>
+              <div>
+                <strong data-count="99.9" data-decimals="1" data-suffix="%">0%</strong>
+                <span>Uptime SLA</span>
+              </div>
+              <div>
+                <strong data-count="4.98" data-decimals="2">0</strong>
+                <span>Client Rating</span>
+              </div>
+              <div>
+                <strong data-count="98" data-suffix="%">0%</strong>
+                <span>Repeat Clients</span>
+              </div>
             </div>
-            <p>From cloud migration to lead generation — one team, enterprise-grade delivery.</p>
-            <a class="btn btn--outline btn--panel" href="contact.html">${icon("arrow")} Start a project</a>
+            <p style="font-size:0.95rem;line-height:1.55;color:var(--ink-soft);margin-bottom:1.5rem;">
+              From seamless AWS migrations to bespoke ERP automation—one dependable team, enterprise security standards.
+            </p>
+            <a class="btn btn--outline btn--primary" href="contact.html" style="width:100%;">
+              ${icon("arrow")} Start Your Project
+            </a>
           </div>
         </aside>
       </div>
     </section>
 
-    <section class="trust-strip" aria-label="Trusted by clients">
+    <!-- Client Trust Strip -->
+    <section class="trust-strip" aria-label="Trusted by industry leaders">
       <div class="trust-strip__track">
         ${clients
           .concat(clients)
           .map(
             ([file, name]) =>
-              `<img class="trust-strip__logo" src="assets/images/clients/${file}" alt="${name}" loading="lazy" />`
+              `<img class="trust-strip__logo" src="assets/images/clients/${file}" alt="${name} logo" loading="lazy" />`
           )
           .join("")}
       </div>
     </section>
 
-    <section class="section section--tight section--panel">
-      <div class="container">
-        <p class="section__eyebrow" data-animate>Start here</p>
-        <h2 data-animate>Choose your gateway</h2>
-        <div class="gateway" style="margin-top:2rem;">
-          <a class="gateway__item" style="--gateway-image:url('assets/images/gateways/cloud-sm.jpg')" href="services/cloud-services.html" data-animate>
-            <h3>Cloud Services</h3>
-            <p>Limitless potential across Azure, AWS, and hybrid cloud.</p>
-            <span>${icon("cloud")} Explore Cloud</span>
-          </a>
-          <a class="gateway__item" style="--gateway-image:url('assets/images/gateways/hosting-sm.jpg')" href="services/cloud-services.html" data-animate>
-            <h3>Private Hosting</h3>
-            <p>Security and performance with dedicated hosting control.</p>
-            <span>${icon("hosting")} Explore Plans</span>
-          </a>
-          <a class="gateway__item" style="--gateway-image:url('assets/images/gateways/email-sm.jpg')" href="services/email-solutions.html" data-animate>
-            <h3>Email Solutions</h3>
-            <p>Business inboxes that keep teams connected and confident.</p>
-            <span>${icon("email")} Explore Email</span>
-          </a>
-        </div>
-      </div>
-    </section>
-
+    <!-- Gateways Section -->
     <section class="section section--panel">
-      <div class="container grid-2">
-        <div>
-          <p class="section__eyebrow" data-animate>About us</p>
-          <h2 data-animate>A powerful agency for corporate business.</h2>
-          <p class="section__lead" data-animate>Founded in 2021, GetKloud Solutions is a trusted partner in cloud transformation and digital growth — delivering scalable, secure services across Microsoft Azure, AWS, and private hosting.</p>
-          <a class="btn btn--outline" href="about.html" data-animate>${icon("arrow")} Learn about GetKloud</a>
-        </div>
-        ${ownerProfileCard()}
-      </div>
-    </section>
-
-    <section class="section section--tight">
       <div class="container">
-        <p class="section__eyebrow" data-animate>Our services</p>
-        <h2 data-animate>Everything your digital stack needs</h2>
-        <p class="section__lead" data-animate>From infrastructure to acquisition to custom software — one partner, clear execution.</p>
-        <div class="service-links service-links--home" style="margin-top:2rem;">
-          ${services
-            .map(
-              (s) => `<a class="service-link service-link--media" href="services/${s.slug}.html" data-animate>
-            <img src="${serviceThumb(s)}" alt="" loading="lazy" />
+        <div class="section__header section__header--center">
+          <p class="section__eyebrow" data-animate>Start Here</p>
+          <h2 data-animate>Choose your infrastructure gateway</h2>
+          <p class="section__lead" data-animate>
+            Explore our core pillars of cloud transformation, dedicated hosting, and team collaboration.
+          </p>
+        </div>
+        <div class="gateway" style="margin-top:2.5rem;">
+          <a class="gateway__item" href="services/cloud-services.html" data-animate>
             <div>
-              <h3><span class="service-link__icon service-link__icon--inline">${icon(s.icon)}</span>${s.title}</h3>
-              <p>${s.lead}</p>
+              <div class="gateway__media">
+                <img src="assets/images/cloud-infrastructure.jpg" alt="Cloud Infrastructure" loading="lazy" />
+                <div class="gateway__media-overlay"></div>
+                <div class="gateway__badge">${icon("cloud", "icon--lg")}</div>
+              </div>
+              <h3>Cloud Services & Migration</h3>
+              <p>Scalable, auto-healing AWS & Microsoft Azure architecture with automated DevOps and FinOps cost optimization.</p>
             </div>
-          </a>`
-            )
-            .join("\n")}
+            <span class="gateway__action">${icon("arrow")} Explore Cloud Architecture</span>
+          </a>
+          <a class="gateway__item" href="services/cloud-services.html" data-animate>
+            <div>
+              <div class="gateway__media">
+                <img src="assets/images/dedicated-hosting.jpg" alt="Dedicated Private Hosting" loading="lazy" />
+                <div class="gateway__media-overlay"></div>
+                <div class="gateway__badge">${icon("hosting", "icon--lg")}</div>
+              </div>
+              <h3>Dedicated Private Hosting</h3>
+              <p>High-security isolated infrastructure with NVMe storage, custom firewall policies, and 99.99% network availability.</p>
+            </div>
+            <span class="gateway__action">${icon("arrow")} View Hosting Capabilities</span>
+          </a>
+          <a class="gateway__item" href="services/email-solutions.html" data-animate>
+            <div>
+              <div class="gateway__media">
+                <img src="assets/images/email-security.jpg" alt="Enterprise Email Solutions" loading="lazy" />
+                <div class="gateway__media-overlay"></div>
+                <div class="gateway__badge">${icon("email", "icon--lg")}</div>
+              </div>
+              <h3>Enterprise Email Solutions</h3>
+              <p>Microsoft 365, Google Workspace, and Zoho Mail setups hardened with SPF/DKIM/DMARC for 100% deliverability.</p>
+            </div>
+            <span class="gateway__action">${icon("arrow")} Explore Email Setup</span>
+          </a>
         </div>
       </div>
     </section>
 
-    <section class="section section--panel">
-      <div class="container grid-2">
-        <div>
-          <p class="section__eyebrow" data-animate>How we work</p>
-          <h2 data-animate>A calm process with sharp momentum.</h2>
-          <p class="section__lead" data-animate>Analyze, plan, execute, optimize, report, and go live — with transparency at every step.</p>
-          <a class="btn btn--outline" href="how-we-work.html" data-animate>${icon("arrow")} See full process</a>
-        </div>
-        <div class="steps">
-          <div class="step" data-animate><span class="step__icon">${icon("analyze")}</span><div><h3>Analyze</h3><p>We study your needs, challenges, and market to shape a growth path.</p></div></div>
-          <div class="step" data-animate><span class="step__icon">${icon("plan")}</span><div><h3>Plan</h3><p>Strategy with clear KPIs across leads, SEO, cloud, or development.</p></div></div>
-          <div class="step" data-animate><span class="step__icon">${icon("execute")}</span><div><h3>Execute</h3><p>Quality delivery on ads, websites, automation, and infrastructure.</p></div></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section--tight">
-      <div class="container">
-        <p class="section__eyebrow" data-animate>Our clients</p>
-        <h2 data-animate>Trusted by growing teams</h2>
-        <div class="clients" style="margin-top:1.5rem;" data-animate>
-          ${clients
-            .map(
-              ([file, name]) =>
-                `<img class="client-logo" src="assets/images/clients/${file}" alt="${name}" loading="lazy" />`
-            )
-            .join("\n          ")}
-        </div>
-      </div>
-    </section>
-
+    <!-- Interactive Scope & Estimator Widget -->
     <section class="section">
       <div class="container">
-        <p class="section__eyebrow" data-animate>Why GetKloud</p>
-        <h2 data-animate>Built for reliability and momentum</h2>
-        <div class="feature-band" style="margin-top:1.5rem;">
-          <div class="feature" data-animate>
-            <span class="feature__icon">${icon("cloud")}</span>
-            <div>
-              <h3>Scalable cloud services</h3>
-              <p>Flexible infrastructure on AWS, Azure, and GCP with migration and cost optimization.</p>
+        <div class="section__header">
+          <p class="section__eyebrow" data-animate>Interactive Tool</p>
+          <h2 data-animate>Calculate your project scope & stack</h2>
+          <p class="section__lead" data-animate>
+            Select your requirements to generate an instant timeline estimate, architecture deliverables, and recommended tech stack.
+          </p>
+        </div>
+
+        <div class="estimator-box" data-estimator data-animate>
+          <div class="estimator-step-title">Select Your Required Capabilities:</div>
+          <div class="estimator-chips">
+            <div class="estimator-chip is-selected" data-days="7" data-deliverable="AWS/Azure Migration Roadmap" data-stack="AWS, Azure">
+              ${icon("cloud", "icon--sm")} Cloud Migration
+            </div>
+            <div class="estimator-chip" data-days="3" data-deliverable="M365 / Google Workspace Setup" data-stack="Microsoft 365, Google">
+              ${icon("email", "icon--sm")} Business Email (M365/Google)
+            </div>
+            <div class="estimator-chip" data-days="10" data-deliverable="Custom Corporate Website" data-stack="React, HTML5, CSS3">
+              ${icon("code", "icon--sm")} Corporate Website
+            </div>
+            <div class="estimator-chip" data-days="14" data-deliverable="eCommerce Storefront & Gateway" data-stack="Shopify, WooCommerce, Node.js">
+              ${icon("shop", "icon--sm")} eCommerce Store
+            </div>
+            <div class="estimator-chip" data-days="7" data-deliverable="Google Ads & Lead Funnel" data-stack="Google Ads, Meta Ads">
+              ${icon("ads", "icon--sm")} Paid Lead Generation
+            </div>
+            <div class="estimator-chip" data-days="14" data-deliverable="Technical SEO & Local Maps Ranking" data-stack="Google Search Console, Schema">
+              ${icon("search", "icon--sm")} SEO & Google Ranking
+            </div>
+            <div class="estimator-chip" data-days="21" data-deliverable="Custom Business ERP / CRM" data-stack="Node.js, PostgreSQL, React">
+              ${icon("cog", "icon--sm")} Business Automation & ERP
             </div>
           </div>
-          <div class="feature" data-animate>
-            <span class="feature__icon">${icon("email")}</span>
+
+          <div class="estimator-results">
             <div>
-              <h3>Reliable email solutions</h3>
-              <p>Google Workspace, Microsoft 365, Zoho Mail, and Webmail — chosen for your workflow.</p>
+              <div class="estimator-metrics">
+                <div class="estimator-metric">
+                  <span style="font-size:0.75rem;text-transform:uppercase;letter-spacing:0.05em;color:var(--accent-bright);">Estimated Delivery</span>
+                  <strong data-est-timeline>2–4 Weeks</strong>
+                </div>
+                <div class="estimator-metric">
+                  <span style="font-size:0.75rem;text-transform:uppercase;letter-spacing:0.05em;color:var(--accent-bright);">Core Deliverables</span>
+                  <div style="font-size:0.95rem;font-weight:700;color:#fff;margin-top:0.2rem;" data-est-deliverables>AWS/Azure Migration Roadmap, Architecture Consultation</div>
+                </div>
+              </div>
+              <div style="margin-top:1rem;font-size:0.85rem;color:var(--ink-inverse-soft);">
+                <strong>Recommended Stack:</strong> <span data-est-stack>AWS · Azure · Cloud Security</span>
+              </div>
             </div>
-          </div>
-          <div class="feature" data-animate>
-            <span class="feature__icon">${icon("hosting")}</span>
             <div>
-              <h3>Powerful private hosting</h3>
-              <p>High-performance environments with control, scalability, and strong security posture.</p>
-            </div>
-          </div>
-          <div class="feature" data-animate>
-            <span class="feature__icon">${icon("headset")}</span>
-            <div>
-              <h3>Dedicated support</h3>
-              <p>Monitoring, tuning, and technical help so your systems stay online and optimized.</p>
+              <button class="btn btn--primary btn--lg" data-est-action type="button">
+                ${icon("zap")} Request Scope Quote
+              </button>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="cta-band">
+    <!-- Services Grid -->
+    <section class="section section--panel">
       <div class="container">
-        <h2 data-animate>How we can help you</h2>
-        <p data-animate>Tell us what you need — cloud, website, leads, or automation. We’ll respond with a clear next step.</p>
-        <div class="btn-row" style="margin-top:1.25rem;" data-animate>
-          <a class="btn btn--primary" href="contact.html" style="background:#fff;color:var(--ink);">${icon("mail")} Send a message</a>
-          <a class="btn btn--ghost" href="https://wa.me/918421174747" data-action="whatsapp" target="_blank" rel="noopener">${icon("whatsapp")} WhatsApp</a>
+        <div class="section__header">
+          <p class="section__eyebrow" data-animate>All Solutions</p>
+          <h2 data-animate>Engineered for speed, security, and growth</h2>
+          <p class="section__lead" data-animate>
+            From cloud infrastructure to high-converting web applications, we provide end-to-end digital engineering.
+          </p>
+        </div>
+
+        <div class="offer-list" style="margin-top:2rem;">
+          ${services
+            .map(
+              (s) => `
+            <article class="offer" data-animate>
+              <div class="offer__head">
+                <div class="offer__icon-box">${icon(s.icon, "icon--lg")}</div>
+                <div>
+                  <h3>${s.title}</h3>
+                  <p>${s.lead}</p>
+                </div>
+              </div>
+              <div class="offer__tags">
+                ${s.features.map((f) => `<span class="offer__tag">${f.title}</span>`).join("")}
+              </div>
+              <div style="margin-top:auto;padding-top:1rem;border-top:1px solid var(--line);">
+                <a class="btn btn--sm btn--outline" href="services/${s.slug}.html" style="width:100%;">
+                  ${icon("arrow")} Explore ${s.title.split(" ")[0]} Details
+                </a>
+              </div>
+            </article>
+          `
+            )
+            .join("")}
+        </div>
+      </div>
+    </section>
+
+    <!-- Leadership Section -->
+    <section class="section">
+      <div class="container grid-2 grid-2--sidebar">
+        <div>
+          <p class="section__eyebrow" data-animate>Leadership & Expertise</p>
+          <h2 data-animate>Led by proven cloud architects</h2>
+          <p class="section__lead" data-animate>
+            GetKloud is directed by Shailesh Patil, a cloud technology veteran with 13+ years across AWS, Microsoft Azure, Google Cloud, and enterprise SaaS.
+          </p>
+          <p data-animate>
+            We eliminate technical bloat and vendor lock-in. Every client receives hands-on solution architecture, proactive security monitoring, and clear milestone reporting.
+          </p>
+          <div class="btn-row" style="margin-top:1.75rem;" data-animate>
+            <a class="btn btn--primary" href="about.html">${icon("arrow")} Read Our Full Story</a>
+            <a class="btn btn--outline" href="https://www.linkedin.com/in/shaileshpatilcloud/" target="_blank" rel="noopener">
+              ${icon("linkedin")} LinkedIn Profile
+            </a>
+          </div>
+        </div>
+
+        <div class="founder-card" data-animate="scale">
+          <div class="founder-card__badge-row">
+            <span class="founder-card__status">
+              <span class="pulse-dot"></span> Available for Projects
+            </span>
+            <div data-founder-clock style="font-size:0.82rem;font-weight:700;color:var(--ink-muted);display:flex;align-items:center;gap:0.35rem;">
+              ${icon("clock", "icon--sm")} <time datetime="">--:--</time>
+            </div>
+          </div>
+          <div class="founder-card__body">
+            <div class="founder-card__photo-frame">
+              <img class="founder-card__photo" src="assets/images/team/shailesh-patil.jpg" alt="Shailesh Patil" loading="lazy" />
+            </div>
+            <h3 class="founder-card__name">Shailesh Patil</h3>
+            <span class="founder-card__title">Founder & Lead Cloud Architect</span>
+            <span class="founder-card__location">${icon("pin", "icon--sm")} Pune, Maharashtra, India</span>
+          </div>
+          <div class="founder-card__stats">
+            <div><strong>13+ Yrs</strong><span>Experience</span></div>
+            <div><strong>11K+</strong><span>Network</span></div>
+            <div><strong>2021</strong><span>Founded</span></div>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;gap:0.4rem;justify-content:center;">
+            <span class="offer__tag">AWS Certified</span>
+            <span class="offer__tag">Azure Cloud</span>
+            <span class="offer__tag">Google Cloud</span>
+            <span class="offer__tag">FinOps</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process Preview -->
+    <section class="section section--panel">
+      <div class="container">
+        <div class="section__header section__header--center">
+          <p class="section__eyebrow" data-animate>How We Work</p>
+          <h2 data-animate>Milestone-driven execution framework</h2>
+          <p class="section__lead" data-animate>
+            A calm, predictable 6-phase engineering lifecycle designed to eliminate surprises.
+          </p>
+        </div>
+
+        <div class="step-grid" style="margin-top:2.5rem;">
+          <div class="step-card" data-animate>
+            <div class="step-card__num">01</div>
+            <h3>Discovery & Audit</h3>
+            <p>Comprehensive inspection of current servers, DNS, codebase, and business objectives.</p>
+          </div>
+          <div class="step-card" data-animate>
+            <div class="step-card__num">02</div>
+            <h3>Architecture Design</h3>
+            <p>Clear blueprint detailing cloud topologies, security boundaries, and timeline milestones.</p>
+          </div>
+          <div class="step-card" data-animate>
+            <div class="step-card__num">03</div>
+            <h3>Precision Execution</h3>
+            <p>Agile build, configuration, data migration, and coding with weekly milestone check-ins.</p>
+          </div>
+          <div class="step-card" data-animate>
+            <div class="step-card__num">04</div>
+            <h3>QA & Security Hardening</h3>
+            <p>Load testing, SSL validation, DMARC/SPF audits, and penetration testing prior to cutover.</p>
+          </div>
+          <div class="step-card" data-animate>
+            <div class="step-card__num">05</div>
+            <h3>Zero-Downtime Launch</h3>
+            <p>Seamless DNS switchover, database synchronization, and live environment validation.</p>
+          </div>
+          <div class="step-card" data-animate>
+            <div class="step-card__num">06</div>
+            <h3>24/7 SLA Support</h3>
+            <p>Proactive monitoring, automated backups, and guaranteed emergency response.</p>
+          </div>
+        </div>
+
+        <div style="text-align:center;margin-top:2.5rem;" data-animate>
+          <a class="btn btn--outline btn--lg" href="how-we-work.html">
+            ${icon("arrow")} View Full Engineering Lifecycle
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section">
+      <div class="container">
+        <div class="section__header section__header--center">
+          <p class="section__eyebrow" data-animate>Frequently Asked Questions</p>
+          <h2 data-animate>Answers to common project questions</h2>
+          <p class="section__lead" data-animate>
+            Everything you need to know about our cloud services, delivery SLAs, and engagement models.
+          </p>
+        </div>
+
+        ${renderFAQAccordion([
+          ["How do you guarantee zero downtime during cloud or email migrations?", "We set up parallel staging environments, pre-sync database records and mailbox archives, and perform final DNS switchovers during off-peak hours with automated rollbacks in place."],
+          ["Do you work with startups, SMBs, and enterprise teams?", "Yes, we tailor solutions according to scale—from lean, cost-efficient setups for growing SMBs to multi-region redundant architectures for corporate organizations."],
+          ["What are your pricing models?", "We offer transparent fixed-milestone project pricing for migrations and web development, as well as monthly managed service retainers for 24/7 monitoring and cloud optimization."],
+          ["How fast can you initiate a new project?", "Following our initial 30-minute discovery call and scope sign-off, engineering kick-off begins within 48 to 72 hours."],
+          ["Where is GetKloud based and do you serve international clients?", "We are headquartered in Pune, Maharashtra, India, and actively serve enterprise clients across India, the Middle East, North America, and Europe."],
+        ])}
+      </div>
+    </section>
+
+    <!-- CTA Band -->
+    <section class="container" data-animate>
+      <div class="cta-band">
+        <div class="container" style="position:relative;z-index:2;">
+          <h2>Ready to elevate your cloud & digital stack?</h2>
+          <p>
+            Schedule a 30-minute technical consultation with our lead cloud architect. We'll provide a clear roadmap and next steps with zero obligation.
+          </p>
+          <div class="btn-row" style="margin-top:1.75rem;">
+            <a class="btn btn--white btn--lg" href="contact.html">
+              ${icon("zap")} Start a Conversation
+            </a>
+            <a class="btn btn--ghost btn--lg" href="https://wa.me/918421174747" target="_blank" rel="noopener">
+              ${icon("whatsapp")} Instant WhatsApp Chat
+            </a>
+          </div>
         </div>
       </div>
     </section>
 `;
 
+// ----------------------------------------------------
+// 2. ABOUT PAGE
+// ----------------------------------------------------
+const aboutBody = `
+    <section class="page-hero">
+      <div class="container">
+        <p class="section__eyebrow" data-animate>About GetKloud Solutions</p>
+        <h1 data-animate>Empowering modern enterprises with cloud clarity and precision.</h1>
+        <p class="section__lead" data-animate>
+          Founded in 2021 in Pune, GetKloud Solutions bridges the gap between complex enterprise infrastructure and practical business outcomes.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container grid-2">
+        <div>
+          <h2 data-animate>Our Mission & Philosophy</h2>
+          <p data-animate>
+            Cloud adoption should accelerate your business, not overwhelm your budget with hidden fees and architectural complexity. We help organizations across India and global markets migrate, scale, and secure their digital systems.
+          </p>
+          <p data-animate>
+            Whether managing high-traffic web applications on AWS, configuring secure Microsoft 365 environments, or engineering bespoke business ERPs, our focus remains absolute: zero downtime, rock-solid security, and measurable ROI.
+          </p>
+          <div class="hero__tags" style="margin-top:1.5rem;" data-animate>
+            <span class="hero__tag">${icon("check", "icon--sm")} Zero Vendor Lock-in</span>
+            <span class="hero__tag">${icon("check", "icon--sm")} Proactive 24/7 Monitoring</span>
+            <span class="hero__tag">${icon("check", "icon--sm")} Strict SLA Guarantees</span>
+          </div>
+        </div>
+
+        <div class="founder-card" data-animate="scale">
+          <div class="founder-card__badge-row">
+            <span class="founder-card__status">
+              <span class="pulse-dot"></span> Founder Profile
+            </span>
+            <div data-founder-clock style="font-size:0.82rem;font-weight:700;color:var(--ink-muted);display:flex;align-items:center;gap:0.35rem;">
+              ${icon("clock", "icon--sm")} <time datetime="">--:--</time>
+            </div>
+          </div>
+          <div class="founder-card__body">
+            <div class="founder-card__photo-frame">
+              <img class="founder-card__photo" src="assets/images/team/shailesh-patil.jpg" alt="Shailesh Patil" loading="lazy" />
+            </div>
+            <h3 class="founder-card__name">Shailesh Patil</h3>
+            <span class="founder-card__title">Founder & Owner · GetKloud Solutions</span>
+            <span class="founder-card__location">${icon("pin", "icon--sm")} Pune, Maharashtra, India</span>
+          </div>
+          <div class="founder-card__stats">
+            <div><strong>13+ Yrs</strong><span>Industry Exp</span></div>
+            <div><strong>11K+</strong><span>Followers</span></div>
+            <div><strong>MBA</strong><span>Marketing</span></div>
+          </div>
+          <p style="font-size:0.9rem;line-height:1.55;color:var(--ink-soft);text-align:center;margin:0 0 1rem;">
+            "We treat every client's infrastructure as our own—architecting for resilience, continuous security, and cost efficiency."
+          </p>
+          <a class="btn btn--outline" href="https://www.linkedin.com/in/shaileshpatilcloud/" target="_blank" rel="noopener" style="width:100%;">
+            ${icon("linkedin")} View LinkedIn Profile
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Engineering & Architecture Consultation Showcase -->
+    <section class="section">
+      <div class="container grid-2" style="align-items:center;">
+        <div class="visual-showcase" data-animate>
+          <img src="assets/images/team-consulting.jpg" alt="GetKloud Engineering & Cloud Architects" loading="lazy" />
+          <div class="visual-showcase__caption">
+            <span class="visual-showcase__title">Enterprise Cloud Architecture & Advisory</span>
+            <span class="visual-showcase__tag">Pune Engineering Hub</span>
+          </div>
+        </div>
+        <div>
+          <p class="section__eyebrow" data-animate>Architecture & Advisory</p>
+          <h2 data-animate>Collaborative engineering built on measurable clarity.</h2>
+          <p data-animate>
+            We partner directly with your leadership and engineering teams to design resilient, cost-effective infrastructure that scales effortlessly under real-world demand.
+          </p>
+          <div class="stats-matrix" style="display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-top:1.5rem;" data-animate>
+            <div style="padding:1.25rem;background:#fff;border-radius:var(--radius-sm);border:1px solid var(--line);">
+              <div style="font-size:1.6rem;font-weight:800;color:var(--accent-deep);font-family:var(--font-display);">150+</div>
+              <div style="font-size:0.85rem;font-weight:600;color:var(--ink-soft);margin-top:0.25rem;">Cloud Migrations Completed</div>
+            </div>
+            <div style="padding:1.25rem;background:#fff;border-radius:var(--radius-sm);border:1px solid var(--line);">
+              <div style="font-size:1.6rem;font-weight:800;color:var(--emerald);font-family:var(--font-display);">99.9%</div>
+              <div style="font-size:0.85rem;font-weight:600;color:var(--ink-soft);margin-top:0.25rem;">Guaranteed Infrastructure SLA</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="section section--panel">
+      <div class="container">
+        <div class="section__header section__header--center">
+          <p class="section__eyebrow" data-animate>Why GetKloud</p>
+          <h2 data-animate>The GetKloud Advantage</h2>
+          <p class="section__lead" data-animate>
+            Why growing organizations choose us over traditional IT agencies.
+          </p>
+        </div>
+
+        <div class="grid-3" style="margin-top:2.5rem;">
+          <div class="offer" data-animate>
+            <div class="offer__icon-box">${icon("shield", "icon--lg")}</div>
+            <h3>Enterprise Security Standards</h3>
+            <p>Every system is hardened with SSL/TLS, multi-factor authentication, automated vulnerability scans, and strict firewall policies.</p>
+          </div>
+          <div class="offer" data-animate>
+            <div class="offer__icon-box">${icon("chart", "icon--lg")}</div>
+            <h3>FinOps Cost Optimization</h3>
+            <p>We actively audit and eliminate idle cloud resources, saving our clients an average of 30% to 50% on their ongoing cloud infrastructure bills.</p>
+          </div>
+          <div class="offer" data-animate>
+            <div class="offer__icon-box">${icon("zap", "icon--lg")}</div>
+            <h3>Sub-Second Performance</h3>
+            <p>Websites, e-commerce stores, and cloud APIs engineered for lightning-fast speeds and top Google Core Web Vitals rankings.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section">
+      <div class="container">
+        <div class="section__header section__header--center">
+          <p class="section__eyebrow" data-animate>Common Inquiries</p>
+          <h2 data-animate>Frequently Asked Questions</h2>
+        </div>
+        ${renderFAQAccordion([
+          ["Where is your primary engineering team located?", "Our core engineering, cloud architecture, and support team is located in Pune, Maharashtra, India."],
+          ["What technologies and platforms do you specialize in?", "We are specialists across Amazon Web Services (AWS), Microsoft Azure, Google Cloud, Microsoft 365, Google Workspace, React, Next.js, Node.js, and PostgreSQL."],
+          ["How do we start a consultation?", "Simply fill out our contact form or send a WhatsApp message. We'll set up a 30-minute discovery call to evaluate your infrastructure requirements."],
+        ])}
+      </div>
+    </section>
+`;
+
+// ----------------------------------------------------
+// 3. SERVICES DIRECTORY (services/index.html)
+// ----------------------------------------------------
+const servicesHubBody = `
+    <section class="page-hero">
+      <div class="container">
+        <p class="section__eyebrow" data-animate>Solutions Directory</p>
+        <h1 data-animate>Complete cloud, web & digital engineering services.</h1>
+        <p class="section__lead" data-animate>
+          Discover our specialized technology solutions engineered to accelerate operations, enhance security, and drive measurable revenue.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="offer-list">
+          ${services
+            .map(
+              (s) => `
+            <article class="offer" data-animate>
+              <div class="offer__head">
+                <div class="offer__icon-box">${icon(s.icon, "icon--lg")}</div>
+                <div>
+                  <span style="font-size:0.78rem;font-weight:750;text-transform:uppercase;color:var(--accent);">${s.eyebrow}</span>
+                  <h3 style="font-size:1.35rem;margin-top:0.25rem;">${s.title}</h3>
+                  <p>${s.lead}</p>
+                </div>
+              </div>
+              <div class="grid-2" style="gap:1rem;margin-top:1rem;">
+                ${s.features
+                  .slice(0, 2)
+                  .map(
+                    (f) => `
+                  <div style="background:var(--bg);padding:1rem;border-radius:var(--radius-sm);border:1px solid var(--line);">
+                    <strong style="font-size:0.92rem;display:block;margin-bottom:0.25rem;">${f.title}</strong>
+                    <p style="font-size:0.85rem;margin:0;line-height:1.45;">${f.desc}</p>
+                  </div>
+                `
+                  )
+                  .join("")}
+              </div>
+              <div style="margin-top:auto;padding-top:1.25rem;display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--line);">
+                <span style="font-size:0.85rem;font-weight:700;color:var(--ink-soft);">Enterprise SLA · Custom Scope</span>
+                <a class="btn btn--primary btn--sm" href="${s.slug}.html">
+                  ${icon("arrow")} View Full Service Details
+                </a>
+              </div>
+            </article>
+          `
+            )
+            .join("")}
+        </div>
+      </div>
+    </section>
+
+    <section class="container" data-animate>
+      <div class="cta-band">
+        <div class="container" style="position:relative;z-index:2;">
+          <h2>Need a custom multi-service solution?</h2>
+          <p>
+            We frequently combine cloud migration, email security, and website development into comprehensive digital transformation packages.
+          </p>
+          <div class="btn-row" style="margin-top:1.75rem;">
+            <a class="btn btn--white btn--lg" href="../contact.html">${icon("zap")} Request Custom Proposal</a>
+          </div>
+        </div>
+      </div>
+    </section>
+`;
+
+// ----------------------------------------------------
+// 4. HOW WE WORK (how-we-work.html)
+// ----------------------------------------------------
+const howWeWorkBody = `
+    <section class="page-hero">
+      <div class="container">
+        <p class="section__eyebrow" data-animate>Engineering Methodology</p>
+        <h1 data-animate>A calm, predictable process with sharp execution.</h1>
+        <p class="section__lead" data-animate>
+          We follow a rigorous 6-phase delivery lifecycle that eliminates guesswork, maintains continuous communication, and ensures on-time completion.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="step-grid">
+          <div class="step-card" data-animate>
+            <div class="step-card__num">01</div>
+            <h3>Discovery & Needs Audit</h3>
+            <p>We analyze your business objectives, inspect your current infrastructure, assess security vulnerabilities, and establish quantifiable KPIs.</p>
+            <div style="margin-top:1rem;font-size:0.82rem;font-weight:700;color:var(--accent);">Deliverable: Architecture Audit Report</div>
+          </div>
+          <div class="step-card" data-animate>
+            <div class="step-card__num">02</div>
+            <h3>Blueprint & Strategy</h3>
+            <p>Our lead architect drafts a detailed topology diagram, technology stack selection, security controls, and clear milestone timeline.</p>
+            <div style="margin-top:1rem;font-size:0.82rem;font-weight:700;color:var(--accent);">Deliverable: Implementation Roadmap</div>
+          </div>
+          <div class="step-card" data-animate>
+            <div class="step-card__num">03</div>
+            <h3>Agile Build & Configuration</h3>
+            <p>We set up infrastructure-as-code, configure server instances, build frontend/backend modules, and provide weekly sprint demos.</p>
+            <div style="margin-top:1rem;font-size:0.82rem;font-weight:700;color:var(--accent);">Deliverable: Functional Staging Environment</div>
+          </div>
+          <div class="step-card" data-animate>
+            <div class="step-card__num">04</div>
+            <h3>Testing & Security Hardening</h3>
+            <p>Comprehensive load testing, SSL validation, vulnerability scans, cross-browser compatibility checks, and DNS dry-runs.</p>
+            <div style="margin-top:1rem;font-size:0.82rem;font-weight:700;color:var(--accent);">Deliverable: QA & Security Certification</div>
+          </div>
+          <div class="step-card" data-animate>
+            <div class="step-card__num">05</div>
+            <h3>Zero-Downtime Deployment</h3>
+            <p>Executing live DNS cutovers, data synchronization, and SSL binding during off-peak windows with live monitoring.</p>
+            <div style="margin-top:1rem;font-size:0.82rem;font-weight:700;color:var(--accent);">Deliverable: Production Go-Live</div>
+          </div>
+          <div class="step-card" data-animate>
+            <div class="step-card__num">06</div>
+            <h3>Proactive SLA Maintenance</h3>
+            <p>24/7 automated monitoring, daily verified backups, security updates, and dedicated monthly review check-ins.</p>
+            <div style="margin-top:1rem;font-size:0.82rem;font-weight:700;color:var(--accent);">Deliverable: Monthly Performance Analytics</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--panel">
+      <div class="container">
+        <div class="section__header section__header--center">
+          <p class="section__eyebrow" data-animate>Client Commitments</p>
+          <h2 data-animate>Our Guarantees to You</h2>
+        </div>
+        <div class="grid-3" style="margin-top:2.5rem;">
+          <div class="offer" data-animate>
+            <div class="offer__icon-box">${icon("check", "icon--lg")}</div>
+            <h3>Zero Hidden Surcharges</h3>
+            <p>Transparent milestones and clear scope definition before any work begins.</p>
+          </div>
+          <div class="offer" data-animate>
+            <div class="offer__icon-box">${icon("users", "icon--lg")}</div>
+            <h3>Dedicated Tech Lead</h3>
+            <p>Direct communication with senior cloud architects, never intermediate non-technical reps.</p>
+          </div>
+          <div class="offer" data-animate>
+            <div class="offer__icon-box">${icon("shield", "icon--lg")}</div>
+            <h3>Complete Data Ownership</h3>
+            <p>100% of licenses, source code, and cloud accounts are registered in your company name.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+`;
+
+// ----------------------------------------------------
+// 5. CONTACT PAGE (contact.html)
+// ----------------------------------------------------
+const contactBody = `
+    <section class="page-hero">
+      <div class="container">
+        <p class="section__eyebrow" data-animate>Contact GetKloud</p>
+        <h1 data-animate>Let's engineer your digital advantage.</h1>
+        <p class="section__lead" data-animate>
+          Send an enquiry or initiate an instant WhatsApp chat. We review all technical requirements and respond within 24 hours.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container grid-2">
+        <form class="form" data-enquire-form data-animate>
+          <h3 style="margin-bottom:0.5rem;">Project Enquiry Form</h3>
+          <p style="font-size:0.9rem;color:var(--ink-muted);margin-bottom:1.5rem;">
+            Provide your requirements below for a detailed technical estimate.
+          </p>
+
+          <div class="form-group">
+            <label class="form-label" for="inp-name">Full Name *</label>
+            <input class="form-input" id="inp-name" name="name" type="text" required autocomplete="name" placeholder="Shailesh Patil" />
+          </div>
+
+          <div class="grid-2" style="gap:1rem;">
+            <div class="form-group">
+              <label class="form-label" for="inp-email">Business Email *</label>
+              <input class="form-input" id="inp-email" name="email" type="email" required autocomplete="email" placeholder="name@company.com" />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="inp-phone">Phone / WhatsApp</label>
+              <input class="form-input" id="inp-phone" name="phone" type="tel" autocomplete="tel" placeholder="+91 98765 43210" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="inp-service">Service Area</label>
+            <select class="form-select" id="inp-service" name="service">
+              <option value="">Select primary solution</option>
+              <option>Cloud Services & AWS/Azure</option>
+              <option>Enterprise Email (M365/Google)</option>
+              <option>Paid Lead Generation</option>
+              <option>Google Ranking & SEO</option>
+              <option>eCommerce Store Development</option>
+              <option>Custom Website Development</option>
+              <option>Business Automation & ERP</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="inp-message">Project Details & Objectives</label>
+            <textarea class="form-textarea" id="inp-message" name="message" placeholder="Describe your current setup, challenges, and goals..."></textarea>
+          </div>
+
+          <div class="btn-row" style="margin-top:0.5rem;">
+            <button class="btn btn--primary btn--lg" type="submit" style="width:100%;">
+              ${icon("zap")} Prepare & Send Project Brief
+            </button>
+          </div>
+        </form>
+
+        <div style="display:flex;flex-direction:column;gap:1.5rem;" data-animate="right">
+          <div class="offer" style="background:#ffffff;">
+            <div class="offer__icon-box">${icon("pin", "icon--lg")}</div>
+            <h3>Pune Headquarters</h3>
+            <p>BHARGAV VIHAR, SN.53/1, Wadgaon Dhayari, Sinhagad Road, Pune 411041, Maharashtra, India</p>
+          </div>
+
+          <div class="offer" style="background:#ffffff;">
+            <div class="offer__icon-box">${icon("phone", "icon--lg")}</div>
+            <h3>Direct Call & WhatsApp</h3>
+            <p><a href="tel:+918421174747" style="font-weight:700;font-size:1.1rem;">+91 8421174747</a></p>
+            <p style="font-size:0.88rem;margin-top:0.35rem;">Monday – Saturday, 9:00 AM – 7:00 PM IST</p>
+          </div>
+
+          <div class="offer" style="background:#ffffff;">
+            <div class="offer__icon-box">${icon("mail", "icon--lg")}</div>
+            <h3>Official Email</h3>
+            <p><a href="mailto:info@getkloud.in" style="font-weight:700;font-size:1.1rem;">info@getkloud.in</a></p>
+            <p style="font-size:0.88rem;margin-top:0.35rem;">Responses guaranteed within 24 business hours.</p>
+          </div>
+
+          <div class="offer" style="background:var(--accent-soft);border-color:var(--accent-border);">
+            <div style="display:flex;align-items:center;gap:0.75rem;">
+              <span class="pulse-dot"></span>
+              <strong style="color:var(--accent-deep);">Instant WhatsApp Messaging Available</strong>
+            </div>
+            <p style="font-size:0.92rem;margin-top:0.5rem;">
+              Need a quick question answered? Chat directly with our solutions team on WhatsApp.
+            </p>
+            <a class="btn btn--primary btn--sm" href="https://wa.me/918421174747" target="_blank" rel="noopener" style="margin-top:0.5rem;align-self:flex-start;">
+              ${icon("whatsapp")} Open WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+`;
+
+// ----------------------------------------------------
+// BUILD ALL PAGES
+// ----------------------------------------------------
+console.log("Starting full website generation...");
+
+// 1. Root pages
 write(
   "index.html",
   shell({
     depth: 0,
     page: "home",
-    title: "Website Development & Digital Marketing in Pune",
-    description:
-      "GetKloud Solutions — cloud services, email, lead generation, SEO, eCommerce, and website development in Pune.",
+    title: "Website Development & Cloud Services in Pune",
+    description: "GetKloud Solutions: Enterprise AWS/Azure Cloud Services, Google Workspace, SEO, eCommerce and Website Development in Pune, India.",
     body: homeBody,
   })
 );
@@ -674,54 +1444,9 @@ write(
   shell({
     depth: 0,
     page: "about",
-    title: "About Us",
-    description: "Learn about GetKloud Solutions — cloud and digital partners based in Pune, India.",
-    body: `
-    <section class="page-hero">
-      <div class="container">
-        <p class="section__eyebrow">About GetKloud</p>
-        <h1>Powerful agency for corporate business.</h1>
-        <p class="section__lead">Founded in 2021, GetKloud Solutions helps organizations adopt cloud and digital systems with clarity, security, and lasting support.</p>
-      </div>
-    </section>
-    <section class="section">
-      <div class="container grid-2">
-        <div>
-          <h2 data-animate>Our mission</h2>
-          <p data-animate>We simplify cloud adoption for businesses of all sizes — offering tailored solutions that improve agility, performance, and cost-efficiency across Microsoft Azure, AWS, and private hosting environments.</p>
-          <p data-animate>Whether you are migrating legacy systems, optimizing infrastructure, or building hybrid environments, our team focuses on seamless execution and dependable ongoing support.</p>
-        </div>
-        <div class="visual-panel" data-animate="scale" aria-hidden="true"></div>
-      </div>
-    </section>
-    <section class="section section--tight section--panel">
-      <div class="container">
-        <p class="section__eyebrow" data-animate>Leadership</p>
-        <h2 data-animate>Meet the founder</h2>
-        <p class="section__lead" data-animate>GetKloud is led by a cloud practitioner with 13+ years helping businesses adopt AWS, Google Cloud, and modern digital systems.</p>
-        <div style="margin-top:2rem;max-width:24rem;margin-inline:auto;">
-          ${ownerProfileCard()}
-        </div>
-      </div>
-    </section>
-    <section class="section section--tight">
-      <div class="container">
-        <h2 data-animate>Why teams choose us</h2>
-        <div class="feature-band" style="margin-top:1.5rem;">
-          <div class="feature" data-animate><span class="feature__icon">${icon("spark")}</span><div><h3>Innovation with reliability</h3><p>Modern platforms delivered with practical governance and support.</p></div></div>
-          <div class="feature" data-animate><span class="feature__icon">${icon("layers")}</span><div><h3>End-to-end digital stack</h3><p>Cloud, email, websites, SEO, ads, and automation under one roof.</p></div></div>
-          <div class="feature" data-animate><span class="feature__icon">${icon("pin")}</span><div><h3>Pune-based, India-wide</h3><p>Serving Pune, Mumbai, Nagpur, Thane, Bangalore, and beyond.</p></div></div>
-          <div class="feature" data-animate><span class="feature__icon">${icon("shield")}</span><div><h3>4+ years of delivery</h3><p>Hands-on experience helping businesses thrive in a digital-first world.</p></div></div>
-        </div>
-      </div>
-    </section>
-    <section class="cta-band">
-      <div class="container">
-        <h2 data-animate>Let’s build what’s next</h2>
-        <p data-animate>Share your goals and we’ll map a practical path forward.</p>
-        <a class="btn btn--primary" href="contact.html" style="background:#fff;color:var(--ink);margin-top:1rem;" data-animate>${icon("enquire")} Contact GetKloud</a>
-      </div>
-    </section>`,
+    title: "About Us | Cloud & IT Solutions Partner",
+    description: "Learn about GetKloud Solutions — certified cloud architects and digital transformation experts in Pune led by Shailesh Patil.",
+    body: aboutBody,
   })
 );
 
@@ -730,28 +1455,9 @@ write(
   shell({
     depth: 0,
     page: "process",
-    title: "How We Work",
-    description: "GetKloud’s six-step process — analyze, plan, execute, optimize, report, and go live.",
-    body: `
-    <section class="page-hero">
-      <div class="container">
-        <p class="section__eyebrow">How we work</p>
-        <h1>From clarity to go-live.</h1>
-        <p class="section__lead">A transparent process designed for measurable progress — whether the work is cloud, campaigns, or custom development.</p>
-      </div>
-    </section>
-    <section class="section">
-      <div class="container">
-        <div class="steps">
-          <div class="step" data-animate><span class="step__icon">${icon("analyze")}</span><div><h3>Analyze</h3><p>We analyze your business needs, challenges, and market trends to craft tailored strategies for growth.</p></div></div>
-          <div class="step" data-animate><span class="step__icon">${icon("plan")}</span><div><h3>Plan</h3><p>We craft a strategy aligned with your goals — lead generation, SEO, eCommerce, or infrastructure — with clear KPIs.</p></div></div>
-          <div class="step" data-animate><span class="step__icon">${icon("execute")}</span><div><h3>Execute</h3><p>With a clear plan, we implement ads, websites, automation, or cloud work efficiently and on time.</p></div></div>
-          <div class="step" data-animate><span class="step__icon">${icon("optimize")}</span><div><h3>Optimize</h3><p>We monitor performance and refine strategies so results keep improving after launch.</p></div></div>
-          <div class="step" data-animate><span class="step__icon">${icon("report")}</span><div><h3>Report & Support</h3><p>Regular communication, performance reporting, and ongoing support for updates and improvements.</p></div></div>
-          <div class="step" data-animate><span class="step__icon">${icon("launch")}</span><div><h3>Go Live</h3><p>A smooth, tested, optimized launch for maximum impact from day one.</p></div></div>
-        </div>
-      </div>
-    </section>`,
+    title: "How We Work | 6-Phase Engineering Lifecycle",
+    description: "Discover GetKloud's milestone-driven process: analyze, architecture, agile execution, security hardening, and 24/7 SLA monitoring.",
+    body: howWeWorkBody,
   })
 );
 
@@ -760,194 +1466,164 @@ write(
   shell({
     depth: 0,
     page: "contact",
-    title: "Contact",
-    description: "Contact GetKloud in Pune — email, phone, WhatsApp, and office location.",
-    body: `
-    <section class="page-hero">
-      <div class="container">
-        <p class="section__eyebrow">Contact</p>
-        <h1>How we can help you</h1>
-        <p class="section__lead">Send a message by email or WhatsApp. We never collect information without your consent.</p>
-      </div>
-    </section>
-    <section class="section">
-      <div class="container grid-2">
-        <form class="form" data-enquire-form data-animate>
-          <label>Name *
-            <input name="name" type="text" required autocomplete="name" placeholder="Your name" />
-          </label>
-          <label>Email *
-            <input name="email" type="email" required autocomplete="email" placeholder="you@company.com" />
-          </label>
-          <label>Phone
-            <input name="phone" type="tel" autocomplete="tel" placeholder="+91 ..." />
-          </label>
-          <label>Interested service
-            <select name="service">
-              <option value="">Select a service</option>
-              <option>Cloud Services</option>
-              <option>Email Solutions</option>
-              <option>Lead Generation</option>
-              <option>Google Ranking</option>
-              <option>eCommerce Development</option>
-              <option>Website Development</option>
-              <option>Business Automation</option>
-            </select>
-          </label>
-          <label>Message
-            <textarea name="message" placeholder="Tell us about your project"></textarea>
-          </label>
-          <div class="btn-row">
-            <button class="btn btn--primary" type="submit">${icon("mail")} Send via Email</button>
-            <button class="btn btn--outline" type="button" data-action="whatsapp">${icon("whatsapp")} Send via WhatsApp</button>
-          </div>
-        </form>
-        <div class="contact-details" data-animate="right">
-          <div class="contact-item">
-            <span class="contact-item__icon">${icon("pin")}</span>
-            <div>
-              <h3>Office location</h3>
-              <p>BHARGAV VIHAR, SN.53/1, Wadgaon Dhayari, Sinhagad Road, Pune 411041, India</p>
-            </div>
-          </div>
-          <div class="contact-item">
-            <span class="contact-item__icon">${icon("mail")}</span>
-            <div>
-              <h3>Email</h3>
-              <p><a href="mailto:info@getkloud.in">info@getkloud.in</a></p>
-            </div>
-          </div>
-          <div class="contact-item">
-            <span class="contact-item__icon">${icon("phone")}</span>
-            <div>
-              <h3>Call</h3>
-              <p><a href="tel:+918421174747">+91 8421174747</a></p>
-            </div>
-          </div>
-          <div class="contact-item">
-            <span class="contact-item__icon">${icon("whatsapp")}</span>
-            <div>
-              <h3>WhatsApp</h3>
-              <p><a href="https://wa.me/918421174747" data-action="whatsapp" target="_blank" rel="noopener">Chat with GetKloud</a></p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>`,
+    title: "Contact Us | GetKloud Solutions Pune",
+    description: "Connect with GetKloud Solutions in Pune for custom cloud migration, web development, and digital marketing consultations.",
+    body: contactBody,
   })
 );
 
+// 2. Services Hub
 write(
   "services/index.html",
   shell({
     depth: 1,
     page: "services",
-    title: "Services",
-    description: "Explore GetKloud services — cloud, email, leads, SEO, eCommerce, websites, and automation.",
-    body: `
-    <section class="page-hero">
-      <div class="container">
-        <p class="section__eyebrow">Our services</p>
-        <h1>Capabilities that compound.</h1>
-        <p class="section__lead">Infrastructure, acquisition, and software — designed to work together for your business.</p>
-      </div>
-    </section>
-    <section class="section">
-      <div class="container service-links">
-        ${services
-          .map(
-            (s) => {
-              const thumb = s.image.startsWith("services/")
-                ? `../assets/images/${s.image}`
-                : `../assets/images/${s.image}`;
-              return `<a class="service-link service-link--media" href="${s.slug}.html" data-animate>
-          <img src="${thumb}" alt="" loading="lazy" />
-          <div>
-            <h3><span class="service-link__icon service-link__icon--inline">${icon(s.icon)}</span>${s.title}</h3>
-            <p>${s.lead}</p>
-          </div>
-        </a>`;
-            }
-          )
-          .join("\n")}
-      </div>
-    </section>`,
+    title: "Enterprise Technology Services & Solutions",
+    description: "Complete catalog of GetKloud solutions: Cloud Infrastructure, Google Workspace, Lead Generation, SEO, eCommerce, and Custom ERP.",
+    body: servicesHubBody,
   })
 );
 
+// 3. Dedicated Service Pages
+const serviceVisuals = {
+  "cloud-services": {
+    img: "cloud-infrastructure.jpg",
+    title: "AWS & Azure Multi-Region Architecture",
+    tag: "99.9% Uptime SLA Guarantee",
+  },
+  "email-solutions": {
+    img: "email-security.jpg",
+    title: "Enterprise Email Security & Migration",
+    tag: "SPF / DKIM / DMARC 100% Deliverability",
+  },
+  "lead-generation": {
+    img: "cloud-infrastructure.jpg",
+    title: "Targeted Inbound B2B Lead Funnels",
+    tag: "Multi-Channel Tracking & Conversion",
+  },
+  "google-ranking": {
+    img: "cloud-infrastructure.jpg",
+    title: "Search Engine Optimization & Authority",
+    tag: "Local Maps & Technical SEO",
+  },
+  "ecommerce": {
+    img: "web-engineering.jpg",
+    title: "High-Converting eCommerce Architecture",
+    tag: "Razorpay & Multi-Currency Ready",
+  },
+  "website-development": {
+    img: "web-engineering.jpg",
+    title: "Modern React & Responsive Web Engineering",
+    tag: "Sub-Second Lighthouse Performance",
+  },
+  "business-automation": {
+    img: "web-engineering.jpg",
+    title: "Custom Enterprise ERP & Process Systems",
+    tag: "Automated Workflows & API Bridges",
+  },
+};
+
 for (const s of services) {
-  const offers = s.offers
-    .map(([name, copy, img]) => {
-      const imgTag = img
-        ? `<img class="offer__img" src="../assets/images/services/${img}" alt="" loading="lazy" />`
-        : "";
-      return `<article class="offer" data-animate>
-          ${imgTag}
-          <div class="offer__body">
-            <h3>${name}</h3>
-            <p>${copy}</p>
+  const vis = serviceVisuals[s.slug] || {
+    img: "cloud-infrastructure.jpg",
+    title: s.title,
+    tag: "Enterprise Architecture",
+  };
+
+  const serviceBody = `
+    <section class="page-hero page-hero--cinematic">
+      <div class="container">
+        <p class="section__eyebrow" data-animate>${s.eyebrow}</p>
+        <h1 data-animate>${s.headline}</h1>
+        <p class="section__lead" data-animate>${s.lead}</p>
+        <div class="btn-row" style="margin-top:1.75rem;" data-animate>
+          <a class="btn btn--primary btn--lg" href="../contact.html">
+            ${icon("zap")} Get ${s.title.split(" ")[0]} Quote
+          </a>
+          <a class="btn btn--ghost btn--lg" href="https://wa.me/918421174747" target="_blank" rel="noopener">
+            ${icon("whatsapp")} WhatsApp Consultation
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Visual Showcase -->
+    <section class="section" style="padding-bottom:1rem;">
+      <div class="container">
+        <div class="visual-showcase" data-animate>
+          <img src="../assets/images/${vis.img}" alt="${vis.title}" loading="lazy" />
+          <div class="visual-showcase__caption">
+            <span class="visual-showcase__title">${vis.title}</span>
+            <span class="visual-showcase__tag">${vis.tag}</span>
           </div>
-        </article>`;
-    })
-    .join("\n");
-
-  const heroImage = s.image.startsWith("services/") || s.image.startsWith("gateways/") || s.image.startsWith("heroes/")
-    ? `../assets/images/${s.image}`
-    : `../assets/images/${s.image}`;
-
-  const hero = s.cinematic
-    ? `<section class="page-hero page-hero--cinematic" style="--page-hero-image:url('${heroImage}')">
-      <div class="page-hero__media" aria-hidden="true"></div>
-      <div class="container">
-        <p class="section__eyebrow">${s.eyebrow}</p>
-        <h1>${s.headline}</h1>
-        <p class="section__lead">${s.lead}</p>
-        <div class="btn-row" style="margin-top:1.25rem;">
-          <a class="btn btn--primary" href="../contact.html">${icon("arrow")} Start a project</a>
-          <a class="btn btn--ghost" href="https://wa.me/918421174747" data-action="whatsapp" target="_blank" rel="noopener">${icon("whatsapp")} WhatsApp</a>
         </div>
       </div>
-    </section>`
-    : `<section class="page-hero page-hero--cinematic" style="--page-hero-image:url('${heroImage}')">
-      <div class="page-hero__media" aria-hidden="true"></div>
+    </section>
+
+    <section class="section">
       <div class="container">
-        <p class="section__eyebrow">${s.eyebrow}</p>
-        <h1>${s.headline}</h1>
-        <p class="section__lead">${s.lead}</p>
-        <div class="btn-row" style="margin-top:1.25rem;">
-          <a class="btn btn--primary" href="../contact.html">${icon("arrow")} Start a project</a>
-          <a class="btn btn--ghost" href="https://wa.me/918421174747" data-action="whatsapp" target="_blank" rel="noopener">${icon("whatsapp")} WhatsApp</a>
+        <div class="section__header">
+          <p class="section__eyebrow" data-animate>What We Deliver</p>
+          <h2 data-animate>Comprehensive ${s.title} Capabilities</h2>
+          <p class="section__lead" data-animate>${s.intro}</p>
+        </div>
+
+        <div class="offer-list" style="margin-top:2.5rem;">
+          ${s.features
+            .map(
+              (f) => `
+            <article class="offer" data-animate>
+              <div class="offer__head">
+                <div class="offer__icon-box">${icon(f.icon || s.icon, "icon--lg")}</div>
+                <div>
+                  <h3>${f.title}</h3>
+                  <p>${f.desc}</p>
+                </div>
+              </div>
+              <div class="offer__tags">
+                ${f.tags.map((t) => `<span class="offer__tag">${t}</span>`).join("")}
+              </div>
+            </article>
+          `
+            )
+            .join("")}
         </div>
       </div>
-    </section>`;
+    </section>
+
+    <section class="section section--panel">
+      <div class="container">
+        <div class="section__header section__header--center">
+          <p class="section__eyebrow" data-animate>FAQ</p>
+          <h2 data-animate>Frequently Asked Questions</h2>
+        </div>
+        ${renderFAQAccordion(s.faqs)}
+      </div>
+    </section>
+
+    <section class="container" data-animate>
+      <div class="cta-band">
+        <div class="container" style="position:relative;z-index:2;">
+          <h2>Ready to get started with ${s.title}?</h2>
+          <p>Contact our Pune engineering team today for a tailored architecture review and quote.</p>
+          <div class="btn-row" style="margin-top:1.75rem;">
+            <a class="btn btn--white btn--lg" href="../contact.html">${icon("zap")} Request Proposal</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  `;
 
   write(
     `services/${s.slug}.html`,
     shell({
       depth: 1,
       page: "services",
-      title: s.title,
+      title: `${s.title}`,
       description: s.lead,
-      body: `
-    ${hero}
-    <section class="section">
-      <div class="container">
-        <h2 data-animate>What we deliver</h2>
-        <p class="section__lead" data-animate>${s.intro}</p>
-        <div class="offer-list" style="margin-top:2rem;">
-          ${offers}
-        </div>
-      </div>
-    </section>
-    <section class="cta-band">
-      <div class="container">
-        <h2 data-animate>Ready to talk ${s.title.toLowerCase()}?</h2>
-        <p data-animate>Tell us where you are today — we’ll recommend a clear next step.</p>
-        <a class="btn btn--primary" href="../contact.html" style="background:#fff;color:var(--ink);margin-top:1rem;" data-animate>${icon("enquire")} Contact GetKloud</a>
-      </div>
-    </section>`,
+      body: serviceBody,
     })
   );
 }
 
-console.log("Done.");
+console.log("All 13 pages generated successfully!");

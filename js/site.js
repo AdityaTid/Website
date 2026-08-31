@@ -5,20 +5,31 @@
   const mobileNav = document.querySelector(".mobile-nav");
   const page = document.body.dataset.page;
 
+  // Active navigation highlight
   document.querySelectorAll("[data-nav]").forEach((link) => {
     if (link.dataset.nav === page) {
       link.classList.add("is-active");
     }
   });
 
+  // Scroll detection for compact header
+  let ticking = false;
   const onScroll = () => {
-    if (!header) return;
-    header.classList.toggle("is-scrolled", window.scrollY > 12);
+    if (!ticking) {
+      requestAnimationFrame(() => {
+        if (header) {
+          header.classList.toggle("is-scrolled", window.scrollY > 20);
+        }
+        ticking = false;
+      });
+      ticking = true;
+    }
   };
 
   onScroll();
   window.addEventListener("scroll", onScroll, { passive: true });
 
+  // Mobile navigation drawer toggle
   const setMenuOpen = (open) => {
     if (!mobileNav || !toggle) return;
     mobileNav.classList.toggle("is-open", open);
@@ -37,6 +48,12 @@
       closeBtn.addEventListener("click", () => setMenuOpen(false));
     }
 
+    mobileNav.addEventListener("click", (e) => {
+      if (e.target === mobileNav) {
+        setMenuOpen(false);
+      }
+    });
+
     mobileNav.querySelectorAll("a").forEach((link) => {
       link.addEventListener("click", () => setMenuOpen(false));
     });
@@ -47,6 +64,4 @@
       }
     });
   }
-
-  document.body.classList.add("page-enter");
 })();
