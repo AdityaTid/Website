@@ -64,4 +64,30 @@
       }
     });
   }
+
+  // Desktop dropdown toggle & click support
+  const dropdown = document.querySelector(".nav__dropdown");
+  const dropdownBtn = document.querySelector(".nav__dropdown-btn");
+  if (dropdown && dropdownBtn) {
+    dropdownBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      const isOpen = dropdown.classList.toggle("is-open");
+      dropdownBtn.setAttribute("aria-expanded", String(isOpen));
+    });
+
+    document.addEventListener("click", (e) => {
+      if (!dropdown.contains(e.target)) {
+        dropdown.classList.remove("is-open");
+        dropdownBtn.setAttribute("aria-expanded", "false");
+      }
+    });
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") {
+        dropdown.classList.remove("is-open");
+        dropdownBtn.setAttribute("aria-expanded", "false");
+      }
+    });
+  }
 })();

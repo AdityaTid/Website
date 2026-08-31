@@ -486,6 +486,27 @@ function shell({ depth = 0, page, title, description, body, canonical = "" }) {
   </script>
 </head>
 <body data-page="${page}">
+  <!-- Top Utility Ribbon -->
+  <aside class="top-ribbon" aria-label="Quick Contact and Status">
+    <div class="container top-ribbon__inner">
+      <div class="top-ribbon__status">
+        <span class="pulse-dot pulse-dot--sm" aria-hidden="true"></span>
+        <span>24/7 SLA Cloud Operations Active · Pune, India</span>
+      </div>
+      <div class="top-ribbon__actions">
+        <a class="top-ribbon__link" href="tel:+918421174747">
+          ${icon("phone", "icon--sm")} +91 84211 74747
+        </a>
+        <a class="top-ribbon__link top-ribbon__link--whatsapp" href="https://wa.me/918421174747" target="_blank" rel="noopener">
+          ${icon("whatsapp", "icon--sm")} WhatsApp Direct
+        </a>
+        <a class="top-ribbon__badge" href="${p}contact.html">
+          ${icon("spark", "icon--sm")} Free Infrastructure Audit
+        </a>
+      </div>
+    </div>
+  </aside>
+
   <header class="site-header">
     <div class="site-header__wrap">
       <div class="site-header__bar">
@@ -496,25 +517,91 @@ function shell({ depth = 0, page, title, description, body, canonical = "" }) {
           <a href="${p}index.html" data-nav="home">Home</a>
           <a href="${p}about.html" data-nav="about">About</a>
           <div class="nav__dropdown">
-            <a href="${p}services/index.html" data-nav="services">
+            <button class="nav__dropdown-btn" type="button" aria-expanded="false" aria-haspopup="true">
               Services ${icon("chevron", "icon--sm")}
-            </a>
-            <div class="nav__dropdown-menu">
-              <a href="${p}services/cloud-services.html">${icon("cloud", "icon--sm")} Cloud Services</a>
-              <a href="${p}services/email-solutions.html">${icon("email", "icon--sm")} Email Solutions</a>
-              <a href="${p}services/lead-generation.html">${icon("ads", "icon--sm")} Lead Generation</a>
-              <a href="${p}services/google-ranking.html">${icon("search", "icon--sm")} Google Ranking & SEO</a>
-              <a href="${p}services/ecommerce.html">${icon("shop", "icon--sm")} eCommerce Stores</a>
-              <a href="${p}services/website-development.html">${icon("code", "icon--sm")} Web Development</a>
-              <a href="${p}services/business-automation.html">${icon("cog", "icon--sm")} Business Automation</a>
+            </button>
+            <div class="nav__mega-menu" role="region" aria-label="Services Menu">
+              <div class="nav__mega-grid">
+                <div>
+                  <span class="nav__mega-heading">Our Core Capabilities</span>
+                  <div class="nav__mega-columns">
+                    <a class="nav__mega-item" href="${p}services/cloud-services.html">
+                      <span class="nav__mega-icon">${icon("cloud")}</span>
+                      <div>
+                        <strong>Cloud Services</strong>
+                        <span>AWS, Azure & DevOps</span>
+                      </div>
+                    </a>
+                    <a class="nav__mega-item" href="${p}services/email-solutions.html">
+                      <span class="nav__mega-icon">${icon("email")}</span>
+                      <div>
+                        <strong>Enterprise Email</strong>
+                        <span>Google & Office 365</span>
+                      </div>
+                    </a>
+                    <a class="nav__mega-item" href="${p}services/website-development.html">
+                      <span class="nav__mega-icon">${icon("code")}</span>
+                      <div>
+                        <strong>Web Development</strong>
+                        <span>React & Fast Portals</span>
+                      </div>
+                    </a>
+                    <a class="nav__mega-item" href="${p}services/business-automation.html">
+                      <span class="nav__mega-icon">${icon("cog")}</span>
+                      <div>
+                        <strong>Automation & ERP</strong>
+                        <span>Custom Ops & CRM</span>
+                      </div>
+                    </a>
+                    <a class="nav__mega-item" href="${p}services/ecommerce.html">
+                      <span class="nav__mega-icon">${icon("shop")}</span>
+                      <div>
+                        <strong>eCommerce Stores</strong>
+                        <span>Shopify & Gateways</span>
+                      </div>
+                    </a>
+                    <a class="nav__mega-item" href="${p}services/google-ranking.html">
+                      <span class="nav__mega-icon">${icon("search")}</span>
+                      <div>
+                        <strong>Google Ranking</strong>
+                        <span>Local Maps & SEO</span>
+                      </div>
+                    </a>
+                    <a class="nav__mega-item" href="${p}services/lead-generation.html" style="grid-column: span 2;">
+                      <span class="nav__mega-icon">${icon("ads")}</span>
+                      <div>
+                        <strong>Paid Lead Generation</strong>
+                        <span>Targeted B2B Ad Funnels & Inbound Pipelines</span>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div class="nav__mega-feature">
+                  <div class="nav__mega-card">
+                    <div>
+                      <div class="nav__mega-badge">
+                        <span class="pulse-dot pulse-dot--sm"></span> Enterprise Ready
+                      </div>
+                      <h4>Zero-Downtime Guaranteed</h4>
+                      <p>Parallel staging, verified data sync, and 24/7 Pune engineering support.</p>
+                    </div>
+                    <a class="btn btn--primary btn--sm" href="${p}contact.html" style="width:100%;justify-content:center;">
+                      ${icon("zap")} Get Custom Quote
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
           <a href="${p}how-we-work.html" data-nav="process">How We Work</a>
           <a href="${p}contact.html" data-nav="contact">Contact</a>
         </nav>
         <div class="site-header__actions">
+          <a class="nav-btn-whatsapp" href="https://wa.me/918421174747" target="_blank" rel="noopener" aria-label="WhatsApp Support">
+            ${icon("whatsapp")} <span>Chat</span>
+          </a>
           <a class="nav-cta" href="${p}contact.html">
-            ${icon("zap", "icon--sm")} Get Quote
+            ${icon("zap", "icon--sm")} <span>Get Quote</span>
           </a>
           <button class="nav-toggle" type="button" aria-label="Open mobile menu" aria-expanded="false">
             ${icon("menu")}
