@@ -17,9 +17,7 @@ const pages = [
   "/services/email-solutions.html",
   "/services/lead-generation.html",
   "/services/google-ranking.html",
-  "/services/ecommerce.html",
   "/services/website-development.html",
-  "/services/business-automation.html",
 ];
 
 function resolveUrl(from, href) {
@@ -112,9 +110,7 @@ const htmlFiles = [
   "services/email-solutions.html",
   "services/lead-generation.html",
   "services/google-ranking.html",
-  "services/ecommerce.html",
   "services/website-development.html",
-  "services/business-automation.html",
 ];
 
 for (const file of htmlFiles) {
